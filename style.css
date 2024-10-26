@@ -6,6 +6,9 @@
     list-style: none;
     font-family:  Noto Sans JP , sans-serif;;
   }
+  body {
+    margin: 0 auto;
+  }
 
   /* header */
   header {
@@ -22,6 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  
   }
  .nav_content {
     display: none;
@@ -31,27 +35,37 @@
     align-items: center;
     height: 64px;
  }
+ .header_logo img {
+   transition: 0.4s;
+ }
+ .header_logo img:hover {
+   opacity: .6;
+ }
  .mail_icon  {
-    width: 64px;
-    height: 64px;
-    background-color: #007FC6;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+   width: 64px;
+   height: 64px;
+   background-color: #007FC6;
+   align-items: center;
+   display: flex;
+   justify-content: center;
  }
  .mail_icon img {
-    width: 24px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+   width: 24px;
+   height: auto;
+   display: block;
+   margin: 0 auto;
  }
  .mail_icon a {
-    font-size: 10px;
-    text-decoration: none;
-    color: #fff;
-    justify-content: center;
-    align-items: center;
-    font-weight:400;
+   font-size: 10px;
+   text-decoration: none;
+   color: #fff;
+   justify-content: center;
+   align-items: center;
+   font-weight:400;
+   transition: 0.4s;
+ }
+ .mail_icon a:hover {
+   opacity: .6;
  }
  .menu {
    background-color: #444;
@@ -62,28 +76,114 @@
    cursor: pointer;
    margin: 0 auto;
    position: relative;
-   align-items: center;   
+   align-items: center;
+   transition: 0.4s;  
  }
+ .menu:hover {
+   opacity: .6;
+ }
+ 
  .menu span{
    display: block;
-   border: #fff;
-   transform-origin:0% 50%;
    position: absolute;
    top: 12px;
    left: 25%;
    transition: .3s;
    color: #fff;
    text-align: center;
-}
-.menu_icon span:nth-of-type(2){
+   /* mission線入れる何かを見つける！。。。 */
+ }
+ .menu_icon span:nth-of-type(2){
    top: 18px;
-}
-.menu_icon span:nth-of-type(3){
+ }
+ .menu_icon span:nth-of-type(3){
    top: 27px;
-}
-.menu_icon span:nth-of-type(4){
+ }
+ .menu_icon span:nth-of-type(4){
    top: 36px;
+ }
+ .hero {
+  width: 100%;
+  background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%);
+  ;
+ }
+ .hero_inner {
+  margin: 0 15px;
+  padding: 0 16px;
+  margin: 0 auto;
+  color: #fff
+  ;
+ }
+ .hero_text {
+  text-align: center;
+ }
+ .copy_text {
+  font-size: 14px;
+  line-height: 1.5;
+  padding-top: 40px;
+  font-weight: 400;
+ }
+ .copy_catch {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-top: 18px;
+ }
+ .copy_read {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-top: 24px;
+ }
+ .hero_list {
+  margin: 0 auto;
+  text-align: center;
+  width: 344px;
+ }
+ .hero_about{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-top: 16px;
+  gap: 4px;
+ }
+ .hero_about li {
+  background-color: #fff;
+  color: #007FC6;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 50%;
+  width: 112px;
+  height: 112px;
+  margin: 0 auto;
+  place-content: center;
+  gap: 20px;
+ }
+ .hero_detail {
+  margin-top: 18px;
+ }
+
+ .hero_note {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 24px;
+ }
+.hero_detail span {
+  font-size: 12px;
+  align-items: first baseline;
+  /* missionこの文字を上に揃える指示見つける！ */
 }
-
-
-   
+.job_listing img{
+ margin: 0 auto;
+ display: block;
+ /* 位置を上のpに少し上に重ねて移動させる指示 */
+}
+.contact {
+  width: 100%;
+  height: auto;
+}
+.contact_inner {
+  width:343px;
+  height: 571px;
+  background-color: #fff;
+  display: block;
+}
