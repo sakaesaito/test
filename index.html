@@ -36,7 +36,7 @@
                 <div class="mail_icon"><a href="#"target="blank"><img src="img/mail.png"><p>資料請求</p></a></div>
                 <div class="menu">
                     <div class="menu_icon" onclick="toggleMenu()">
-                        <span>ここの線</span>
+                        <span>線</span>
                         <span>引けない</span>
                         <span>事件</span>
                         <span>メニュー</span>
@@ -79,7 +79,7 @@
                 <div class="contact_inner">
                     <div class="contact_form">
                         <h3 class="contact_text">派遣事例が分かる資料をダウンロード‼︎</h3>
-                        <form action="/submit" method="POST"></form>
+                        <form action="/submit" method="POST">
                         <label for="lastName">性</label>
                         <input type="text" id="lastName" name="lastName" placeholder="介護" required>
                         <label for="firstName">名</label>
@@ -90,7 +90,7 @@
                         <input type="email" id="email" name="email" placeholder="caresend@caresend.com" required>
                         <label for="tel">電話番号</label>
                         <input type="tel" id="tel" name="tel" placeholder="000-0000-0000" required>
-                        <p>このフォームから送信された情報は、 プライバシーポリシー に基づいて処理されます。</p>
+                        <p class="contact_note">このフォームから送信された情報は、 プライバシーポリシー に基づいて処理されます。</p>
                         <input type="submit" value="資料ダウンロード（無料）">
                         </form> 
                     </div>        
@@ -233,7 +233,7 @@
         </section>
         <section class="contact">
             <div class="contact_inner">
-                <div class="contact_text">
+                <div class="contact_message">
                     <h2>介護派遣に関する資料を無料でダウンロード</h2>
                     <p>CareSendに興味をお持ち頂き、ありがとうございます<br>
                         本フォームを送信頂きますと、サービス資料を送付させていただきます。</p>

@@ -16,16 +16,18 @@
     height: 64px;
     width: 100%;
     background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 1;
   }
   .header_inner {
     width: 100%;
     height: 64px;
-    margin: 0 auto;
+    margin: 0 auto ;
     padding: 0 0 0 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  
   }
  .nav_content {
     display: none;
@@ -109,7 +111,7 @@
  }
  .hero_inner {
   margin: 0 15px;
-  padding: 0 16px;
+  padding: 0 16px 46px;
   margin: 0 auto;
   color: #fff
   ;
@@ -145,6 +147,9 @@
   grid-template-columns: repeat(3,1fr);
   margin-top: 16px;
   gap: 4px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
  }
  .hero_about li {
   background-color: #fff;
@@ -165,7 +170,10 @@
  .hero_note {
   font-size: 12px;
   font-weight: 400;
-  margin-top: 24px;
+  text-align: left;
+  width: 344px;
+  margin: 24px auto 0;
+
  }
 .hero_detail span {
   font-size: 12px;
@@ -175,15 +183,64 @@
 .job_listing img{
  margin: 0 auto;
  display: block;
- /* 位置を上のpに少し上に重ねて移動させる指示 */
+ /* 位置を上のpに少し上に重ねて移動させる指示 ::biforeとか？ */
 }
 .contact {
   width: 100%;
   height: auto;
+  color: #333333;
 }
 .contact_inner {
   width:343px;
   height: 571px;
   background-color: #fff;
   display: block;
+  margin: 0 auto;
+  padding: 7px 7px 15px ;
+  border-radius: 10px;
 }
+.contact_text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #007FC6;
+  height: 52px;
+  text-align: center;
+  border-radius: 10px;
+  /* 調べ：三角の吹き出しをつける指示を調べる */
+}
+.label {
+  /* ここの指示が聞いてない理由探す */
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 15px;
+}
+.input {
+  color: #AAAAAA;
+}
+input[type="text"], input[type="email"], input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 7px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.contact_note {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 24px;
+}
+input[type="submit"]{
+  text-align: center;
+  margin: 40px auto 0;
+  width: 246px;
+  height: 42px;
+  background-color: #007FC6;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
