@@ -16,14 +16,11 @@
     height: 64px;
     width: 100%;
     background-color: #fff;
-    position: fixed;
-    top: 0;
-    z-index: 1;
   }
   .header_inner {
-    width: 100%;
+    max-width:100%;
     height: 64px;
-    margin: 0 auto ;
+    /* margin: 0 auto ; */
     padding: 0 0 0 10px;
     display: flex;
     align-items: center;
@@ -93,15 +90,23 @@
    color: #fff;
    text-align: center;
    width: 32px;
-   height: 2px;
+   height: 1px;
    background-color:#fff; 
-   /* mission線高さ揃える。。。 */
+   margin: 0 auto; 
  }
+ .menu_icon span:nth-of-type(1){
+  margin-top: 12px;
+}
  .menu_icon span:nth-of-type(2){
    margin-top: 9px;
  }
  .menu_icon span:nth-of-type(3){
   margin-top: 9px;
+ }
+ .menu_item {
+  text-align: center;
+  margin-top: 4px;
+
  }
  
  .hero {
@@ -111,7 +116,7 @@
  }
  .hero_inner {
   margin: 0 15px;
-  padding: 0 15px 46px;
+  padding: 0 15px 26px;
   margin: 0 auto;
   color: #fff
   ;
@@ -173,12 +178,9 @@
   text-align: left;
   width: 344px;
   margin: 24px auto 0;
-
  }
 .hero_detail span {
-  font-size: 12px;
-  align-items: first baseline;
-  /* missionこの文字を上に揃える指示見つける！ */
+  font-size: 12px;text-align: start;
 }
 .job_listing img{
  margin: 0 auto;
@@ -192,11 +194,11 @@
 }
 .contact_inner {
   width:343px;
-  height: 571px;
+  height: auto;
   background-color: #fff;
   display: block;
   margin: 0 auto;
-  padding: 0 8px ;
+  padding: 8px 8px 19px;
   border-radius: 10px;
 }
 .contact_text {
@@ -207,22 +209,30 @@
   height: 52px;
   text-align: center;
   border-radius: 10px;
-  margin-top: 8px;
+  align-items: center;
+  padding: 15px;
   /* 調べ：三角の吹き出しをつける指示を調べる */
 }
-.label {
-  /* ここの指示が聞いてない理由探す */
+label {
+  display: block;
   font-weight: 700;
   font-size: 14px;
   margin-top: 15px;
 }
-.input {
+label:nth-child(1),label:nth-child(2){
+  margin-top: 25px;
+}
+label:nth-child(1) {
+  margin-right: 155px;
+}
+input {
   color: #AAAAAA;
+  padding: 16px auto 16px 8px;
+  /* 箱に余白つけたい！！なぜつかない・・  */
 }
 input[type="text"], input[type="email"], input[type="tel"] {
   width: 100%;
   margin-top: 8px;
-  padding: 16px auto 16px 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -232,9 +242,10 @@ input[type="text"], input[type="email"], input[type="tel"] {
 .contact_note {
   font-size: 12px;
   font-weight: 400;
-  margin-top: 24px;
+  margin: 24px auto 0;
 }
 input[type="submit"]{
+  display: block;
   text-align: center;
   margin: 40px auto 0;
   width: 246px;
@@ -247,13 +258,16 @@ input[type="submit"]{
   border-radius: 30px;
   border-style: none;
 }
+.contact_name {
+  display: flex;
+}
 .works {
   background-color: #fff;
   color: #333333;
   width: 100%;
 }
 .works_inner {
-  margin: 0 auto;
+  margin: 0 auto 39px;
   max-width: 375px;
   text-align: center;
   padding: 0 20px;
@@ -274,9 +288,90 @@ input[type="submit"]{
 .works_logo img:nth-child(2) {
   margin-top: 8px;
 }
-/* スライダーの箇所 */
-.slider_container {
+.slider-container img {
+  width: 160px;
+  height: 64px;
+}
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+.slider{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(5 * 223px);
+  animation: slide 15s linear infinite;
+}
+#lead_area {
+  background-color: #fff;
+  color: #333333;
+  margin: 0 auto;
+}
+.lead_main {
+  width: 100%;
+  margin: 72px auto 0;
+  padding: 0 15px;
+  text-align: center;
+}
+.lead_title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.5;
+}
+.lead_text {
+  margin-top: 63px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.8;
+}
+.lead_text span {
+  color: #007FC6;
+  font-size: 24px; 
+}
+.lead_main img {
+  width: 315px;
+  margin-top: 54px;
+}
+.feature_menu {
+  margin: 72px auto 0 ;
+  text-align: center;
+}
+.feature_heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+}
+.feature_list {
+  margin-top: 51px;
+  width: 100%;
+}
+.feature_item {
+  border: 1px solid #007FC6;
+  width: 91.2%;
+  margin: 0 auto 24px;
+  padding: 14px 30px 22px;
+}
+.feature_img img {
+  width: 50%;
+  height: auto;
+}
+.feature_title {
+  margin-top: 19px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #F47500;
+}
+.feature_lead {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333333;
+  margin-top: 19px;
+  text-align: left;
 }
 
 

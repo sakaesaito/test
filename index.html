@@ -39,7 +39,7 @@
                         <span></span>
                         <span></span>
                         <span></span>
-                        <p>メニュー</p>
+                        <div class="menu_item">メニュー</div>
                     </div>
                 </div>
             </div>             
@@ -80,16 +80,22 @@
                     <div class="contact_form">
                         <h3 class="contact_text">派遣事例が分かる資料をダウンロード‼︎</h3>
                         <form action="/submit" method="POST">
-                        <label for="lastName">性</label>
-                        <input type="text" id="lastName" name="lastName" placeholder="介護" required>
-                        <label for="firstName">名</label>
-                        <input type="text" id="firstName" name="firstName" placeholder="太郎" required>
+                        <div class="contact_name">
+                            <label for="lastName">性</label>
+                            <label for="firstName">名</label>
+                        </div>
+                        <div class="contact_name">
+                            <input type="text" id="lastName" name="lastName" value="介護" >
+                            <input type="text" id="firstName" name="firstName" value="太郎">
+                        </div>
+                        <div>
                         <label for="company">会社名</label>
-                        <input type="text" id="company" name="company" placeholder="株式会社CareSend" required>
+                        <input type="text" id="company" name="company" value="株式会社CareSend">
+                        </div>
                         <label for="email">メールアドレス</label>
-                        <input type="email" id="email" name="email" placeholder="caresend@caresend.com" required>
+                        <input type="email" id="email" name="email" value="caresend@caresend.com" >
                         <label for="tel">電話番号</label>
-                        <input type="tel" id="tel" name="tel" placeholder="000-0000-0000" required>
+                        <input type="tel" id="tel" name="tel" value="000-0000-0000" >
                         <p class="contact_note">このフォームから送信された情報は、 プライバシーポリシー に基づいて処理されます。</p>
                         <a href=""><input type="submit" value="資料ダウンロード（無料）"></a>
                         </form> 
@@ -105,49 +111,52 @@
                     <img src="img/jiseki 1.png" alt="">
                     <img src="img/jiseki-02 1.png" alt="">
                 </div>
-                <div class="slider-container">
-                    <div class="slider">
-                        <img src="img/logo01.png" alt="Logo 1">
-                        <img src="img/logo02.png" alt="Logo 2">
-                        <!-- <img src="img/logo03.png" alt="Logo 3">
-                        <img src="img/logo04.png" alt="Logo 4">
-                        <img src="img/logo05.png" alt="Logo 5"> -->
-                    </div>
-                </div>
         </div>
+        <div class="slider-container">
+            <div class="slider">
+                <img src="img/logo01.png" alt="Logo 1">
+                <img src="img/logo02.png" alt="Logo 2">
+                <img src="img/logo03.png" alt="Logo 3">
+                <img src="img/logo04.png" alt="Logo 4">
+                <img src="img/logo05.png" alt="Logo 5">
+            </div>
+        </div>
+       
     </section>
     <section id="lead_area">
         <div class="lead_main">
             <h2 class="lead_title">CareSendについて</h2>
-            <p class="lead_text">CareSendは、人材不足に悩む介護施設を<br>
-                認定介護福祉士などの<span>高スキル介護人材</span>の派遣で<br>
+            <p class="lead_text">CareSendは、<br>
+                人材不足に悩む介護施設を<br>
+                認定介護福祉士などの<br><span>高スキル介護人材</span>の派遣で<br>
                 支えるサービスです。</p>
-            <img src="img/caresend-feature.png" alt="">
+            <img src="img/caresend-feature-01-sp .png" alt="">
         </div>
     </section>
     <section id="feature">
         <div class="feature_menu">
-            <h3 class="frauture_title">CareSendの特徴</h3>
+            <h3 class="feature_heading">CareSendの特徴</h3>
             <ul class="feature_list">
-                <li>
-                    <img src="img/feature-01.png" alt="">
-                    <h4>登録者の内5割が有資格者</h4>
-                    <p>「CareSend」の登録者の半数以上は、介護福祉士や看護師などの専門資格を保有しています。高い資格基準を満たすことで、利用者に信頼性の高いサービスを提供できています。</p>
+                <li class="feature_item">
+                    <div class="feature_img">
+                        <img src="img/feature-01.png" alt=""></div>
+                    <h4 class="feature_title">登録者の内5割が有資格者</h4>
+                    <p class="feature_lead">「CareSend」の登録者の半数以上は、介護福祉士や看護師などの専門資格を保有しています。高い資格基準を満たすことで、利用者に信頼性の高いサービスを提供できています。</p>
                 </li>
-                <li>
-                    <img src="img/feature-02.png" alt="">
-                    <h4>登録型派遣と紹介予定派遣の2種に対応</h4>
-                    <p>登録型派遣では、即戦力人材を最短即日で派遣することが可能です。また紹介予定派遣にも対応しているので、正社員雇用を考えている施設にもお役立ていただけます。</p>
+                <li class="feature_item">
+                    <div class="feature_img"><img src="img/feature-02.png" alt=""></div>
+                    <h4 class="feature_title">登録型派遣と紹介予定派遣の2種に対応</h4>
+                    <p class="feature_lead">登録型派遣では、即戦力人材を最短即日で派遣することが可能です。また紹介予定派遣にも対応しているので、正社員雇用を考えている施設にもお役立ていただけます。</p>
                 </li>
-                <li>
-                    <img src="img/feature-03.png" alt="">
-                    <h4>派遣介護士の実績を閲覧可能</h4>
-                    <p>「CareSend」の登録者の過去の派遣実績は、お問い合わせ頂いたユーザー限定で閲覧することができます。利用施設側のコメントなどを参照することが可能です。また、気になる介護士がいれば直接アプローチ頂くことも可能です。</p>
+                <li class="feature_item">
+                    <div class="feature_img"><img src="img/feature-03.png" alt=""></div>
+                    <h4 class="feature_title">派遣介護士の実績を閲覧可能</h4>
+                    <p class="feature_lead">「CareSend」の登録者の過去の派遣実績は、お問い合わせ頂いたユーザー限定で閲覧することができます。利用施設側のコメントなどを参照することが可能です。また、気になる介護士がいれば直接アプローチ頂くことも可能です。</p>
                 </li>
-                <li>
-                    <img src="img/feature-04.png" alt="">
-                    <h4>3社面談を実施しお互い納得の上派遣</h4>
-                    <p>「CareSend」でマッチングした場合、弊社カウンセラーを交えた三者で面談を行い、ミスマッチが起こらないようにします。これは即日派遣の場合も同様です。</p>
+                <li class="feature_item">
+                    <div class="feature_img"><img src="img/feature-04.png" alt=""></div>
+                    <h4 class="feature_title">3社面談を実施し<br>お互い納得の上派遣</h4>
+                    <p class="feature_lead">「CareSend」でマッチングした場合、弊社カウンセラーを交えた三者で面談を行い、ミスマッチが起こらないようにします。これは即日派遣の場合も同様です。</p>
                 </li>
             </ul>
         </div>
