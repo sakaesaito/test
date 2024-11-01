@@ -336,6 +336,10 @@ input[type="submit"]{
   width: 315px;
   margin-top: 54px;
 }
+#feature {
+  width: 375px;
+  margin: 0 auto;
+}
 .feature_menu {
   margin: 72px auto 0 ;
   text-align: center;
@@ -434,7 +438,10 @@ button:hover {
   height: auto;
  /* 後ほど要修正　幅と位置 */
 }
-  
+#slider {
+  width: 375px;
+  margin: 0 auto;
+} 
 .slider_concept {
   padding-top: 31px;
   font-size: 18px;
@@ -458,6 +465,7 @@ button:hover {
 #plan {
   width: 375px;
   padding-top: 72px;
+  margin: 0 auto;
 }
 .plan_inner {
   margin: 0 auto;
