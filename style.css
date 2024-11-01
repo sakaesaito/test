@@ -227,7 +227,6 @@ label:nth-child(1) {
 }
 input {
   color: #AAAAAA;
-  padding: 16px auto 16px 8px;
   /* 箱に余白つけたい！！なぜつかない・・  */
 }
 input[type="text"], input[type="email"], input[type="tel"] {
@@ -238,6 +237,7 @@ input[type="text"], input[type="email"], input[type="tel"] {
   box-sizing: border-box;
   font-size: 16px;
   font-weight: 400;
+  padding: 16px auto 16px 8px;
 }
 .contact_note {
   font-size: 12px;
@@ -265,6 +265,7 @@ input[type="submit"]{
   background-color: #fff;
   color: #333333;
   width: 100%;
+
 }
 .works_inner {
   margin: 0 auto 39px;
@@ -288,16 +289,16 @@ input[type="submit"]{
 .works_logo img:nth-child(2) {
   margin-top: 8px;
 }
-.slider-container img {
+.logo-container img {
   width: 160px;
   height: 64px;
 }
-.slider-container {
+.logo-container {
   width: 100%;
   overflow: hidden;
   background-color: #fff;
 }
-.slider{
+.logo_slider {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -417,13 +418,23 @@ button:hover {
 }
 .slider_item {
   border: 1px;
-  width: 82.93%;
+  width: 90%;
   height: auto;
   margin: 57px auto 0;
   box-shadow: 0px 5px 8px rgba(51, 51, 51, 0.25);
   border-radius: 30px 0 30px 0;
   padding: 0 10px;
 }
+.slider_sec {
+  display: flex;
+  justify-content: space-between;
+}
+.arrow img {
+  width: 20px; 
+  height: auto;
+ /* 後ほど要修正　幅と位置 */
+}
+  
 .slider_concept {
   padding-top: 31px;
   font-size: 18px;
@@ -444,24 +455,122 @@ button:hover {
   margin-top: 48px;
   margin-bottom: 20px;
 }
+#plan {
+  width: 375px;
+  padding-top: 72px;
+}
 .plan_inner {
   margin: 0 auto;
   width: 81%;
-  text-align: center;
+  text-align: center; 
 }
 .plan_title {
   font-size: 24px;
   font-weight: 700;
-  margin-top: 72px;
 }
 .plan_list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
   align-items: center;
-  margin-top: 31px;
+  margin-top: 31px; 
 }
 .plan_item {
   box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.25);
   border-radius: 10px 10px 10px 10px;
-  padding: 8px 0 17px;
+  width: 96px;
+  border-top: solid 6px #007FC6
+}
+.plan_service {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.plan_number {
+  margin-top: 12px;
+  margin-bottom: 17px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #007FC6;
+}
+.plan_number span {
+  font-size: 12px;
+}
+.plan_text {
+  margin-top: 48px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: left;
+}
+#QA {
+  padding-top: 89px;
+}
+.QA_inner {
+  width: 91.4%;
+  padding: 0 16px ;
+  margin: 0 auto;
+}
+.QA_title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;  
+}
+
+
+
+
+.recommend {
+  background-color: #007FC6;
+  color: #fff;
+  padding-top: 72px;
+  padding-bottom: 40px;
+}
+.recommend_inner {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 16px;
+}
+.recommend_title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.recommend_item {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: center;
+  margin-top: 26px;
+}
+.recommend_pic img {
+  width: 240px;
+  height: auto;
+  margin-top: 16px;
+}
+.contact_second {
+  background-color: #007FC6;
+  padding-bottom: 46px;
+}
+footer {
+  background-color: #fff;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
+}
+.footer_inner {
+  margin: 0 auto;
+  padding: 0 16px;
+  display: block;
+}
+.footer_logo img{
+  /* width: 60.6%; */
+  width: 227px;
+}
+small img {
+  margin-top: 37px;
+  width: 105px;
+  height: auto;
+  
 }
