@@ -112,14 +112,17 @@
  .hero {
   width: 100%;
   background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%);
-  ;
+  position: relative;
  }
  .hero_inner {
   margin: 0 15px;
-  padding: 0 15px 26px;
+  padding: 0 15px 0;
   margin: 0 auto;
   color: #fff
   ;
+ }
+ .hero_left {
+  margin-bottom: 44px;
  }
  .hero_text {
   text-align: center;
@@ -179,25 +182,32 @@
   width: 344px;
   margin: 24px auto 0;
  }
+ .hero_note p:nth-child(2) {
+  margin-top: 8px;
+ }
+
 .hero_detail span {
-  font-size: 12px;text-align: start;
+  font-size: 12px;
+  vertical-align: top;
 }
 .job_listing img{
  margin: 0 auto;
  display: block;
- /* 位置を上のpに少し上に重ねて移動させる指示 ::biforeとか？ */
+ position: relative;
+ top: -15px;
 }
 .contact {
   width: 100%;
   height: auto;
   color: #333333;
+  padding-bottom: 26px;
 }
 .contact_inner {
   width:343px;
   height: auto;
   background-color: #fff;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto ;
   padding: 8px 8px 19px;
   border-radius: 10px;
 }
@@ -211,7 +221,12 @@
   border-radius: 10px;
   align-items: center;
   padding: 15px;
-  /* 調べ：三角の吹き出しをつける指示を調べる */
+}
+
+.contact_polygon img {
+  display: block;
+  text-align: center;
+  width: 17px;
 }
 label {
   display: block;
@@ -220,16 +235,16 @@ label {
   margin-top: 15px;
 }
 label:nth-child(1),label:nth-child(2){
-  margin-top: 25px;
+  margin-top: 15px;
 }
 label:nth-child(1) {
   margin-right: 155px;
 }
 input {
   color: #AAAAAA;
-  /* 箱に余白つけたい！！なぜつかない・・  */
 }
 input[type="text"], input[type="email"], input[type="tel"] {
+  display: inline-block;
   width: 100%;
   margin-top: 8px;
   border: 1px solid #ccc;
@@ -237,7 +252,13 @@ input[type="text"], input[type="email"], input[type="tel"] {
   box-sizing: border-box;
   font-size: 16px;
   font-weight: 400;
-  padding: 16px auto 16px 8px;
+  line-height: 48px;
+}
+
+textarea {
+  width: 327px;
+  height: 48px;
+  padding-left: 8px;
 }
 .contact_note {
   font-size: 12px;
@@ -257,7 +278,21 @@ input[type="submit"]{
   font-size: 16px;
   border-radius: 30px;
   border-style: none;
+  transition: 0.4s;
 }
+input[type="submit"]:hover{
+  opacity: .6;
+}
+.contact_name input {
+  width: 160px;
+}
+input[type="text"]:nth-child(1) {
+  margin-right: 9px;
+}
+input {
+  padding-left: 8px;
+}
+
 .contact_name {
   display: flex;
 }
@@ -410,7 +445,7 @@ button:hover {
 }
 #slider {
   width: 100%;
-  padding: 72px 10px 45px;
+  padding: 72px 6px 45px;
 }
 .slider_title {
   font-size: 24px;
@@ -418,11 +453,11 @@ button:hover {
   line-height: 1.5;
   color: #333333;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 .slider_item {
   border: 1px;
-  width: 90%;
+  width: 311px;
   height: auto;
   margin: 57px auto 0;
   box-shadow: 0px 5px 8px rgba(51, 51, 51, 0.25);
@@ -436,7 +471,7 @@ button:hover {
 .arrow img {
   width: 20px; 
   height: auto;
- /* 後ほど要修正　幅と位置 */
+ /* 要修正　幅と位置 */
 }
 #slider {
   width: 375px;
@@ -558,7 +593,7 @@ button:hover {
 }
 .contact_second {
   background-color: #007FC6;
-  padding-bottom: 46px;
+  padding-bottom: 20px;
 }
 footer {
   background-color: #fff;
@@ -572,13 +607,16 @@ footer {
   padding: 0 16px;
   display: block;
 }
-.footer_logo img{
-  /* width: 60.6%; */
+.footer_logo img {
   width: 227px;
+  transition: 0.4s;
 }
+
 small img {
   margin-top: 37px;
   width: 105px;
-  height: auto;
-  
+  height: auto; 
+}
+.footer_logo img:hover {
+  opacity: .6;
 }
