@@ -164,7 +164,7 @@
  }
  .copy_read {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.8;
   font-weight: 400;
   margin-top: 24px;
  }
@@ -254,6 +254,7 @@
   position: relative;
   top: -6px;
   left: 155px;
+  background-color: #F9F9F9;
 }
 label {
   display: block;
@@ -261,14 +262,13 @@ label {
   font-size: 14px;
   margin-top: 15px;
 }
-label:nth-child(1),label:nth-child(2){
-  margin-top: 15px;
-}
 label:nth-child(1) {
   margin-right: 155px;
 }
 input {
   color: #AAAAAA;
+  background-color: #F5F8FA;
+  padding-left: 8px;
 }
 input[type="text"], input[type="email"], input[type="tel"] {
   display: inline-block;
@@ -310,24 +310,19 @@ input[type="submit"]{
 input[type="submit"]:hover{
   opacity: .6;
 }
+.contact_name {
+  display: flex;
+}
 .contact_name input {
   width: 160px;
 }
 input[type="text"]:nth-child(1) {
   margin-right: 9px;
 }
-input {
-  padding-left: 8px;
-}
-
-.contact_name {
-  display: flex;
-}
 .works {
   background-color: #fff;
   color: #333333;
   width: 100%;
-
 }
 .works_inner {
   margin: 0 auto 39px;
@@ -396,6 +391,10 @@ input {
 }
 .lead_main img {
   width: 315px;
+  /* margin-top: px; */
+}
+.lead_text_img {
+  background-color: #F9F9F9;
   margin-top: 54px;
 }
 #feature {
@@ -612,29 +611,31 @@ button:hover {
   padding: 20px 0;
   border-radius: 10px;
 }
-.Qlogo {
-  display: inline-block;
+.QA_list dt::before {
+  content: "Q";
+	color: #fff;
+  border-radius: 50px;
+  background-color: #007FC6;
   font-size: 14px;
-  color: #fff;
   font-weight: 700;
-  border-radius: 30px;
-  background-color :#007FC6;
   height: 32px;
   width: 32px;
   text-align: center;
   padding-top: 5px;
   margin-right: 10px;
+  display: inline-block;
 }
-.Qsec:nth-child(2) {
-  background-color: #007FC6;
-  color: #fff;
-  margin-top: 16px;
+.QA_list dt::after {
+  content: "-";
+  font-size: 14px;
+  font-weight: 700;
+  height: 32px;
+  width: 32px;
+  text-align: right;
+  padding-top: 5px;
+  margin-right: 10px;
 }
-.Qlogo span:nth-child(2) {
-  color: #007FC6;
-  background-color: #fff;
-  border-radius: 30px;
-}
+
 .Qsec:nth-child(3)  {
   margin-top: 16px;
 }
@@ -647,7 +648,6 @@ button:hover {
 .Qsec:nth-child(6) {
   margin-top: 16px;
 } 
-
 .Asec {
   padding: 10px 10px 0;
   font-size: 14px;
@@ -659,13 +659,9 @@ button:hover {
   padding: 0 10px;
   margin-top: 10px;
 }
-
-
-
-
-
 .recommend {
-  background-color: #007FC6;
+  background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%);
+  ;
   color: #fff;
   padding-top: 72px;
   padding-bottom: 40px;
@@ -691,6 +687,7 @@ button:hover {
   width: 240px;
   height: auto;
   margin-top: 16px;
+  margin-bottom: 40px;
 }
 #contact_second {
   background-color: #007FC6;
