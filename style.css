@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    font-family:  Noto Sans JP , sans-serif;;
+    font-family: Noto Sans JP, sans-serif;;
   }
   html {
     scroll-behavior: smooth;
@@ -13,7 +13,7 @@
     margin: 0 auto;
     position: relative;
   }
-  header {
+  .header {
     color: #007FC6;
     height: 64px;
     width: 100%;
@@ -29,7 +29,7 @@
     align-items: center;
     justify-content: space-between;
   }
- .nav_content {
+ .header_nav {
     display: none;
  }
  .header_menu {
@@ -39,6 +39,7 @@
  }
  .header_logo img {
    transition: 0.4s;
+   margin-left: 5px;
  }
  .header_logo img:hover {
    opacity: .6;
@@ -136,33 +137,34 @@
   width: 100%;
   background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%);
   padding-top: 64px;
+
  }
  .hero_inner {
   margin: 0 15px;
   padding: 0 15px 0;
   margin: 0 auto;
-  color: #fff
-  ;
+  color: #fff;
+  padding-bottom: 24px;
  }
  .hero_left {
-  margin-bottom: 44px;
+  margin-bottom: 30px;
  }
  .hero_text {
   text-align: center;
  }
- .copy_text {
+ .hero_copy {
   font-size: 14px;
   line-height: 1.5;
   padding-top: 40px;
   font-weight: 400;
  }
- .copy_catch {
+ .hero_catch {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.8;
   margin-top: 18px;
  }
- .copy_read {
+ .hero_read {
   font-size: 14px;
   line-height: 1.8;
   font-weight: 400;
@@ -195,7 +197,7 @@
   gap: 20px;
  }
  .hero_detail {
-  margin-top: 18px;
+  margin-top: 14px;
  }
 
  .hero_note {
@@ -206,12 +208,13 @@
   margin: 24px auto 0;
  }
  .hero_note p:nth-child(2) {
-  margin-top: 8px;
+  margin-top: 5px;
  }
 
 .hero_detail span {
   font-size: 12px;
   vertical-align: top;
+  color:#333333;
 }
 .job_listing img{
  margin: 0 auto;
@@ -225,6 +228,9 @@
   color: #333333;
   padding-bottom: 26px;
 }
+.contact:nth-child(2) {
+  padding-bottom: 0;
+}
 .contact_inner {
   width:343px;
   height: auto;
@@ -232,7 +238,7 @@
   display: block;
   margin: 0 auto ;
   padding: 8px 8px 19px;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 .contact_form {
   position: relative;
@@ -244,9 +250,9 @@
   background-color: #007FC6;
   height: 52px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 6px;
   align-items: center;
-  padding: 15px;
+  padding: 14px;
 }
 
 .contact_polygon img {
@@ -264,6 +270,15 @@ label {
 }
 label:nth-child(1) {
   margin-right: 155px;
+  margin-top: 5px;
+}
+label:nth-child(2) {
+  margin-top: 5px;
+}
+label span {
+  font-weight: 400;
+  font-size: 14px;
+  color: #F90000;
 }
 input {
   color: #AAAAAA;
@@ -279,7 +294,7 @@ input[type="text"], input[type="email"], input[type="tel"] {
   box-sizing: border-box;
   font-size: 16px;
   font-weight: 400;
-  line-height: 48px;
+  height: 48px;
 }
 
 textarea {
@@ -290,7 +305,8 @@ textarea {
 .contact_note {
   font-size: 12px;
   font-weight: 400;
-  margin: 24px auto 0;
+  margin: 25px auto 0;
+  line-height: 1.5;
 }
 input[type="submit"]{
   display: block;
@@ -328,7 +344,7 @@ input[type="text"]:nth-child(1) {
   margin: 0 auto 39px;
   max-width: 375px;
   text-align: center;
-  padding: 0 20px;
+  padding: 0 18px;
 }
 .works_title  {
   font-size: 20px;
@@ -337,14 +353,15 @@ input[type="text"]:nth-child(1) {
   padding-top: 40px;
 }
 .works_logo img {
-  width:  87.7%;
+  width:  80%;
   height: auto;
   margin-top: 30px;
   margin:  30px auto 0;
   text-align: center;
 }
 .works_logo img:nth-child(2) {
-  margin-top: 8px;
+  margin-top: 4px;
+  width: 89%;
 }
 .logo-container img {
   width: 160px;
@@ -376,13 +393,13 @@ input[type="text"]:nth-child(1) {
 }
 .lead_title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 1.5;
 }
 .lead_text {
   margin-top: 63px;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.8;
 }
 .lead_text span {
@@ -418,7 +435,10 @@ input[type="text"]:nth-child(1) {
   border: 1px solid #007FC6;
   width: 91.2%;
   margin: 0 auto 24px;
-  padding: 14px 30px 22px;
+  padding: 14px 30px 21px;
+}
+.feature_item:nth-child(4) {
+  margin-bottom: 31px;
 }
 .feature_img img {
   width: 41.5%;
@@ -452,8 +472,9 @@ input[type="text"]:nth-child(1) {
   padding: 40px 28px ;
 }
 .info_title {
-  font-size: 21px;
+  font-size: 24px;
   line-height: 1.8;
+  font-weight: 700;
 }
 button {
   background-color: #fff ;
@@ -528,7 +549,7 @@ button:hover {
 }
 .slider_item img {
   width: 50%;
-  margin-top: 48px;
+  margin-top: 55px;
   margin-bottom: 20px;
 }
 #plan {
@@ -553,12 +574,13 @@ button:hover {
   grid-template-columns: repeat(3,1fr);
   gap: 12px;
   align-items: center;
-  margin-top: 31px;
+  margin-top: 30px;
 }
 .plan_item {
   box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.25);
   border-radius: 10px 10px 10px 10px;
   width: 96px;
+  height: 91px;
   border-top: solid 6px #007FC6
 }
 .plan_service {
@@ -664,7 +686,7 @@ button:hover {
   ;
   color: #fff;
   padding-top: 72px;
-  padding-bottom: 40px;
+  padding-bottom: 46px;
 }
 .recommend_inner {
   margin: 0 auto;
@@ -691,9 +713,8 @@ button:hover {
 }
 #contact_second {
   background-color: #007FC6;
-  padding-bottom: 20px;
 }
-footer {
+.footer {
   background-color: #fff;
   width: 100%;
   padding-top: 24px;
@@ -711,9 +732,11 @@ footer {
 }
 
 small img {
-  margin-top: 37px;
-  width: 105px;
-  height: auto; 
+font-family: Goldman;
+font-size: 12px;
+font-weight: 400;
+line-height: 12px;
+text-align: left;
 }
 .footer_logo img:hover {
   opacity: .6;
