@@ -32,6 +32,7 @@
  .header_nav {
     display: none;
  }
+ 
  .header_menu {
     display: flex;
     align-items: center;
@@ -111,7 +112,8 @@
   text-align: center;
   margin-top: 4px;
  }
- .header_wrap{
+ /* ハンバーガーがバツ表示に使用 */
+ .icon {
   display: none;
   width: 375px;
  }
@@ -741,4 +743,147 @@ text-align: left;
 }
 .footer_logo img:hover {
   opacity: .6;
+}
+
+@media (min-width:800px) { 
+
+  .header_nav{
+    display: block;
+  }
+  .nav_list {
+    list-style-type: none;
+    padding: 0;
+  }
+  .nav_item{
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 12px;
+  }
+  .menu {
+    display: none;
+  }
+  .mail_icon  {
+    width: 189px;
+    height: 64px;
+    background-color: #007FC6;
+    align-items: center; 
+    
+  }
+  .mail_icon a {
+    font-size: 10px;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-weight:400;
+    transition: 0.4s;  
+  }
+  .mail_icon a:hover {
+    opacity: .6;
+  }
+  .mail_icon img {
+    width: 32px;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 5px;
+  }
+  .hero_inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 84px 20px 0;
+  }
+  .hero_left {
+    width: 100%;
+    margin-bottom: 68px;
+   }
+  .hero_text {
+    text-align: left;
+  }
+  .hero_copy {
+    font-size: 20px;
+  }
+  .hero_catch {
+    margin-top: 11px;
+    font-size: 56px;
+  }
+  .hero_catch {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 11px;
+   }
+   .hero_read {
+    font-size: 14px;
+    margin-top: 15px;  
+   }
+   .hero_list {
+    text-align: center;
+    width: 400px;
+   }
+   .worfs_inner {
+    max-width:1280px;
+    padding: 0 20px;
+   }
+  
+  }
+
+
+@media (min-width:1241px) {
+  .header_logo img {
+    width: 227px;
+    height: auto;
+  }
+  .nav_item{
+    display: inline-block;
+    margin-right: 28px;
+  }
+  .nav_item{
+    display: inline-block;
+    margin-right: 28px;
+    font-size: 16px;
+  }
+
+  .hero {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hero_inner {
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* padding: 84px 20px; */
+  }
+  .hero_left {
+    width: 100%;
+    /* margin-bottom: 127px; */
+   }
+  .hero_copy {
+    font-size: 20px;
+  }
+  .hero_catch {
+    margin-top: 11px;
+    font-size: 56px;
+  }
+  .hero_catch {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 11px;
+   }
+   .hero_read {
+    font-size: 14px;
+    margin-top: 15px;
+   }
+  .hero_read br:nth-child(1) {
+    display: none;
+   }
+   
+   .hero_list {
+    text-align: center;
+    width: 400px;
+   }
+
 }
