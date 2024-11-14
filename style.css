@@ -223,12 +223,6 @@
  position: relative;
  top: -15px;
 }
-.contact {
-  width: 100%;
-  height: auto;
-  color: #333333;
-  padding-bottom: 26px;
-}
 .contact:nth-child(2) {
   padding-bottom: 0;
 }
@@ -241,6 +235,7 @@
   padding: 8px 8px 19px;
   border-radius: 6px;
   color: #333333;
+  padding-bottom: 28px;
 }
 
 .contact_text {
@@ -253,6 +248,7 @@
   border-radius: 6px;
   align-items: center;
   padding: 14px;
+  margin:  0 ;
 }
 
 .contact_polygon img {
@@ -361,6 +357,7 @@ input[type="text"]:nth-child(1) {
   height: auto;
   margin: 0  auto ;
   text-align: center;
+  margin-top: 30px;
 }
 .works_logo img:nth-child(2) {
   margin-top: 4px;
@@ -524,14 +521,14 @@ button:hover {
   display: flex;
   justify-content: space-between;
 }
-.arrow img {
+.slider_arrow img {
   width: 20px; 
   height: auto;
   position: relative;
   top: 283px;
   transition: 0.4s;
 }
-.arrow img:hover {
+.slider_arrow img:hover {
   opacity: .6;
 }
 #slider {
@@ -559,16 +556,16 @@ button:hover {
   margin-bottom: 20px;
 }
 #plan {
-  width: 375px;
-  padding-top: 72px;
+  width: 100%;
   text-align: center;
   margin: 0 auto;
   background-color: #F9F9F9;
 }
 .plan_inner {
-  width: 81%;
+  width: 300px;
   text-align: center; 
   margin: 0 auto;
+  padding-top: 72px;
 }
 .plan_title {
   font-size: 24px;
@@ -696,13 +693,13 @@ button:hover {
 }
 .recommend_inner {
   margin: 0 auto;
-  text-align: center;
   padding: 0 16px;
 }
 .recommend_title {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
+  text-align: center;
 }
 .recommend_item {
   font-size: 12px;
@@ -717,6 +714,7 @@ button:hover {
   margin-top: 16px;
   margin-bottom: 40px;
 }
+
 #contact_second {
   background-color: #007FC6;
 }
@@ -761,6 +759,10 @@ text-align: left;
   .nav_list {
     list-style-type: none;
     padding: 0;
+    transition: 0.4s;
+  }
+  .nav_list:hover {
+    opacity: .6;
   }
   .nav_item{
     display: inline-block;
@@ -872,11 +874,18 @@ text-align: left;
 
 
 @media (min-width:1421px) {
-  
+  .header {
+    width: 100%;
+    margin:  0 auto;
+  }
+  .header_inner {
+    margin-left: 50px;
+  }
   .header_logo img {
     width: 227px;
     height: 52px;
     align-items: center;
+
   }
   .nav_item{
     display: inline-block;
@@ -946,23 +955,29 @@ text-align: left;
      }
      .contact {
       align-items: start;
+      position: relative;
+      height: auto;
      }
      .contact_inner {
       width:400px;
-      height: auto;
+      height: 586px;
       background-color: #fff;
       display: block;
       margin: 0 auto 0 51px ;
-      padding: 8px 16px 28px;
+      padding: 8px 16px 0;
       border-radius: 6px; 
     }
     .contact_form_sec label {
       width: 368px;
+      height: 48px;
     }
     .contact_text {
       font-size: 20px;
       width: 384px;
-      margin: 0 auto;
+      margin: 0 ;
+      position: relative;
+      z-index: 1;
+      left: -8px;
     }
     /* ここの三角を擬似要素で後で要チャレンジ箇所*/
     .contact_polygon img {
@@ -978,7 +993,7 @@ text-align: left;
       background-color: #fff;
       display: block;
       margin: 0 auto;
-      padding: 8px 8px 28px;
+      padding: 8px 8px 0px;
       border-radius: 6px; 
     }
     
@@ -992,7 +1007,7 @@ text-align: left;
       font-size: 14px;
     }
     label:nth-child(1) {
-      margin-right: 165px;
+      margin-right: 178px;
     } 
     input[type="text"], input[type="email"], input[type="tel"] {
       display: inline-block;
@@ -1029,6 +1044,10 @@ text-align: left;
     input[type="text"]{
       padding: 0 8px;
     }
+    input[type="text"]:nth-child(1){
+      margin-right: 0;
+    }
+
     label[for="email"] {
      margin-top: 7px;
     }
@@ -1038,11 +1057,11 @@ text-align: left;
     }
     .works_title  {
       font-size: 32px;
-      padding-top: 80px;
+      margin-top: 43px;
     }
     .works_logo {
       display: flex;
-      margin-top: 40px;
+      margin-top: 20px;
     }
     .works_logo img {
      width: 41%;
@@ -1050,24 +1069,33 @@ text-align: left;
     }
     .works_logo img:nth-child(2) {
       width: 41%;
-      height: 14%; 
+      height: 14%;
+      margin-top: 30px; 
     }
-    .logo-container {
+    .logo_container {
       width: 100%;
       padding-bottom: 46px;
     }
     .logo_slider {
-      margin-top: 64px; 
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      gap: 80px;
+      margin-top: 25px; 
+    }
+    .logo_slider img {
+      width: 248px;
+      height: 99px;
     }
     #lead_area {
       width: 100%;
     }
     .lead_main {
       max-width: 1024px;
-      margin-top: 50px;
+      margin: 0 auto;
     }
     .lead_title {
       font-size: 32px;
+      margin-top: 96px;
     }
     .lead_text {
       font-size: 24px;
@@ -1184,17 +1212,25 @@ text-align: left;
       height: 654px;
       margin: 0 auto;
       padding-top: 69px;
+      place-content: center;
     }
     .plan_title {
       font-size: 32px;
     }
     .plan_list {
-      margin-top: 65px;
+      width: 1020px;
+      margin: 65px auto 0;
       padding: 0 45px;
-      gap: 15px;
+      gap: 11px;
       display: grid;
       grid-template-columns: repeat(3,1fr);
       align-items: center;
+    }
+    .plan_text {
+      text-align: left;
+      padding: 0 20px;
+      width: 955px;
+      margin: 45px auto 0 ;
     }
     .plan_item {
       box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.25);
@@ -1225,6 +1261,7 @@ text-align: left;
     }
     #qa {
       width: 100%;
+      padding-top: 96px;
     }
     .qa_container {
       max-width: 1024px;
@@ -1242,22 +1279,23 @@ text-align: left;
       position: relative;
     }
     .slider_title {
-      font-size: 24px;
+      font-size: 32px;
+      line-height: 1.8;
     }
     .slider_item {
       border: 1px;
       width: 405px;
       height: auto;
-      margin: 57px auto 0;
+      margin: 63px auto 0;
       box-shadow: 0px 5px 8px rgba(51, 51, 51, 0.25);
       border-radius: 30px 0 30px 0;
-      padding: 0 10px;
+      padding: 0 20px;
     }
     .slider_sec {
       display: flex;
       justify-content: space-between;
     }
-    .arrow img {
+    .slider_arrow img {
       width: 34px; 
       height: auto;
       position: relative;
@@ -1278,8 +1316,50 @@ text-align: left;
       font-size: 14px;
       line-height: 1.8;
     }
+  
     .slider_item img {
       width: 42.6%;
       margin-top: 37px;
+    }
+    .recommend {
+      padding-top: 96px;
+      padding-bottom: 57px;
+      height: 850px;
+    }
+    .recommend_inner {
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      max-width: 888px;
+    }
+    .recommend_left {
+      width: 40%;
+    }
+    .recommend_title {
+      font-size: 32px;
+      text-align: center;
+      line-height: 1;
+    }
+    .recommend_title br {
+      display: none;
+    }
+    .recommend_item {
+      font-size: 16px;
+      text-align: left;
+      margin-top: 111px;
+      width: 413px;
+    }
+    .recommend_pic img {
+      width: 413px;
+      height: 269px;
+      margin-top: 48px;
+      margin-bottom: 223px;
+    }
+    .contact_second {
+      background-color: #007FC6;
+    }
+    .contact_inner:nth-child(2):nth-child(2) {
+      margin-top: 50px;
     }
   }
