@@ -642,7 +642,7 @@ button:hover {
   padding: 20px 0;
   border-radius: 10px;
 }
-.qa_list dt::before {
+/* .qa_list dt::before {
   content: "Q";
 	color: #fff;
   border-radius: 50px;
@@ -665,7 +665,7 @@ button:hover {
   text-align: right;
   padding-top: 5px;
   margin-right: 10px;
-}
+} */
 
 .qsec:nth-child(3)  {
   margin-top: 16px
@@ -701,6 +701,7 @@ button:hover {
 .recommend_inner {
   margin: 0 auto;
   padding: 0 16px;
+  max-width: 400px;
 }
 .recommend_title {
   font-size: 24px;
@@ -712,14 +713,18 @@ button:hover {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.8;
-  text-align: center;
+  text-align: left;
   margin-top: 26px;
 }
 .recommend_pic img {
+  display: block;
   width: 240px;
   height: auto;
+  margin: 0 auto;
   margin-top: 16px;
   margin-bottom: 40px;
+  text-align: center;
+  
 }
 
 #contact_second {
@@ -742,7 +747,7 @@ button:hover {
   transition: 0.4s;
 }
 
-small img {
+.small_sec img {
 font-family: Goldman;
 font-size: 12px;
 font-weight: 400;
@@ -755,10 +760,10 @@ text-align: left;
 
 @media (min-width:980px) { 
   .header {
-    height: 96px;
+    height: 64px;
   }
   .header_menu {
-    height: 96px;
+    height: 64px;
   }
   .header_nav{
     display: block;
@@ -781,7 +786,7 @@ text-align: left;
   }
   .mail_icon  {
     width: 189px;
-    height: 96px;
+    height: 64px;
     background-color: #007FC6;
     align-items: center;  
   }
@@ -876,7 +881,10 @@ text-align: left;
   .lead_text_imgpc {
     background-color: #F9F9F9;
   }
-  
+  /* .recommend_left {
+    width: 400px;
+    margin: 0 auto;
+   } */
   }
 
 
@@ -884,20 +892,29 @@ text-align: left;
   .header {
     width: 100%;
     margin:  0 auto;
+    height: 96px;
   }
   .header_inner {
-    margin-left: 50px;
+    margin-left: 0.5%;
+    padding-left: 20px;
+  }
+  .header_menu {
+    height: 96px;
   }
   .header_logo img {
     width: 227px;
     height: 52px;
     align-items: center;
-
+  }
+  .mail_icon  {
+    width: 189px;
+    height: 96px;
   }
   .nav_item{
     display: inline-block;
     margin-right: 28px;
     font-size: 16px;
+    font-weight: 700;
   }
   .mail_icon p {
     font-size: 16px;
@@ -928,6 +945,7 @@ text-align: left;
    .hero_read {
     font-size: 20px;
     margin-top: 15px;
+    line-height: 1.5;
    }
    .hero_about{
     margin-top: 37px;
@@ -1310,7 +1328,7 @@ text-align: left;
       width: 34px; 
       height: auto;
       position: relative;
-      top: 283px;
+      top: 293px;
       transition: 0.4s;
     }
     .arrow img:hover {
@@ -1344,20 +1362,21 @@ text-align: left;
       padding: 0 20px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       max-width: 888px;
     }
-    .slider_item img {
+    .slider_pic_a img{
       width: 42.6%;
       margin-top: 37px;
     }
-    .slider_item img:nth-child(2){
+    .slider_pic_b img{
       width: 64px;
+      height: 64px;
       margin-top: 37px;
     }
-    
-    
     .recommend_left {
       width: 40%;
+      margin: 0 auto;
     }
     .recommend_title {
       font-size: 32px;
@@ -1378,10 +1397,17 @@ text-align: left;
       height: 269px;
       margin-top: 48px;
       margin-bottom: 223px;
-    }
-    .contact_second {
-      justify-content: center;
       align-items: center;
     }
+    .footer_inner {
+      height: 100px;
+    }
+   .small_sec {
+    display: block;
+    margin-top: 38px;
+    font-family: Goldman;
+    font-size: 12px;
+    font-weight: 400;
+   }
    
   }
