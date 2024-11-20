@@ -1230,8 +1230,6 @@ text-align: left;
       max-width: 1024px;
       margin: 0 auto;
       padding-top: 96px;
-    }
-    #slider {
       width: 100%;
       padding: 96px 10px 55px;
     }
@@ -1362,6 +1360,7 @@ text-align: left;
     .qa_container {
       max-width: 1024px;
       margin: 0 auto;
+      
     }
     .qa_title {
       color: #333333;
