@@ -756,78 +756,7 @@ text-align: left;
 
 @media (min-width:960px) { 
   
-  .hero {
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 96px;
-  }
-  .hero_inner {
-    width: 100%;
-    max-width:  960px;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-auto-flow: column;
-    justify-content: start;
-    gap: 20px; 
-    }
-  .hero_copy {
-    padding-top: 0;
-  }
-  .hero_left {
-    margin-bottom: 0;
-   }
-  .hero_text {
-    text-align: left;
-  }
-  .hero_catch {
-    font-size: 30px;
-   }
-  .hero_read {
-    font-size: 14px;
-    margin-top: 15px;  
-   }
-  .hero_read br:nth-child(1) {
-    display: none;
-   }
-   .hero_item {
-    font-size: 20px;
-    font-weight: 700;
-   }
-   .hero_list {
-    margin: 0 ;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: start;
-   }
-   .hero_note {
-    text-align: left;
-    width: 100%;
-    margin: 27px auto 0;
-   }
-   #span {
-    font-size: 16px;
-    vertical-align: bottom;
-      color:#007FC6
-   }
-   .job_listing img{
-    margin: 0 auto;
-    display: block;
-    position: relative;
-    top: -70%;
-   }
-   .contact {
-    padding: 0;
-   }
-   .works_logo img:nth-child(2) {
-    width: 41%;
-    height: 14%; 
-  }
-  .lead_text_imgpc img {
-    display: none;
-  }
-  .lead_text_imgpc {
-    background-color: #F9F9F9;
-  }
+  
 /* } */
 /* @media (min-width:1421px) { */
   .header {
@@ -914,22 +843,88 @@ text-align: left;
   }
   .hero {
     width: 100%;
-    /* height: 850px; */
     margin: 0 auto;
     padding-top: 96px;
   }
   .hero_inner {
     width: 100%;
     max-width: 960px;
-    padding: 0 15px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 20px; 
+    }
+  .hero_copy {
+    padding-top: 0;
+  }
+  .hero_left {
+    margin-bottom: 0;
+   }
+  .hero_text {
+    text-align: left;
+  }
+  .hero_catch {
+    font-size: 30px;
+   }
+  .hero_read {
+    font-size: 14px;
+    margin-top: 15px;  
+   }
+  .hero_read br:nth-child(1) {
+    display: none;
+   }
+   .hero_item {
+    font-size: 20px;
+    font-weight: 700;
+   }
+   .hero_list {
+    margin: 0 ;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+   }
+   .hero_note {
+    text-align: left;
+    width: 100%;
+    margin: 27px auto 0;
+   }
+   #span {
+    font-size: 16px;
+    vertical-align: bottom;
+      color:#007FC6
+   }
+   .job_listing img{
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: -70%;
+   }
+   .contact {
+    padding: 0;
+   }
+   .works_logo img:nth-child(2) {
+    width: 41%;
+    height: 14%; 
+  }
+  .lead_text_imgpc img {
+    display: none;
+  }
+  .lead_text_imgpc {
+    background-color: #F9F9F9;
+  }
+  .hero_inner {
+    width: 100%;
+    max-width: 960px;
+    padding: 0 20px;
     justify-content: space-between;
     margin: 0 auto;
     height: 760px;
-    gap: 161px;
+    gap: 16%;
     padding-bottom:  0;
     } 
   .hero_list {
-    width:536px;
+    width:50%;
     justify-content: start;
     margin-left :10px;
   }
@@ -1161,10 +1156,12 @@ text-align: left;
     }
     #feature {
       width: 100%;
+      max-width: 1024px;
       margin: 0 auto;
+      padding: 0 20px;
     }
     .feature_menu {
-      width: 986px;
+      width: 100%;
       margin: 0 auto;
     }
     .feature_heading {
@@ -1181,8 +1178,8 @@ text-align: left;
     }
     .feature_item {
       border: 1px solid #007FC6;
-      height: 325px;
-      width: 480px;
+      height: 100%;
+      width: 100%;
       margin: 0;
       padding: 14px 30px 21px;
     }
@@ -1196,6 +1193,11 @@ text-align: left;
     }
     .feature_item:nth-child(4) {
       margin: 0;
+      padding-bottom: 18px;
+
+    }
+    .feature_lead {
+      padding-bottom: 28px;
     }
     .info {
       margin-top: 31px;
@@ -1205,6 +1207,7 @@ text-align: left;
     }
     .info_inner {
       width: 100%;
+      max-width: 1024px;
       height: 240px;
       align-items: center;
       text-align: center;
@@ -1298,11 +1301,12 @@ text-align: left;
       padding-top: 0px;
     } 
     .plan_inner {
-      width: 1024px;
+      width: 100%;
+      max-width: 1024px;
       height: auto;
       margin: 0 auto;
       place-content: center;
-      padding-top: 0px;
+      padding: 0 20px;
       padding-bottom: 57px;
     }
     .plan_title {
@@ -1310,7 +1314,7 @@ text-align: left;
       padding-top: 96px;
     }
     .plan_list {
-      width: 1020px;
+      max-width: 1020px;
       margin: 65px auto 0;
       padding: 0 45px;
       gap: 11px;
