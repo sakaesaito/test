@@ -881,11 +881,11 @@ text-align: left;
     margin: 27px auto 0;
    }
    .job_listing img{
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     display: block;
-    position: relative;
-    left: 58%;
+    /* position: relative; */
+    left: 30%;
    }
   .hero_left {
    margin: 0 auto;
@@ -1159,6 +1159,12 @@ text-align: left;
   .feature_item:nth-child(4) {
     margin: 0;
     padding-bottom: 18px;
+  }
+  .feature_lead{
+    padding-bottom: 29px;
+  }
+  .feature_item:nth-last-child(3), .feature_lead:nth-last-child(4){
+    padding-bottom: 0px;
   }
   
   .info {
