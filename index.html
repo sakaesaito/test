@@ -102,33 +102,35 @@
                     <p>※1 CareSend開始2023年4月時と2024年4月時の比較</p>
                     <p>※2 CareSend2023年度一年間の実績</p>
                 </div>
-                    <div class="job_listing">
-                        <img src="img/job-listing.png" alt="">
-                    </div>
+                <div class="job_listing">
+                    <img src="img/job-listing.png" alt="">
+                </div>
             </div>
             <div class="contact">
                 <div class="contact_inner">
                     <div class="contact_form">
                         <h3 class="contact_text">派遣事例が分かる資料をダウンロード‼︎</h3><div class="contact_polygon"><img src="img/Polygon 1.png" alt=""></div>
                         <form action="/submit" method="POST">
+                        <div class="contact_namesec">
                             <div class="contact_name">
                                 <label for="lastName">姓<span>*</span></label>
-                                <label for="firstName">名<span>*</span></label>
+                                <input type="text" name="lastname" placeholder="介護">
                             </div>
-                        <div class="contact_name">
-                            <input type="text" name="lastname" placeholder="介護">
-                            <input type="text" name="firstName" placeholder="太郎">
+                            <div class="contact_name">
+                                <label for="firstName">名<span>*</span></label>
+                                <input type="text" name="firstName" placeholder="太郎">
+                            </div>
                         </div>
-                        <div>
-                            <label for="company">会社名<span>*</span></label>
-                            <input type="text"name="company" placeholder="株式会社CareSend">
-                        </div>
-                        <label for="email">メールアドレス<span>*</span></label>
-                        <input type="email"  name="email" placeholder="caresend@caresend.com" >
-                        <label for="tel">電話番号<span>*</span></label>
-                        <input type="tel"  name="tel" placeholder="000-0000-0000" >
-                        <p class="contact_note">このフォームから送信された情報は、 プライバシーポリ<br>シー に基づいて処理されます。</p>
-                        <input type="submit" value="資料ダウンロード（無料）">
+                            <div>
+                                <label for="company">会社名<span>*</span></label>
+                                <input type="text"name="company" placeholder="株式会社CareSend">
+                            </div>
+                            <label for="email">メールアドレス<span>*</span></label>
+                            <input type="email"  name="email" placeholder="caresend@caresend.com" >
+                            <label for="tel">電話番号<span>*</span></label>
+                            <input type="tel"  name="tel" placeholder="000-0000-0000" >
+                            <p class="contact_note">このフォームから送信された情報は、 プライバシーポリ<br>シー に基づいて処理されます。</p>
+                            <input type="submit" value="資料ダウンロード（無料）">
                         </form> 
                     </div>        
                 </div>

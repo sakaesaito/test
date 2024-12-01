@@ -16,7 +16,7 @@
   .header {
     color: #007FC6;
     height: 64px;
-    width: 100vw;
+    width: 100%;
     background-color: #fff;
     position: fixed;
     z-index: 999; 
@@ -24,7 +24,7 @@
   }
   .header_inner {
     width: 100%;
-    margin: 0 0 0auto;
+    margin: 0 0 0 auto;
     margin-left: 10px;
     display: flex;
     align-items: center;
@@ -185,6 +185,7 @@
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 4px;
+  margin-top: 16px;
  }
  .hero_about li {
   background-color: #fff;
@@ -845,14 +846,12 @@ text-align: left;
     width: 100%;
     height: auto;
     max-width: 1536px;
-    margin: 0 auto;
-    
+    margin: 0 auto; 
     padding: 0;
   }
   .hero_inner {
     width: 100%;
     max-width: 1536px;
-    /* height: 100%; */
     margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 30%;
@@ -888,13 +887,14 @@ text-align: left;
     text-align: left;
     width: 100%;
     margin: 27px auto 0;
+    padding-bottom: 127px;
    }
    .job_listing img{
-    width: 50%;
+    width: 25%;
     margin: 0 auto;
-    /* display: block; */
-    position: relative;
-    left: 30%;
+    position: absolute;
+    left: 39%;
+    top: 11%;
    }
   .hero_left {
    margin: 0 auto;
@@ -932,20 +932,16 @@ text-align: left;
     #span {
     font-size: 24px;
     vertical-align: bottom;
-      color:#007FC6
+    color:#007FC6
     }
     .hero_note p:nth-child(2) {
-      margin-top: 7px;
+    margin-top: 7px;
     }
-
-    
     .contact {
-    /* align-items: start; */
-    /* position: relative; */
     height: auto;
-    /* justify-content: left; */
+    width: 100%;
     place-content: center;
-    padding: 0 20px;
+    padding: 20px 20px 0 ;
     }
     .contact_inner {
     width:400px;
@@ -956,6 +952,27 @@ text-align: left;
     padding: 8px 16px 0;
     border-radius: 6px;
   }
+  .contact_name {
+    display: inline-block;
+    width: 175px;
+    height: 48px;
+  }
+  .contact_names input{
+    display: block;
+    width: 175px;
+    height: 48px;
+    
+  }
+  .contact_namesec {
+    display: flex;
+  }
+  
+  .contact_name:nth-child(2) {
+    display: inline-block;
+    width: 175px;
+    height: 48px;
+  }
+
   .contact_form_sec label {
     width: 368px;
     height: 48px;
@@ -1135,13 +1152,14 @@ text-align: left;
   }
   #feature {
     width: 100%;
-    max-width: 1024px;
     margin: 0 auto;
-    padding: 0 20px;
+    
   }
   .feature_menu {
     width: 100%;
+    max-width: 1024px;
     margin: 0 auto;
+    
   }
   .feature_heading {
     font-size: 32px;
@@ -1161,8 +1179,7 @@ text-align: left;
     height: 100%;
     width: 100%;
     margin: 0;
-    padding: 14px 30px 0x;
-    
+    padding: 14px 30px 0; 
   }
 
   .feature_img img {
@@ -1183,7 +1200,11 @@ text-align: left;
     padding-bottom: 29px;
   } 
   .info {
+    width: 100%;
+    max-width: 1536px;
+    margin: 0 auto;
     margin-top: 31px;
+  
   }
   .info_title {
     line-height: 43.2px; 
@@ -1213,14 +1234,17 @@ text-align: left;
     color: #222222;
   }
   #slider {
-    max-width: 1024px;
     margin: 0 auto;
-    padding-top: 96px;
     width: 100%;
-    padding: 96px 30px 55px;
+    padding-top: 96px;
+    padding-bottom: 0;
   }
   .slider_sec {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
     position: relative;
+    padding: 73px 20px 55px;
   }
   .slider_title {
     font-size: 32px;
@@ -1230,7 +1254,7 @@ text-align: left;
     border: 1px;
     width: 93%;
     height: auto;
-    margin: 63px auto 0;
+    margin: 0 auto ;
     box-shadow: 0px 5px 8px rgba(51, 51, 51, 0.25);
     border-radius: 30px 0 30px 0;
     padding: 0 20px;
@@ -1247,16 +1271,16 @@ text-align: left;
     width: 34px; 
     height: auto;
     position: relative;
-    top: 293px;
-    left: -8px;
+    top: 45%;
+    left: -20px;
     transition: 0.4s;
   }
   .arrow img:hover {
     opacity: .6;
   }
-  .slider_arrow img:nth-child(1) {
-    right: 5px;
-  }
+  /* .slider_arrow img:nth-child(2) {
+    right: 45px;
+  } */
   .slider_concept {
     padding-top: 31px;
     font-size: 24px;
