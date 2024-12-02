@@ -887,14 +887,14 @@ text-align: left;
     text-align: left;
     width: 100%;
     margin: 27px auto 0;
-    padding-bottom: 127px;
+    /* padding-bottom: 127px; */
    }
    .job_listing img{
-    width: 25%;
+    width: 50%;
     margin: 0 auto;
-    position: absolute;
+    position: relative;
     left: 39%;
-    top: 11%;
+    bottom: 0;
    }
   .hero_left {
    margin: 0 auto;
@@ -967,8 +967,8 @@ text-align: left;
     display: flex;
   }
   
-  .contact_name:nth-child(2) {
-    display: inline-block;
+  .contact_name:nth-child(1) {
+    display: block;
     width: 175px;
     height: 48px;
   }
@@ -1025,6 +1025,9 @@ text-align: left;
     font-weight: 400;
     height: 48px;
     padding: 0 8px;
+  }
+  .contact_name input[type="text"]:nth-child(1){
+    width: 175px;
   }
   .contact_note {
     font-size: 14px;
@@ -1090,7 +1093,7 @@ text-align: left;
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 80px;
-    margin-top: 25px; 
+    margin-top: 25px;
   }
   .logo_slider img {
     width: 248px;
@@ -1432,5 +1435,17 @@ text-align: left;
   font-size: 12px;
   font-weight: 400;
   }
+  .logo_slider .slider {
+    display: flex;
+    width: calc(5* 428px); /* 同じロゴを繰り返してスムーズにループさせる */
+}
+@keyframes slide {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
   
 }

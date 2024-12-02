@@ -11,7 +11,8 @@
 <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com/)" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com/)">
-<link rel="icon" href="img/favicon.png"> 
+<link rel="icon" href="img/favicon.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -309,24 +310,26 @@
                         <div class="contact_polygon">
                         <img src="img/Polygon 1.png" alt=""></div>
                         <form action="/submit" method="POST">
-                            <div class="contact_name">
-                                <label for="lastName">姓<span>*</span></label>
-                                <label for="firstName">名<span>*</span></label>
+                           <div class="contact_namesec">
+                                <div class="contact_name">
+                                    <label for="lastName">姓<span>*</span></label>
+                                    <input type="text" name="lastname" placeholder="介護">
+                                </div>
+                                <div class="contact_name">
+                                    <label for="firstName">名<span>*</span></label>
+                                    <input type="text" name="firstName" placeholder="太郎">
+                                </div>
                             </div>
-                        <div class="contact_name">
-                            <input type="text" name="lastname" placeholder="介護">
-                            <input type="text" name="firstName" placeholder="太郎">
-                        </div>
-                        <div>
-                            <label for="company">会社名<span>*</span></label>
-                            <input type="text"name="company" placeholder="株式会社CareSend">
-                        </div>
-                        <label for="email">メールアドレス<span>*</span></label>
-                        <input type="email"  name="email" placeholder="caresend@caresend.com" >
-                        <label for="tel">電話番号<span>*</span></label>
-                        <input type="tel"  name="tel" placeholder="000-0000-0000" >
-                        <p class="contact_note">このフォームから送信された情報は、 プライバシーポリ<br>シー に基づいて処理されます。</p>
-                        <input type="submit" value="資料ダウンロード（無料）">
+                            <div>
+                                <label for="company">会社名<span>*</span></label>
+                                <input type="text"name="company" placeholder="株式会社CareSend">
+                            </div>
+                            <label for="email">メールアドレス<span>*</span></label>
+                            <input type="email"  name="email" placeholder="caresend@caresend.com" >
+                            <label for="tel">電話番号<span>*</span></label>
+                            <input type="tel"  name="tel" placeholder="000-0000-0000" >
+                            <p class="contact_note">このフォームから送信された情報は、 プライバシーポリ<br>シー に基づいて処理されます。</p>
+                            <input type="submit" value="資料ダウンロード（無料）">
                         </form> 
                     </div>         
                 </div>        
