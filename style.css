@@ -89,8 +89,9 @@
    border: none;
  }
  .menu:hover {
-   opacity: .5;
+   /* opacity: .9; */
  }
+
  /* ハンバーガーの３本線 */
  .menu span{
    display: block;
@@ -116,6 +117,7 @@
 
  /* ドロワーメニュー */
 .drawer_nav {
+  /* display: none; */
   position: fixed;
   top: 64px;
   right: 0;
@@ -123,7 +125,7 @@
   height: 70vh;
   background-color: #007FC6;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  transition: left 0.3s ease-in-out;
+  transition: left 0.3s ;
   padding-left: 16px;
 }
 
@@ -257,10 +259,13 @@
  margin: 0 auto;
  display: block;
  position: relative;
- top: -15px;
+}
+.contact {
+  margin-right: 20px;
 }
 .contact:nth-child(2) {
   padding-bottom: 0;
+  margin-left: 40px;
 }
 .contact_inner {
   width:343px;
@@ -302,32 +307,54 @@ label {
 }
 label:nth-child(1) {
   margin-right: 155px;
-  margin-top: 5px;
+  margin-top: -4px;
 }
 label:nth-child(2) {
   margin-top: 4px;
 }
 label:nth-child(3) {
-  margin-top: 1px;
+  margin-top: 4px;
 }
 label[for="company"] {
-  margin-top: 15px;
+  margin-top: 32px;
 }
-
+.contact_namesec {
+  display: flex;
+  gap: 15px; 
+  margin-bottom: 15px; 
+}
+.contact_name {
+  display: inline-block;
+  width: 175px;
+  height: 48px;
+}
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"] {
+  width: 100%;
+}
 label span {
   font-weight: 400;
   font-size: 14px;
   color: #F90000;
 }
+
 input {
   color: #333333;
   background-color: #F5F8FA;
   padding-left: 8px;
 }
+.contact_name {
+  margin-bottom: 15px;
+}
+
+input[type="text"]:nth-child(1) {
+  margin-right: 9px;
+}
 input[type="text"], input[type="email"], input[type="tel"] {
   display: inline-block;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -335,7 +362,6 @@ input[type="text"], input[type="email"], input[type="tel"] {
   font-weight: 400;
   height: 48px;
 }
-
 textarea {
   width: 327px;
   height: 48px;
@@ -365,15 +391,7 @@ input[type="submit"]{
 input[type="submit"]:hover{
   opacity: .6;
 }
-.contact_name {
-  display: flex;
-}
-.contact_name input {
-  width: 160px;
-}
-input[type="text"]:nth-child(1) {
-  margin-right: 9px;
-}
+
 .works {
   background-color: #fff;
   color: #333333;
@@ -447,7 +465,6 @@ input[type="text"]:nth-child(1) {
 }
 .lead_main img {
   width: 315px;
-  /* margin-top: px; */
 }
 .lead_text_img {
   background-color: #F9F9F9;
@@ -518,7 +535,21 @@ input[type="text"]:nth-child(1) {
   line-height: 1.8;
   font-weight: 700;
 }
-.const_second {
+.info_inner button{
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 25px;
+  width: 246px;
+  height: 42px;
+  margin-top: 40px;
+  background-color: #fff;
+  color: #007FC6;
+  transition: 0.4s;
+}
+.info_inner button:hover {
+  opacity: .6;
+}
+.contact_second {
   background-color: #fff ;
   color: #007FC6;
   font-size: 20px;
@@ -529,7 +560,7 @@ input[type="text"]:nth-child(1) {
   margin-top: 39px;
   transition: 0.4s;
 }
-.const_second:hover {
+.contact_second:hover {
   opacity: .6;
 }
 #slider {
@@ -602,6 +633,33 @@ input[type="text"]:nth-child(1) {
 .slider_item {
   background-color: #fff;
 }
+
+.slider_sec {
+  display: flex;
+  justify-content: space-between;
+} 
+ .slider_arrow_after img {
+  width: 34px; 
+  height: auto;
+  position: relative;
+  left:20px;
+  transition: 0.4s;
+} 
+.slider_arrow_after img:hover{
+  opacity: .6;
+}
+.slider_arrow img {
+  width: 34px; 
+  height: auto;
+  position: relative;
+  top: 0;
+  left: -10px;
+  transition: 0.4s;
+}
+.arrow img:hover {
+  opacity: .6;
+}
+
 #plan {
   width: 100%;
   text-align: center;
@@ -655,7 +713,7 @@ input[type="text"]:nth-child(1) {
   text-align: left;
 }
 /* 以下作業途中 */
-#qa {
+/* #qa {
   padding-top: 89px;
   padding-bottom: 72px;
   width: 100%;
@@ -680,7 +738,7 @@ input[type="text"]:nth-child(1) {
   height: 64px;
   padding: 20px 0;
   border-radius: 10px;
-}
+} */
 /* .qa_list dt::before {
   content: "Q";
 	color: #fff;
@@ -706,7 +764,7 @@ input[type="text"]:nth-child(1) {
   margin-right: 10px;
 } */
 
-.qsec:nth-child(3)  {
+/* .qsec:nth-child(3)  {
   margin-top: 16px
 }
 .qswc{
@@ -729,7 +787,7 @@ input[type="text"]:nth-child(1) {
   font-weight: 400;
   padding: 0 10px;
   margin-top: 10px;
-}
+} */
 .recommend {
   background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%);
   ;
@@ -972,11 +1030,9 @@ text-align: left;
     font-size: 24px; 
    }
   .hero_detail {
-    /* font-size: 32px;*/
     font-size: 1.5vw;
    }
     #span {
-    /* font-size: 24px; */
     font-size: 1.5vw;
     vertical-align: bottom;
     color:#007FC6
@@ -984,6 +1040,8 @@ text-align: left;
   .hero_note p:nth-child(2) {
     margin-top: 7px;
     }
+
+    /* お問い合わせフォーム */
   .contact {
     height: auto;
     width: 100%;
@@ -999,31 +1057,22 @@ text-align: left;
     padding: 8px 16px 0;
     border-radius: 6px;
   }
+  .contact_namesec {
+    display: flex;
+    gap: 15px; 
+    margin-bottom: 15px; 
+  }
   .contact_name {
     display: inline-block;
     width: 175px;
     height: 48px;
   }
-  .contact_names input{
-    display: block;
-    width: 175px;
-    height: 48px;
-    
+  .contact input[type="text"],
+  .contact input[type="email"],
+  .contact input[type="tel"] {
+    width: 100%;
   }
-  .contact_namesec {
-    display: flex;
-  }
-  
-  .contact_name:nth-child(1) {
-    display: block;
-    width: 175px;
-    height: 48px;
-  }
-
-  .contact_form_sec label {
-    width: 368px;
-    height: 48px;
-  }
+ 
   .contact_text {
     font-size: 20px;
     width: 384px;
@@ -1033,10 +1082,9 @@ text-align: left;
     left: -8px;
   }
   .contact_polygon img {
-    width: 17px;
     position: relative;
     top: -6px;
-    left: 180px;
+    left: 160px;
     background-color: #F9F9F9;
   }
   .contact_inner:nth-child(2) {
@@ -1052,9 +1100,7 @@ text-align: left;
   .contact_name input {
     width: 175px;
   } 
-  .contact_name input:nth-child(2) {
-    margin-left: 18px;
-  }
+ 
   label {
     font-size: 14px;
   }
@@ -1073,9 +1119,7 @@ text-align: left;
     height: 48px;
     padding: 0 8px;
   }
-  .contact_name input[type="text"]:nth-child(1){
-    width: 175px;
-  }
+ 
   .contact_note {
     font-size: 14px;
     margin: 24px auto 0;
@@ -1101,6 +1145,7 @@ text-align: left;
   }
   input[type="text"]:nth-child(1){
     margin-right: 0;
+    width: 176px;
   }
 
   label[for="email"] {
@@ -1282,6 +1327,10 @@ text-align: left;
     margin-top: 24px;
     background-color: #fff;
     color: #007FC6;
+    transition: 0.4s;
+  }
+  .info_inner button:hover {
+    opacity: .6;
   }
   .slider_title {
     font-size: 32px;
@@ -1299,12 +1348,11 @@ text-align: left;
     max-width: 980px;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    justify-content: space-between;
     padding: 73px 20px 55px;
   }
-  .slider_title {
-    font-size: 32px;
-    line-height: 1.8;
-  }
+  
   .slider_item {
     border: 1px;
     width: 93%;
@@ -1318,15 +1366,10 @@ text-align: left;
   .slider_item:nth-child(2) {
     display: block;
   }
-   .slider_sec {
-    display: flex;
-    justify-content: space-between;
-  } 
    .slider_arrow_after img {
     width: 34px; 
     height: auto;
     position: relative;
-    top: 45%;
     left:-2px;
     transition: 0.4s;
   } 
@@ -1337,15 +1380,12 @@ text-align: left;
     width: 34px; 
     height: auto;
     position: relative;
-    top: 45%;
     left: -20px;
     transition: 0.4s;
   }
   .arrow img:hover {
     opacity: .6;
   }
-
- 
   .slider_concept {
     padding-top: 31px;
     font-size: 24px;

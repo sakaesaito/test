@@ -37,15 +37,47 @@ $(document).ready(function() {
   });
 
   // クローズボタンをクリックしたときにドロワーメニューを非表示
-  $('.close-button').on('click', function() {
+  $('.menu').on('click', function() {
     $('.drawer_nav').removeClass('open');
   });
 
   // メニューの外側をクリックしても閉じる動作を追加（オプション）
   $(document).on('click', function(event) {
-    if (!$(event.target).closest('.drawer-menu, .menu-button').length) {
+    if (!$(event.target).closest('.drawer-nav, .menu').length) {
       $('.drawer_nav').removeClass('open');
     }
   });
 });
 
+
+// ２カラムのスライダー実装部分
+$(document).ready(function() {
+  // 変数を設定
+  let currentIndex = 0; // 今のスライドの位置
+  const slideCount = $('.slider_card .slider_item').length; // 全部のスライド数
+  const slidesToShow = 2; // 一度に見せるスライドの数
+  const slideWidth = $('.slider_card .slider_item').outerWidth(); // 1つのスライドの幅
+
+  // 次のスライドへ
+  $('.slider_arrow').click(function() {
+    if (currentIndex < slideCount - slidesToShow) { // 最後のスライドに行きすぎないように
+      currentIndex++;
+      updateSlider(); // スライダーを更新
+    }
+  });
+
+  // 前のスライドへ
+  $('.slider_arrow_after').click(function() {
+    if (currentIndex > 0) { // 最初のスライドより前には行かない
+      currentIndex--;
+      updateSlider(); // スライダーを更新
+    }
+  });
+
+  // スライダーの位置を更新する関数
+  function updateSlider() {
+    $('.slider_card').animate({
+      scrollLeft: slideWidth * currentIndex // 現在の位置に応じてスクロール
+    }, 300); // スライドアニメーションの速度
+  }
+});
