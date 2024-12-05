@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com/)">
 <link rel="icon" href="img/favicon.png">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 <body>
     <header class="header">
@@ -37,41 +37,25 @@
                         <p>資料請求</p></a>
                 </div>
                 <div class="menu">
-                    <div class="menu_icon" onclick="toggleMenu()">
+                    <div class="menu_icon">
                         <span></span>
                         <span></span>
                         <span></span>
                         <div class="menu_item">メニュー</div>
                     </div>
+                    <nav class="drawer_nav">
+                        <ul class="drawe_list">
+                            <li class="drawe_item"><a href="#lead_area">CareSendについて</a></li>
+                            <li class="drawe_item"><a href="#feature">CareSendの特徴</a></li>
+                            <li class="drawe_item"><a href="#slider">導入事例</a></li>
+                            <li class="drawe_item"><a href="#plan">料金</a></li>
+                            <li class="drawe_item"><a href="#QA">よくある質問</a></li>
+                            <li class="drawe_item"><a href="#contact_second">資料請求</a></li>
+                        </ul>
+                    </nav>  
                 </div>
             </div>
-        </div>
-            <!-- <div class="icon">
-                <div class="header_humberger">
-                <h1 class="header_wrap_logo">
-                    <a href="#"target="blank"><img src="img/logo.svg" alt="会社ロゴ"></a>
-                </h1> -->
-                    <!-- <div class="icon_mail"><a href="#"target="blank"><img src="img/mail.png"><p>資料請求</p></a></div>
-                    <div class="icon_humberger">
-                        <div class="icon_menu" onclick="toggleMenu()">
-                            <span></span>
-                            <span></span>
-                            <div class="icon_item">メニュー</div>
-                        </div>
-                    </div>
-                </div> 
-                </div> --> 
-                <!-- <nav class="nav_sub">
-                    <ul class="nav_sub_list">
-                        <li class="nav_sub_item"><a href="#lead_area">CareSendについて</a></li>
-                        <li class="nav_sub_item"><a href="#feature">CareSendの特徴</a></li>
-                        <li class="nav_sub_item"><a href="#slider">導入事例</a></li>
-                        <li class="nav_sub_item"><a href="#plan">料金</a></li>
-                        <li class="nav_sub_item"><a href="#QA">よくある質問</a></li>
-                        <li class="nav_sub_item"><a href="#contact_second">資料請求</a></li>
-                    </ul>
-                </nav>    -->
-        </div>             
+        </div>            
     </header>
     <section class="hero">
         <div class="hero_inner">
@@ -103,9 +87,7 @@
                     <p>※1 CareSend開始2023年4月時と2024年4月時の比較</p>
                     <p>※2 CareSend2023年度一年間の実績</p>
                 </div>
-                <div class="job_listing">
-                    <img src="img/job-listing.png" alt="">
-                </div>
+               
             </div>
             <div class="contact">
                 <div class="contact_inner">
@@ -115,11 +97,11 @@
                         <div class="contact_namesec">
                             <div class="contact_name">
                                 <label for="lastName">姓<span>*</span></label>
-                                <input type="text" name="lastname" placeholder="介護">
+                                <!-- <input type="text" name="lastName" placeholder="介護"> -->
                             </div>
                             <div class="contact_name">
                                 <label for="firstName">名<span>*</span></label>
-                                <input type="text" name="firstName" placeholder="太郎">
+                                <!-- <input type="text" name="firstName" placeholder="太郎"> -->
                             </div>
                         </div>
                             <div>
@@ -133,7 +115,10 @@
                             <p class="contact_note">このフォームから送信された情報は、 プライバシーポリ<br>シー に基づいて処理されます。</p>
                             <input type="submit" value="資料ダウンロード（無料）">
                         </form> 
-                    </div>        
+                    </div> 
+                    <!-- <div class="job_listing">
+                        <img src="img/job-listing.png" alt="">
+                    </div>        -->
                 </div>
             </div>
         </div>    
@@ -153,7 +138,11 @@
                 <img src="img/logo02.png" alt="サイバーアドベンチャーズ株式会社">
                 <img src="img/logo03.png" alt="株式会社ウェルワークネットワーク">
                 <img src="img/logo04.png" alt="くれよん">
-                
+                <img src="img/logo05.png" alt="介護サービスよつば">
+                <img src="img/logo01.jpg" alt="株式会社インフィニティギア">
+                <img src="img/logo02.png" alt="サイバーアドベンチャーズ株式会社">
+                <img src="img/logo03.png" alt="株式会社ウェルワークネットワーク">
+                <img src="img/logo04.png" alt="くれよん">   
             </div>
         </div>   
     </section>
@@ -173,8 +162,7 @@
             <h2 class="feature_heading">CareSendの特徴</h2>
             <ul class="feature_list">
                 <li class="feature_item">
-                    <div class="feature_img">
-                        <img src="img/feature-01.png" alt=""></div>
+                    <div class="feature_img"><img src="img/feature-01.png" alt=""></div>
                     <h3 class="feature_title">登録者の内5割が有資格者</h3>
                     <p class="feature_lead">「CareSend」の登録者の半数以上は、介護福祉士や看護師などの専門資格を保有しています。高い資格基準を満たすことで、利用者に信頼性の高いサービスを提供できています。</p>
                 </li>
@@ -231,7 +219,7 @@
                     私たちは派遣介護士の活用に新たな可能性を見出し、今後は更にその先の「採用」につなげていきたく思っています。</p>
                 <img src="img/case04.png" alt="">
             </div> -->
-            <div class="slider_arrow"><a href=""><img src="img/arrow-02.png" alt=""></a></div>
+            <div class="slider_arrow_after"><a href=""><img src="img/arrow-02.png" alt=""></a></div>
         </div>
     </section>
     <section id="plan">
@@ -313,11 +301,11 @@
                            <div class="contact_namesec">
                                 <div class="contact_name">
                                     <label for="lastName">姓<span>*</span></label>
-                                    <input type="text" name="lastname" placeholder="介護">
+                                    <!-- <input type="text" name="lastname" placeholder="介護"> -->
                                 </div>
                                 <div class="contact_name">
                                     <label for="firstName">名<span>*</span></label>
-                                    <input type="text" name="firstName" placeholder="太郎">
+                                    <!-- <input type="text" name="firstName" placeholder="太郎"> -->
                                 </div>
                             </div>
                             <div>
@@ -336,13 +324,10 @@
             </div>
         </div>             
     </section>
-        
-    <script>
-        function toggleMenu() {
-            const sideMenu = document.getElementById('sideMenu');
-            sideMenu.classList.toggle('open'); 
-        }
-    </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js.main.js"></script>
+
 
     <footer class="footer">
         <div class="footer_inner">
