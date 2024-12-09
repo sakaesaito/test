@@ -35,14 +35,20 @@
  .header_menu {
     display: flex;
     align-items: center;
+    justify-content: end;
     height: 64px;
  }
- .header_logo img {
-   transition: 0.4s;
-   margin: 0 auto;
-   padding:0 10px;
+ .header_logo {
+  width: 100%;
+  max-width: 139px;
+  padding:0 10px;
+  height: inherit; 
  }
- .header_logo img:hover {
+ .header_logo a {
+  transition: 0.4s;
+ 
+ }
+ .header_logo:hover {
    opacity: .6;
  }
  .mail_icon  {
@@ -89,7 +95,7 @@
    border: none;
  }
  .menu:hover {
-   /* opacity: .9; */
+   opacity: .8;
  }
 
  /* ハンバーガーの３本線 */
@@ -117,7 +123,7 @@
 
  /* ドロワーメニュー */
 .drawer_nav {
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 64px;
   right: 0;
@@ -152,13 +158,15 @@
   margin-top: 4px;
  }
 
- .drawer_nav .drawer_list {
+ .drawer_nav .drawer_list{
+  display: none;
   list-style: none;
   padding: 0; 
   margin: 0; 
 }
 
-.drawer_nav .drawe_item {
+
+.drawer_nav .drawer_item {
   margin: 24px auto 24px 0 ;
   border-bottom: #fff 1px solid; 
   padding-bottom: 24px;
@@ -172,17 +180,18 @@
 /* FV */
  .hero {
   width: 100%;
+  margin: 0 auto;
   background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%);
   padding-top: 64px;
  }
  .hero_inner {
   width: 100%;
-  margin: 0 15px;
+  max-width: 375px;
+  margin: 0 auto;
   padding-left:  15px;
   padding-right: 15px;
-  margin: 0 auto;
   color: #fff;
-  padding-bottom: 26px;
+  /* padding-bottom: 26px; */
  }
  .hero_left {
   margin-bottom: 30px;
@@ -194,11 +203,10 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  padding-top: 40px;
+  margin-top: 40px;
  }
  .hero_catch {
   font-size: 24px;
-
   font-weight: 700;
   line-height: 1.5;
   margin-top: 18px;
@@ -210,15 +218,17 @@
   margin-top: 24px;
  }
  .hero_list {
+  width: 100%;
   margin: 0 auto;
   text-align: center;
-  width: 344px;
  }
  .hero_about{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 4px;
   margin-top: 16px;
+  margin-left:  auto;
+  margin-right: auto;
  }
  .hero_about li {
   background-color: #fff;
@@ -856,70 +866,76 @@ text-align: left;
   /* .header */
   .header {
     width: 100%;
-    margin:  0 0 0 auto;
     height: 96px;
+    margin-left: auto;
   }
-  .header_inner {
+   .header_inner {
     width: 100%;
     max-width: 1536px;
-    padding: 0 0 0 15px;
-    margin: 0 auto ;
     height: inherit;
-  }
-  .header_menu {
-    height: inherit;
-  }
+    margin: 0 auto;
+  } 
   .header_logo {
-    width: 10.5%;
-    margin-right: 30px;
+    width: 100%;
+    max-width: 16.9%;
+    margin: 0 auto;
+    height: inherit;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .header_logo a {
+    width: 100%;
+    transition: 0.4s;
   }
   .header_logo img  {
-    width: 152%;
-    align-items: center;
-    height: inherit;
+    width: 100%;
+    height: auto;
   }
   .header_nav{
-    display: inline-block;
-    flex: 1;
-    margin-right:0.5%;
-    height: inherit;
     width: 100%;
+    margin: 0 auto;
+    height: inherit;
+    display: flex;
+    line-height: 96px;
   }
   .header_nav a {
-    display: flex;
     transition: 0.4s;
-    text-align: center;
-    align-items: center;
+    display: block;
     height: inherit;
-    white-space: nowrap;
-    
   }
   .header_nav a:hover {
     opacity: .5;
   }
   .nav_list {
-    text-align: center;
-    list-style-type: none;
+    width: 100%;
+    margin-right: 6%;
     height: inherit;
-    margin-left: 10px;
+    display: flex;
+    justify-content: center;
   }
-  .nav_item{
-    display: inline-block;
-    margin-right: 3%;
+  .nav_item {
+    margin-right: 2.66%;
     font-size: 16px;
     font-weight: 700;
     height: inherit;
+    display: flex;
+    align-items: center;
   }
   .nav_item:nth-child(5) {
     margin-right: 0px;
   }
-  .menu {
-    display: none;
+  .header_menu {
+    width: 100%;
+    max-width: 189px;
+    height: inherit;
+   margin-right: 0;
   }
   .mail_icon  {
     width: 189px;
     height: inherit;
     margin: 0 ;
+    margin-left: 20px;
     background-color: #007FC6;
     align-items: center;
     transition: 0.4s; 
@@ -933,12 +949,16 @@ text-align: left;
   }
   .mail_icon img {
     width: 28%;
-    margin:0 5px 0 0
   }
 
   .mail_icon p {
     font-size: 16px;
+  } 
+  .menu {
+    display: none;
   }
+  
+ 
   /* .hero */
   .hero {
     width: 100%;
@@ -1145,7 +1165,7 @@ text-align: left;
   }
   input[type="text"]:nth-child(1){
     margin-right: 0;
-    width: 176px;
+    /* width: 176px; */
   }
 
   label[for="email"] {
