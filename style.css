@@ -89,14 +89,15 @@
    margin: 0 auto;
    display: flex;
    flex-direction: column;
-   transition: 0.4s;  
    -webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;
    border: none;
+   transition:all 0.3s ;
+   align-items: center;
  }
  .menu:hover {
-   opacity: .8;
+   opacity: .9;
  }
 
  /* ハンバーガーの３本線 */
@@ -110,9 +111,21 @@
    background-color:#fff; 
    margin: 0 auto; 
  }
+ .menu_icon span:nth-of-type(1){
+  margin-top: 12px;
+}
+.menu_icon span:nth-of-type(2){
+  margin-top: 9px;
+ }
+.menu_icon span:nth-of-type(3){
+  margin-top: 9px;
+ }
+.menu_item {
+  text-align: center;
+  margin-top: 4px;
+ }
 
- /* ボタンがアクティブな時 */
- .menu.active span:nth-child(1) {
+ .menu.active  span:nth-child(1) {
   transform: rotate(45deg) translate(5px,9px);
  }
  .menu.active span:nth-child(2) {
@@ -132,50 +145,39 @@
   height: 70vh;
   background-color: #007FC6;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  transition: left 0.3s ;
   padding-left: 16px;
 }
-
 .drawer_list {
   font-size: 16px;
   font-weight: 700;
+  color: #fff;
 }
 .drawer_item  {
   display: block;
   margin: 24px auto 24px 0;
   margin-left: 16px;
 }
-.menu_icon span:nth-of-type(1){
-  margin-top: 12px;
-}
-.menu_icon span:nth-of-type(2){
-  margin-top: 9px;
- }
-.menu_icon span:nth-of-type(3){
-  margin-top: 9px;
- }
-.menu_item {
-  text-align: center;
-  margin-top: 4px;
- }
+
 
  .drawer_nav .drawer_list{
-  display: none;
   list-style: none;
   padding: 0; 
   margin: 0; 
 }
-
-
 .drawer_nav .drawer_item {
   margin: 24px auto 24px 0 ;
   border-bottom: #fff 1px solid; 
   padding-bottom: 24px;
 }
-
 .drawer_nav .drawer_item:last-child {
   margin-bottom: 0;
 }
+.drawer_nav .active {
+  display: block;
+  right: 0;
+  
+}
+
 
 
 /* FV */
@@ -328,10 +330,6 @@ label[for="company"] {
   width: 100%;
   display: flex;
   gap: 9px; 
-}
-.contact input[type="text"],
-.contact input[type="email"],
-.contact input[type="tel"] {
 }
 label span {
   font-weight: 400;
@@ -978,17 +976,20 @@ text-align: left;
     margin-top: 15px;
     font-size: 20px;
     line-height: 1.5;
-    font-size: clamp(18px, 1vw, 20px);
+    font-size: clamp(1.125rem, 1.068rem + 0.24vw, 1.25rem);
+    /* font-size: clamp(18px, 1vw, 20px); */
    }
   .hero_read br:nth-child(1) {
     display: none;
    }
    .hero_list {
     width: 100%;
+    height: auto;
     display: grid;
     grid-auto-flow: column;
     justify-content: start;
     margin-top: 34px;
+    
    }
    .hero_about{
     width: 100%;
@@ -996,14 +997,16 @@ text-align: left;
     grid-template-columns: repeat(3,1fr);
     white-space: nowrap; 
     gap: 25px;
+    place-items: center;
+    width: clamp(551px, 2vw, 1200px);
     
     margin-top: 0; 
    }
    .hero_item {
     font-weight: 700;
     width: 164px;
-    font-size: clamp(20px, 2vw, 24px);
-    white-space: nowrap; 
+    font-size: clamp(20px, 50vw, 24px);
+    white-space: nowrap;  
    }
    .hero_detail {
     font-weight: 700;
@@ -1012,7 +1015,7 @@ text-align: left;
    }
    .hero_detail #span {
     font-weight: 700;
-    font-size: clamp(24px, 2vw, 31px);
+    font-size: clamp(2px, 2vw, 24px);
     white-space: nowrap; 
    }
    
@@ -1026,9 +1029,7 @@ text-align: left;
     top: 552px;
     right: 194px;
    } 
-  .hero_read {
-   
-   }
+  
   .hero_about li{
     font-size: 24px;
     height: 164px; 
@@ -1049,7 +1050,7 @@ text-align: left;
   height: 14%; 
   }
   .contact {
-    width: 68.5%;
+    width: 65.5%;
     height: auto;
     place-content: center;
     align-items: center;
@@ -1057,8 +1058,10 @@ text-align: left;
   }
   .contact_text {
     font-size: 20px;
-    font-size: clamp(16px, 1.5vw, 20px);
     white-space: nowrap; 
+    padding-top: 15px;
+    padding-bottom: 14px;
+    font-size: clamp(0.875rem, 0.54rem + 2.3vw, 1rem);
   }
   input[type="submit"]{
     font-size: 20px;
@@ -1297,6 +1300,11 @@ text-align: left;
   .slider_item:nth-child(2) {
     display: block;
   }
+  .slider_item:nth-child(3) ,
+  .slider_item:nth-child(4) {
+    display: none;
+  }
+
    .slider_arrow_after img {
     width: 34px; 
     height: auto;
