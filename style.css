@@ -95,6 +95,7 @@
    border: none;
    transition:all 0.3s ;
    align-items: center;
+   
  }
  .menu:hover {
    opacity: .9;
@@ -146,6 +147,8 @@
   background-color: #007FC6;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
   padding-left: 16px;
+  right: -200px;
+  z-index: 2;
 }
 .drawer_list {
   font-size: 16px;
@@ -172,10 +175,9 @@
 .drawer_nav .drawer_item:last-child {
   margin-bottom: 0;
 }
-.drawer_nav .active {
-  display: block;
+.drawer_nav.active {
+  /* display: block; */
   right: 0;
-  
 }
 
 
@@ -626,17 +628,19 @@ input[type="submit"]:hover{
   justify-content: space-between;
 } 
  .slider_arrow_after img {
-  width: 34px; 
+  /* width: 34px;  */
   height: auto;
   position: relative;
-  left:20px;
+  /* left:20px; */
   transition: 0.4s;
 } 
+
 .slider_arrow_after img:hover{
   opacity: .6;
 }
+
 .slider_arrow img {
-  width: 34px; 
+  /* width: 34px;  */
   height: auto;
   position: relative;
   top: 0;
