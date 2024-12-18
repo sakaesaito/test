@@ -13,6 +13,7 @@
 <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com/)">
 <link rel="icon" href="img/favicon.png">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
 </head>
 <body>
     <header class="header">
@@ -321,8 +322,19 @@
         </div>             
     </section>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="main.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        const swiper = new Swiper('.logo-container', {
+          slidesPerView: 5, // 一度に表示するスライドの数
+          spaceBetween: 10, // スライド間の余白（ピクセル単位）
+          speed:10000,
+          loop: true, // ループさせる
+          autoplay: {
+            delay: 0,
+          },
+        });
+      </script>
     
     <footer class="footer">
         <div class="footer_inner">

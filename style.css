@@ -25,7 +25,6 @@
   }
   .header_inner {
     width: 100%;
-    /* margin: 0 0 0 auto; */
     padding:0 0 0 10px;
     display: flex;
     align-items: center;
@@ -138,16 +137,25 @@
 
  /* ドロワーメニュー */
 .drawer_nav {
-  /* display: none; */
+  display:  none;
   position: fixed;
   top: 64px;
   right: 0;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   background-color: #007FC6;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  z-index: 2;
+  transition: 0.3s;
+  visibility: hidden;
+  pointer-events: none;
 }
+.drawer_nav.active {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
 .drawer_list {
   font-size: 16px;
   font-weight: 700;
@@ -159,30 +167,22 @@
   margin-left: 16px;
   padding-left: 16px;
 }
-.drawer_nav .active {
-  display: block;
-}
- .drawer_nav .drawer_list{
+
+.drawer_list{
   list-style: none;
   padding: 0; 
   margin: 0; 
 }
-.drawer_nav .drawer_item {
+.drawer_item {
   margin: 24px auto 24px 0 ;
   border-bottom: #fff 1px solid; 
   padding-bottom: 24px;
 }
-.drawer_nav .drawer_item:last-child {
+.drawer_item:last-child {
   margin-bottom: 0;
 }
 .drawer_item img {
   width: 24px;
-}
-.mail {
-  display: inline-block;
-  width: 34px;
-  padding-right: 10px;
-
 }
 
 /* FV */
@@ -420,6 +420,7 @@ input[type="submit"]:hover{
   width: 100%;
   overflow: hidden;
   background-color: #fff;
+  transition-timing-function: linear;
 }
 .logo_slider {
   display: flex;
@@ -428,7 +429,6 @@ input[type="submit"]:hover{
   justify-content: space-between;
   width: calc(5 * 223px);
   animation: slide 15s linear infinite;
-  transition-timing-function: linear;
 }
 #lead_area {
   background-color: #fff;
