@@ -38,7 +38,7 @@
    .header_logo a {
     transition: 0.4s;
    }
-   .header_logo:hover {
+   .header_logo a:hover {
      opacity: .6;
    }
   .header_nav {
@@ -74,12 +74,15 @@
    font-weight:400;
    transition: 0.4s;
  }
+ .mail_icon p {
+  margin-top: 3px;
+ }
  .mail_icon a:hover {
    opacity: .6;
  }
  /* ハンバーガーメニューの部分 */
  .menu {
-   background-color: #444;
+   background-color: #333;
    color: #fff;
    font-size: 10px;
    width: 64px;
@@ -94,10 +97,11 @@
    border: none;
    transition:all 0.3s ;
    align-items: center;
+   justify-content: center;
    
  }
  .menu:hover {
-   opacity: .9;
+   opacity: .7;
  }
 
  /* ハンバーガーの３本線 */
@@ -111,9 +115,7 @@
    background-color:#fff; 
    margin: 0 auto; 
  }
- .menu_icon span:nth-of-type(1){
-  margin-top: 12px;
-}
+ 
 .menu_icon span:nth-of-type(2){
   margin-top: 9px;
  }
@@ -138,6 +140,7 @@
  /* ドロワーメニュー */
 .drawer_nav {
   display:  none;
+  display: block;
   position: fixed;
   top: 64px;
   right: 0;
@@ -155,33 +158,47 @@
   visibility: visible;
   pointer-events: all;
 }
-
+.drawer_nav a {
+  transition: 0.4s;
+  display: block;
+  height: inherit;
+  align-items: center;
+}
 .drawer_list {
+  font-family: Noto Sans JP;
   font-size: 16px;
   font-weight: 700;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
   color: #fff;
+  align-items: center;
 }
-.drawer_item  {
-  display: block;
-  margin: 24px auto 24px 0;
-  margin-left: 16px;
-  padding-left: 16px;
+.drawer_list span{
+  width: 24px;
 }
 
-.drawer_list{
-  list-style: none;
-  padding: 0; 
-  margin: 0; 
-}
 .drawer_item {
-  margin: 24px auto 24px 0 ;
   border-bottom: #fff 1px solid; 
+  padding-left: 16px;
+  list-style: none;
+  padding-top: 24px;
   padding-bottom: 24px;
+  
 }
 .drawer_item:last-child {
   margin-bottom: 0;
+  display: flex;
 }
 .drawer_item img {
+  width: 24px;
+  margin: 0;
+  padding: 0;
+}
+.drawer_list span {
+  margin-right: 12px;
+  box-sizing: border-box;
   width: 24px;
 }
 
@@ -412,11 +429,19 @@ input[type="submit"]:hover{
   margin-top: 4px;
   width: 86%;
 }
+
+/* 会社ロゴ無限スライダー */
+.logo-container {
+  overflow: hidden;
+}
 .logo-container img {
   width: 160px;
   height: 64px;
 }
-.logo-container {
+.logo_slider {
+  transition-timing-function: linear;
+}
+/* .logo-container {
   width: 100%;
   overflow: hidden;
   background-color: #fff;
@@ -429,7 +454,7 @@ input[type="submit"]:hover{
   justify-content: space-between;
   width: calc(5 * 223px);
   animation: slide 15s linear infinite;
-}
+} */
 #lead_area {
   background-color: #fff;
   color: #333333;
@@ -548,14 +573,10 @@ input[type="submit"]:hover{
   font-size: 20px;
   font-weight: 700;
   border-radius: 25px;
-  width: 320px;
-  height: 52px;
-  margin-top: 39px;
-  transition: 0.4s;
+  width: 400px;
+  margin-left: 30px;
 }
-.contact_second:hover {
-  opacity: .6;
-}
+
 #slider {
   width: 100%;
   padding: 72px 6px 45px;
@@ -632,7 +653,7 @@ input[type="submit"]:hover{
   justify-content: space-between;
 } 
  .slider_arrow_after img {
-  /* width: 34px;  */
+  width: 34px; 
   height: auto;
   position: relative;
   /* left:20px; */
@@ -817,9 +838,7 @@ input[type="submit"]:hover{
   margin-bottom: 40px;
   text-align: center; 
 }
-#contact_second {
-  background-color: #007FC6;
-}
+
 .footer {
   background-color: #fff;
   width: 100%;
@@ -1069,7 +1088,7 @@ text-align: left;
     white-space: nowrap; 
     padding-top: 15px;
     padding-bottom: 14px;
-    font-size: clamp(0.875rem, 0.54rem + 2.3vw, 1rem);
+    /* font-size: clamp(0.875rem, 0.54rem + 2.3vw, 1rem); */
   }
   input[type="submit"]{
     font-size: 20px;

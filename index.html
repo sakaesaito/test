@@ -14,9 +14,9 @@
 <link rel="icon" href="img/favicon.png">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
+
 </head>
-<body>
-    <header class="header">
+<body>    <header class="header">
         <div class="header_inner">
            <h1 class="header_logo">
                 <a href="#"target="blank"><img src="img/logo.svg" alt="会社ロゴ"></a>
@@ -51,9 +51,9 @@
                             <li class="drawer_item"><a href="#slider">導入事例</a></li>
                             <li class="drawer_item"><a href="#plan">料金</a></li>
                             <li class="drawer_item"><a href="#QA">よくある質問</a></li>
-                            <li class="drawer_item"><div class="mail" src="img/mail.png"></div><a href="#contact_second">資料請求</a></li>
+                            <li class="drawer_item"><span><img src="img/mail.png"></img></span><a href="#contact_second">資料請求</a></li>
                         </ul>
-                    </nav>   
+                    </nav>  
             </div>            
     </header>
     <section class="hero">
@@ -131,16 +131,11 @@
         </div>
         <div class="logo-container">
             <div class="logo_slider">
-                <img src="img/logo05.png" alt="介護サービスよつば">
-                <img src="img/logo01.jpg" alt="株式会社インフィニティギア">
-                <img src="img/logo02.png" alt="サイバーアドベンチャーズ株式会社">
-                <img src="img/logo03.png" alt="株式会社ウェルワークネットワーク">
-                <img src="img/logo04.png" alt="くれよん">
-                <img src="img/logo05.png" alt="介護サービスよつば">
-                <img src="img/logo01.jpg" alt="株式会社インフィニティギア">
-                <img src="img/logo02.png" alt="サイバーアドベンチャーズ株式会社">
-                <img src="img/logo03.png" alt="株式会社ウェルワークネットワーク">
-                <img src="img/logo04.png" alt="くれよん">   
+                <div class="logo_swiper"><img src="img/logo05.png" alt="介護サービスよつば"></div>
+                <div class="logo_swiper"><img src="img/logo01.jpg" alt="株式会社インフィニティギア"></div>
+                <div class="logo_swiper"><img src="img/logo02.png" alt="サイバーアドベンチャーズ株式会社"></div>
+                <div class="logo_swiper"><img src="img/logo03.png" alt="株式会社ウェルワークネットワーク"></div>
+                <div class="logo_swiper"><img src="img/logo04.png" alt="くれよん"></div>  
             </div>
         </div>   
     </section>
@@ -191,7 +186,7 @@
     <section id="slider">
         <h3 class="slider_title">導入事例</h3>
         <div class="slider_sec">
-                <button class="slider_arrow"><a href=""><img src="img/arrow-01.png" alt=""></a></button>
+            <button class="slider_arrow"><a href=""><img src="img/arrow-01.png" alt=""></a></button>
                 <div class="slider_card">
                     <div class="slider_item">
                         <h4 class="slider_concept">慢性的な介護士不足が解決し、<br>
@@ -290,51 +285,41 @@
                     本フォームを送信頂きますと、サービス資料を送付させていただきます。</p>
                 <div class="recommend_pic"><img src="img/whitepaper.png" alt=""></div>
             </div>
-            <div class="contact_seccond">
-                <div class="contact_inner">
-                    <div class="contact_form">
-                        <h3 class="contact_text">派遣事例が分かる資料をダウンロード‼︎</h3><div class="contact_polygon"><img src="img/Polygon 1.png" alt=""></div>
+            <div class="contact_second">
+                    <div class="contact_inner">
+                        <div class="contact_form">
+                            <h3 class="contact_text">派遣事例が分かる資料をダウンロード‼︎</h3><div class="contact_polygon"><img src="img/Polygon 1.png" alt=""></div>
                         <form action="/submit" method="POST">
-                        <div class="contact_namesec">
-                            <div class="contact_name">
-                                <label for="lastname">姓<span>*</span></label>
-                                <input type="text" name="lastname" placeholder="介護">
+                            <div class="contact_namesec">
+                                <div class="contact_name">
+                                    <label for="lastname">姓<span>*</span></label>
+                                    <input type="text" name="lastname" placeholder="介護">
+                                </div>
+                                <div class="contact_name">
+                                    <label for="firstname">名<span>*</span></label>
+                                    <input type="text" name="firstname" placeholder="太郎">
+                                </div>
                             </div>
-                            <div class="contact_name">
-                                <label for="firstname">名<span>*</span></label>
-                                <input type="text" name="firstname" placeholder="太郎">
-                            </div>
-                        </div>
-                            <div>
-                                <label for="company">会社名<span>*</span></label>
-                                <input type="text"name="company" placeholder="株式会社CareSend">
-                            </div>
-                            <label for="email">メールアドレス<span>*</span></label>
-                            <input type="email"  name="email" placeholder="caresend@caresend.com" >
-                            <label for="tel">電話番号<span>*</span></label>
-                            <input type="tel"  name="tel" placeholder="000-0000-0000" >
-                            <p class="contact_note">このフォームから送信された情報は、 プライバシーポリ<br>シー に基づいて処理されます。</p>
-                            <input type="submit" value="資料ダウンロード（無料）">
-                        </form> 
-                    </div> 
-                </div>      
+                                <div>
+                                    <label for="company">会社名<span>*</span></label>
+                                    <input type="text"name="company" placeholder="株式会社CareSend">
+                                </div>
+                                <label for="email">メールアドレス<span>*</span></label>
+                                <input type="email"  name="email" placeholder="caresend@caresend.com" >
+                                <label for="tel">電話番号<span>*</span></label>
+                                <input type="tel"  name="tel" placeholder="000-0000-0000" >
+                                <p class="contact_note">このフォームから送信された情報は、プライバシーポリシーに基づいて処理されます。</p>
+                                <input type="submit" value="資料ダウンロード（無料）">
+                            </form> 
+                        </div> 
+                    </div>
             </div>
         </div>             
     </section>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   
     <script src="main.js"></script>
-    <script>
-        const swiper = new Swiper('.logo-container', {
-          slidesPerView: 5, // 一度に表示するスライドの数
-          spaceBetween: 10, // スライド間の余白（ピクセル単位）
-          speed:10000,
-          loop: true, // ループさせる
-          autoplay: {
-            delay: 0,
-          },
-        });
-      </script>
+   
     
     <footer class="footer">
         <div class="footer_inner">
