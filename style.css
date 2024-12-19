@@ -441,20 +441,7 @@ input[type="submit"]:hover{
 .logo_slider {
   transition-timing-function: linear;
 }
-/* .logo-container {
-  width: 100%;
-  overflow: hidden;
-  background-color: #fff;
-  transition-timing-function: linear;
-}
-.logo_slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-  width: calc(5 * 223px);
-  animation: slide 15s linear infinite;
-} */
+
 #lead_area {
   background-color: #fff;
   color: #333333;
@@ -503,6 +490,7 @@ input[type="submit"]:hover{
   font-weight: 700;
   font-size: 24px;
   line-height: 1.5;
+  color: #333333;
 }
 .feature_list {
   margin-top: 51px;
@@ -573,8 +561,7 @@ input[type="submit"]:hover{
   font-size: 20px;
   font-weight: 700;
   border-radius: 25px;
-  width: 400px;
-  margin-left: 30px;
+  margin: 0 auto;
 }
 
 #slider {
@@ -604,19 +591,25 @@ input[type="submit"]:hover{
 .slider_item:nth-child(2) {
   display: none;
 }
+.slider_item:nth-child(3) {
+  display: none;
+}
+.slider_item:nth-child(4) {
+  display: none;
+}
+
   
 .slider_sec {
   display: flex;
   justify-content: space-between;
 }
-.slider_arrow img {
-  width: 20px; 
+.slider_button_prev img {
   height: auto;
   position: relative;
-  top: 283px;
+  right: 970px;
   transition: 0.4s;
 }
-.slider_arrow img:hover {
+.slider_button_prev img:hover .slider_button_next img:hover{
   opacity: .6;
 }
 #slider {
@@ -652,7 +645,7 @@ input[type="submit"]:hover{
   display: flex;
   justify-content: space-between;
 } 
- .slider_arrow_after img {
+ .slider_button_next img {
   width: 34px; 
   height: auto;
   position: relative;
@@ -660,11 +653,11 @@ input[type="submit"]:hover{
   transition: 0.4s;
 } 
 
-.slider_arrow_after img:hover{
+.slider_button_next img:hover{
   opacity: .6;
 }
 
-.slider_arrow img {
+.slider_button_next img {
   /* width: 34px;  */
   height: auto;
   position: relative;
@@ -672,7 +665,7 @@ input[type="submit"]:hover{
   left: -10px;
   transition: 0.4s;
 }
-.arrow img:hover {
+.slider_button_next img:hover {
   opacity: .6;
 }
 
@@ -691,6 +684,7 @@ input[type="submit"]:hover{
 .plan_title {
   font-size: 24px;
   font-weight: 700;
+  color: #333333;
 }
 .plan_list {
   display: grid;
@@ -728,85 +722,113 @@ input[type="submit"]:hover{
   line-height: 1.8;
   text-align: left;
 }
-/* 以下作業途中 */
-/* #qa {
-  padding-top: 89px;
-  padding-bottom: 72px;
-  width: 100%;
-  margin: 0 auto;
+
+/* Q＆Aのセクション */
+#qa {
   background-color: #F9F9F9;
 }
-.qa_container {
-  width: 91.4%;
-  margin: 0 auto;
+.qa_title {
+font-size: 24px;
+font-weight: 700;
+line-height: 24px;
+text-align: center;
+padding-top: 89px;
 }
-.qa_list {
+.accordion {
   margin-top: 48px;
 }
-.qa_title {
-  font-size: 24px;
-  font-weight: 700;
-  text-align: center;
+.accordion-content {
+  display: none;
 }
-.qa_sec {
+.qa_container {
+  max-width: 375px;
+  padding: 0 16px;
+  margin: 0 auto;
+  background:#F9F9F9;
+  padding-bottom: 72px;
+}
+
+.accordion-header {
+  background-color: #FFF;
+  padding: 12px 45px 10px 20px;
+  margin: 16px 0 0;
+  cursor: pointer;
+  position: relative;
   font-size: 14px;
   font-weight: 700;
+  line-height: 21px;
+  text-align: left;
+  width: 343px;
   height: 64px;
-  padding: 20px 0;
-  border-radius: 10px;
-} */
-/* .qa_list dt::before {
-  content: "Q";
-	color: #fff;
-  border-radius: 50px;
-  background-color: #007FC6;
-  font-size: 14px;
-  font-weight: 700;
-  height: 32px;
-  width: 32px;
-  text-align: center;
-  padding-top: 5px;
-  margin-right: 10px;
+  left: 16px;
+  border-radius: 10px 0px 0px 0px;
+  opacity: 0px;
+}
+.accordion-header.active {
+  display: block;
+}
+.accordion-header::before,
+.accordion-header::after{
+  position:absolute;
+  content:'';
+  top:1px;
+  right:20px;
+  bottom:0;
+  width:12px;
+  height:2px;
+  margin:auto;
+  background:#151E2F;
+}
+.accordion-header::before {
+  right: 20px;
+}
+.accordion-header::after{
+  transform:rotate(-90deg);
+  transition:transform 0.3s;
+}
+.accordion-header.active::after{transform:rotate(0deg);}
+
+.accordion-content {
+  background-color: #FFF;
+  padding: 12px 20px 10px;
+}
+
+.accordion-header span,
+.accordion-content span{
+  padding-left: 25px;
+  position: relative;
   display: inline-block;
 }
-.qa_list dt::after {
-  content: "-";
-  font-size: 14px;
-  font-weight: 700;
-  height: 32px;
-  width: 32px;
-  text-align: right;
-  padding-top: 5px;
-  margin-right: 10px;
-} */
 
-/* .qsec:nth-child(3)  {
-  margin-top: 16px
-}
-.qswc{
-  margin-top:16px;
-}
- 
-.qsec:nth-child(5) {
-  margin-top: 16px;
-} 
-.qsec:nth-child(6) {
-  margin-top: 16px;
-} 
-.asec {
-  padding: 10px 10px 0;
-  font-size: 14px;
+.accordion-header span::before{
+  position: absolute;
+  content:"Q";
+  top: 2px;
+  left: 0;
+  font-family: Goldman;
+  font-size: 16px;
   font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  /* color: #FFFFFF;
+  background-color: #007FC6; */
+  border-radius: 50px;
+  /* width: 32px;
+  height: 32px; */
 }
-.annser {
-  font-size: 14px;
-  font-weight: 400;
-  padding: 0 10px;
-  margin-top: 10px;
-} */
+
+
+.accordion-content span::before{
+  position: absolute;
+  content:"A";
+  top: 3px;
+  left: 0;
+  color: #151E2F;
+  font-size: 17px;
+}
+
 .recommend {
   background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%);
-  ;
   color: #fff;
   padding-top: 72px;
   padding-bottom: 46px;
@@ -1150,12 +1172,13 @@ text-align: left;
     gap: 80px;
     margin-top: 25px;
     overflow: hidden;
-    /* animation: slide 50s linear infinite; */
   }
   .logo_slider img {
     width: 248px;
     height: 99px;
   }
+
+  /* CareSendについて */
   .lead_text_imgpc img {
     display: none;
   }
@@ -1210,6 +1233,8 @@ text-align: left;
     position: relative;
     top: -20px;
   }
+
+  /* CareSendの特徴 */
   #feature {
     width: 100%;
     margin: 0 auto;
@@ -1333,24 +1358,24 @@ text-align: left;
     display: none;
   }
 
-   .slider_arrow_after img {
+   .slider_button_next img {
     width: 34px; 
     height: auto;
     position: relative;
     left:-2px;
     transition: 0.4s;
   } 
-  .slider_arrow_after img:hover{
+  .slider_button_next img:hover{
     opacity: .6;
   }
-  .slider_arrow img {
+  .slider_button_prev img {
     width: 34px; 
     height: auto;
     position: relative;
     left: -20px;
     transition: 0.4s;
   }
-  .arrow img:hover {
+  .slider_button_prev img:hover {
     opacity: .6;
   }
   .slider_concept {

@@ -10,6 +10,9 @@ $(function(){
   });
   });
   
+
+
+  // 無限会社ループのjQuery
  
     const swiper = new Swiper('.logo-container', {
       slidesPerView: 5, // 一度に表示するスライドの数
@@ -22,4 +25,15 @@ $(function(){
         disableOnInteraction: false,
       },
     });
+
+
+
+    // Q&A問い合わせ部分のjQuery
+
+    $('.accordion-header').click(function() { 
+      $(this).next().slideToggle();
+      $(this).toggleClass('active');
+  });
   
+
+
