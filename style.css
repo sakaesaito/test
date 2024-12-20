@@ -342,7 +342,7 @@ body {
 }
 
 .contact_inner {
-  margin: 0 auto;
+  margin: 44px auto 0;
   width: 100%;
   padding: 8px 8px 19px;
   height: auto;
@@ -628,8 +628,8 @@ input[type="submit"]:hover {
   font-size: 16px;
   font-weight: 700;
   border-radius: 25px;
-  width: 246px;
-  height: 42px;
+  width: 320px;
+  height: 52px;
   margin-top: 40px;
   background-color: #fff;
   color: #007FC6;
@@ -1004,7 +1004,9 @@ input[type="submit"]:hover {
   margin-bottom: 40px;
   text-align: center;
 }
-
+.contact_second.contact_inner:nth-child(2) {
+  margin-top: 40px;
+}
 .footer {
   background-color: #fff;
   width: 100%;
@@ -1036,7 +1038,7 @@ input[type="submit"]:hover {
   opacity: .6;
 }
 
-@media (min-width:960px) {
+@media (min-width:1023px) {
 
   /* .header */
   .header {
@@ -1047,7 +1049,7 @@ input[type="submit"]:hover {
 
   .header_inner {
     width: 100%;
-    max-width: 1536px;
+    /* max-width: 1536px; */
     height: inherit;
     margin: 0 auto;
     padding-left: 20px;
@@ -1153,7 +1155,6 @@ input[type="submit"]:hover {
   /* .hero */
   .hero {
     width: 100%;
-    max-width: 1536px;
     height: auto;
     margin: 0 auto;
     padding-top: 96px;
@@ -1186,7 +1187,7 @@ input[type="submit"]:hover {
   .hero_catch {
     width: 100%;
     display: flex;
-    font-size: clamp(30px, 4vw, 56px);
+    font-size: clamp(45px, 4.5vw, 56px);
     margin-right: 0;
     margin-top: 11px;
     white-space: nowrap;
@@ -1197,7 +1198,6 @@ input[type="submit"]:hover {
     font-size: 20px;
     line-height: 1.5;
     font-size: clamp(1.125rem, 1.068rem + 0.24vw, 1.25rem);
-    /* font-size: clamp(18px, 1vw, 20px); */
   }
 
   .hero_read br:nth-child(1) {
@@ -1221,8 +1221,7 @@ input[type="submit"]:hover {
     white-space: nowrap;
     gap: 25px;
     place-items: center;
-    width: clamp(551px, 2vw, 1200px);
-
+    max-width:100%; 
     margin-top: 0;
   }
 
@@ -1281,7 +1280,8 @@ input[type="submit"]:hover {
   }
 
   .contact {
-    width: 65.5%;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     place-content: center;
     align-items: center;
@@ -1501,7 +1501,6 @@ input[type="submit"]:hover {
 
   .info {
     width: 100%;
-    max-width: 1536px;
     margin: 0 auto;
     margin-top: 31px;
 
