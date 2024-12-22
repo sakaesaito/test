@@ -12,12 +12,12 @@ $(function(){
   
 
 
-  // 無限会社ループのjQuery
+  // 会社ロゴ無限ループのjQuery
  
-    const swiper = new Swiper('.logo-container', {
+    const LoopSwiper = new Swiper('.logo-container', {
       slidesPerView: 5, // 一度に表示するスライドの数
-      spaceBetween: 10, // スライド間の余白（ピクセル単位）
-      speed:10000,
+      spaceBetween: 30, // スライド間の余白（ピクセル単位）
+      speed:50000,
       loop: true, // ループさせる
       allowTouchMove: false, 
       autoplay: {
@@ -30,10 +30,5 @@ $(function(){
 
     // Q&A問い合わせ部分のjQuery
 
-    $('.accordion-header').click(function() { 
-      $(this).next().slideToggle();
-      $(this).toggleClass('active');
-  });
-  
-
+   
 
