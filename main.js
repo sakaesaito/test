@@ -14,9 +14,9 @@ $(function(){
 
   // 会社ロゴ無限ループのjQuery
  
-    const LoopSwiper = new Swiper('.logo-container', {
+    const swiper = new Swiper('.logo-container', {
       slidesPerView: 5, // 一度に表示するスライドの数
-      spaceBetween: 30, // スライド間の余白（ピクセル単位）
+      spaceBetween: 20, // スライド間の余白（ピクセル単位）
       speed:50000,
       loop: true, // ループさせる
       allowTouchMove: false, 
