@@ -339,7 +339,7 @@ img {
 .job_listing {
  position: absolute;
  max-width: 360px;
- bottom: 52%;
+ bottom: 51%;
  left: 6px;
 }
 
@@ -400,7 +400,7 @@ label:nth-child(3) {
 }
 
 label[for="company"] {
-  margin-top: 12px;
+  margin-top: 19px;
 }
 
 .contact_name_sec {
@@ -418,6 +418,7 @@ label span {
 input {
   color: #333333;
   background-color: #F5F8FA;
+  margin-top: 5px;
 }
 
 input[type="text"],
@@ -432,10 +433,11 @@ input[type="tel"] {
   padding-top: 15px;
   padding-bottom: 14px;
   padding-left: 8px;
+  margin-top: 8px;
 }
 input[type="text"]{
   padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 15px;
 
 }
 input[type="email"] {
@@ -447,16 +449,16 @@ input[type="email"] {
   font-weight: 400;
   width: 100%;
   padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 15px;
   padding-left: 8px;
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
 input[type="submit"] {
   display: block;
   text-align: center;
   width: 74%;
-  margin: 30px auto 10px;
+  margin: 35px auto 18px;
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: #007FC6;
@@ -517,21 +519,18 @@ input[type="submit"]:hover {
 }
 
 /* 会社ロゴ無限スライダー */
-.logo-container .swiper{
+.swiper {
   overflow: hidden;
 }
-
-.logo-container .swiper_slide img {
+.swiper-slide img {
   width: 100%;
   height: auto;
 }
 
-.logo-slider .swiper_wrapper{
+.swiper-wrapper{
   transition-timing-function: linear;
 }
-/* .logo-slider {
-  display: flex;
-} */
+
 
 
 #lead_area {
@@ -662,6 +661,7 @@ input[type="submit"]:hover {
   background-color: #fff;
   color: #007FC6;
   transition: 0.4s;
+  border-style: none;
 }
 
 .info_inner button:hover {
@@ -682,17 +682,17 @@ input[type="submit"]:hover {
   padding: 72px 6px 45px;
 }
 
-.slider_sec {
+.slider-sec {
   width: 100%;
   max-width: 360px;
   position: relative;
   margin: 0 auto;
 }
-.slider_card {
+.slider-card {
   width: 100%;
   margin: 0 auto;
 }
-.slider_title {
+.slider-title {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
@@ -701,32 +701,32 @@ input[type="submit"]:hover {
   margin: 0 auto;
 }
 
-.slider_item {
+.slider-item .swiper-slide {
   border: 1px;
-  width: 311px;
+  /* width: 311px; */
   height: auto;
-  margin: 57px auto 0;
+  /* margin: 57px auto 0; */
   box-shadow: 0px 5px 8px rgba(51, 51, 51, 0.25);
   border-radius: 30px 0 30px 0;
-  padding: 0 10px;
+  /* padding: 0 10px; */
 }
 
-.slider_item:nth-child(2) {
+/* .slider-item:nth-child(2) {
   display: none;
 }
 
-.slider_item:nth-child(3) {
+.slider-item:nth-child(3) {
   display: none;
 }
 
-.slider_item:nth-child(4) {
+.slider-item:nth-child(4) {
   display: none;
-}
+} */
 
 
-.slider_sec {
-  display: flex;
-  justify-content: space-between;
+.slider-sec {
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 #slider {
@@ -734,7 +734,7 @@ input[type="submit"]:hover {
   margin: 0 auto;
 }
 
-.slider_concept {
+.slider-concept {
   padding-top: 31px;
   font-size: 18px;
   font-weight: 700;
@@ -742,47 +742,29 @@ input[type="submit"]:hover {
   color: #333333;
 }
 
-.slider_concept span {
+.slider-concept span {
   color: #007FC6;
 }
 
-.slider_lead {
+.slider-lead {
   margin-top: 24px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.8;
 }
-.slider_pic_a {
+.slider-pic-a {
   width: 54%;
   margin-top: 55px;
   margin-bottom: 20px;
 }
 
-.slider_item {
+.slider-item {
   background-color: #fff;
 }
 
-.slider_sec {
-  display: flex;
-  justify-content: space-between;
-}
-.slider_button_prev {
-  height: auto;
-  position: relative;
-  left: -340px;
-  transition: 0.4s;
-}
-.slider_button_next {
-  height: auto;
-  position: relative;
-  left: -16px;
-  transition: 0.4s;
-}
-.slider_button_next img {
-   width: 20px;
-}
-.slider_button_prev img {
-  width: 20px;
+.slider-sec {
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 /* 成約手数料のセクション */
@@ -1319,8 +1301,8 @@ input[type="submit"]:hover {
   .contact_text {
     font-size: 20px;
     white-space: nowrap;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 13px;
+    padding-bottom: 14px;
   }
   .contact_polygon {
     width: 17px;
@@ -1342,7 +1324,8 @@ input[type="submit"]:hover {
   }
 
   label:nth-child(3) {
-    margin-bottom: 3px;
+    margin-bottom: 9px;
+    margin-top: 12px;
   }
 
   .contact_name_sec {
@@ -1382,25 +1365,20 @@ input[type="submit"]:hover {
   }
 
   /* 会社ロゴの無限スライダー */
-  .logo-container {
-    /* width: 100%;
-    padding-bottom: 46px;
-    overflow: hidden; */
+  .swiper{
+    overflow: hidden;
   }
 
-  .logo-slider .swiper_wrapper {
-    /* display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 80px;
+  .swiper-wrapper {
     margin-top: 25px;
-    overflow: hidden; */
+    overflow: hidden;
   }
 
-  .logo-slider img {
-    /* width: 248px;
-    height: 99px; */
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
   }
-
+ 
   /* CareSendについて */
   .lead_text_img-pc img {
     display: none;
@@ -1566,7 +1544,7 @@ input[type="submit"]:hover {
     opacity: .6;
   }
 
-  .slider_title {
+  .slider-title {
     font-size: 32px;
     line-height: 48px;
     color: #222222;
@@ -1579,7 +1557,7 @@ input[type="submit"]:hover {
     padding-bottom: 0;
   }
 
-  .slider_sec {
+  .slider-sec {
     width: 100%;
     max-width: 980px;
     margin: 0 auto;
@@ -1589,85 +1567,47 @@ input[type="submit"]:hover {
     padding: 73px 34px 55px;
   }
 
-  .slider_item {
+  .slider-item {
     border: 1px;
-    width: 93%;
+    /* width: 93%; */
     height: auto;
     margin: 0 auto;
     box-shadow: 0px 5px 8px rgba(51, 51, 51, 0.25);
     border-radius: 30px 0 30px 0;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     background-color: #FFFFFF;
   }
 
-  .slider_item:nth-child(2) {
-    display: block;
-  }
-
-  .slider_item:nth-child(3),
-  .slider_item:nth-child(4) {
-    display: none;
-  }
-
-  .slider_button_next  {
-    width: 34px;
-    height: auto;
-    position: relative;
-    left: -2px;
-    transition: 0.4s;
-  }
-
-  .slider_button_next :hover {
-    opacity: .6;
-  }
-
-  .slider_button_prev {
-    width: 34px;
-    height: auto;
-    position: relative;
-    left: -960px;
-    transition: 0.4s;
-  }
-
-  .slider_button_prev :hover {
-    opacity: .6;
-  }
-
-  .slider_concept {
+  .slider-concept {
     padding-top: 31px;
     font-size: 24px;
     line-height: 1.8;
   }
 
-  .slider_lead {
+  .slider-lead {
     margin-top: 24px;
     font-size: 14px;
     line-height: 1.8;
   }
 
-  .slider_card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4%;
-  }
-
-  .slider_pic_a  {
+  .slider-pic-a  {
     width: 42.6%;
     margin-top: 37px;
   }
 
-  .slider_pic_b  {
+  .slider-pic-b  {
     width: 64px;
     height: 64px;
     margin-top: 37px;
   }
 
-  .slider_button_prev img {
-    width: 34px;
-    height: auto;
-    position: relative;
-    left: -960px;
-    transition: 0.4s;
+/* 前への矢印 */
+.swiper-button-prev {
+  left: -30px;
+}
+/* 次への矢印 */
+.swiper-button-next {
+  right: -30px;
 }
 
   #plan {
@@ -1816,6 +1756,7 @@ input[type="submit"]:hover {
     border-radius: 6px;
     color: #333333;
     margin-left: 36px;
+    margin-top: 20px;
 }
   .contact_polygon_second{
     width: 17px;

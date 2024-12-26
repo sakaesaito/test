@@ -3,7 +3,7 @@
 /* Reset box-model and set borders */
 /* ============================================ */
 
-*,
+*
 ::before,
 ::after {
   box-sizing: border-box;
