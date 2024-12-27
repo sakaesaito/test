@@ -14,10 +14,10 @@ $(function(){
 
   // 会社ロゴ無限ループのjQuery
  
-    const LoopSwiper = new Swiper('.swiper', {
-      speed:5000,
+    const LoopSwiper = new Swiper('.swiper01', {
+      speed:4000,
       loop: true, // ループさせる
-      allowTouchMove: false,//すワイプ有効
+      allowTouchMove: false,//スワイプ有効
       centeredSliders:true,//中心を起点にする
       autoplay: {
       delay: 0, //途切れなくループ
@@ -41,9 +41,9 @@ $(function(){
 
 
 
-    // // カードスライダーのjQuery
+    // // // カードスライダーのjQuery
 
-    const swiper = new Swiper('.slider-sec-swiper', {
+    const swiper = new Swiper('.slider-sec', {
       slidesPerView: 1, // 一度に表示するスライドの数
       spaceBetween: 20, // スライド間の余白（ピクセル単位）
       speed:1000,
