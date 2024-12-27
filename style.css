@@ -1577,7 +1577,9 @@ input[type="submit"]:hover {
     /* padding: 0 20px; */
     background-color: #FFFFFF;
   }
-
+  .swiper-slide-block {
+    width: 93%;
+  }
   .slider-concept {
     padding-top: 31px;
     font-size: 24px;
@@ -1698,10 +1700,8 @@ input[type="submit"]:hover {
     color: #333333;
     font-size: 32px;
     padding-top: 96px;
+    font-weight: 700;
   }
-
-
-
 
   .recommend {
     padding-top: 96px;

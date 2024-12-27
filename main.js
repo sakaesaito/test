@@ -17,9 +17,10 @@ $(function(){
     const LoopSwiper = new Swiper('.swiper', {
       speed:5000,
       loop: true, // ループさせる
-      allowTouchMove: false, 
+      allowTouchMove: false,//すワイプ有効
+      centeredSliders:true,//中心を起点にする
       autoplay: {
-      delay: 0,
+      delay: 0, //途切れなくループ
       },
       breakpoints:{
         0:{
@@ -31,7 +32,7 @@ $(function(){
             spaceBetween: 63,
         },
        
-        1245:{
+        1200:{
             slidesPerView: 5,
             spaceBetween: 80,
         },
@@ -55,8 +56,8 @@ $(function(){
    
 
     // // Navigation arrows
-    //   navigation, {
-    //   nextEL: '.swiper-button-next',
-    //   prevEL: '.swiper-button-prev',
-    //   },
-    //  );
+      navigation, {
+      nextEL: '.swiper-button-next',
+      prevEL: '.swiper-button-prev',
+      }
+    // });
