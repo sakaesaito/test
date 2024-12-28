@@ -527,7 +527,7 @@ input[type="submit"]:hover {
   height: auto;
 }
 
-.swiper-wrapper{
+.swiper01 .swiper-wrapper{
   transition-timing-function: linear;
 }
 
@@ -679,18 +679,8 @@ input[type="submit"]:hover {
 
 #slider {
   width: 100%;
-  padding: 72px 6px 45px;
-}
-
-.slider-sec {
-  width: 100%;
-  max-width: 360px;
-  position: relative;
-  margin: 0 auto;
-}
-.slider-card {
-  width: 100%;
-  margin: 0 auto;
+  overflow: hidden;
+  padding: 5px 20px;
 }
 .slider-title {
   font-size: 24px;
@@ -699,30 +689,34 @@ input[type="submit"]:hover {
   color: #222222;
   text-align: center;
   margin: 0 auto;
+  padding-top: 96px;
 }
 
-.slider-item .swiper-slide {
-  border: 1px;
-  /* width: 311px; */
+.slider-sec-swiper .swiper-wrapper{
+  width: 100%;
   height: auto;
-  box-shadow: 0px 5px 8px rgba(51, 51, 51, 0.25);
-  border-radius: 30px 0 30px 0;
-}
-
-
-#slider {
-  width: 375px;
+  position: relative;
   margin: 0 auto;
 }
-
-.slider-concept {
-  padding-top: 31px;
+.slider-box {
+  display: flex;
+  
+}
+.slider-slide {
+  width: 100%;
+  margin: 0 auto;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.8;
   color: #333333;
 }
 
+.slider-concept {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+  color: #222222;
+}
 .slider-concept span {
   color: #007FC6;
 }
@@ -735,17 +729,26 @@ input[type="submit"]:hover {
 }
 .slider-pic-a {
   width: 54%;
-  margin-top: 55px;
-  margin-bottom: 20px;
+  margin-top: 48px;
+}
+.slider-pic-b  {
+  width: 64px;
+  height: 64px;
+  margin-top: 37px;
 }
 
 .slider-item {
   background-color: #fff;
 }
 
-.slider-sec {
-  /* display: flex;
-  justify-content: space-between; */
+.slider-box {
+  width: 311px;
+  height: auto;
+  border-radius: 30px 0;
+  padding: 32px 10px 20px;
+  position: relative;
+  margin: 53px auto 55px;
+  box-shadow: 0px 5px 8px 3px #33333340;
 }
 
 /* 成約手数料のセクション */
@@ -809,6 +812,7 @@ input[type="submit"]:hover {
   font-weight: 400;
   line-height: 1.8;
   text-align: left;
+  padding-bottom: 89px;
 }
 
 /* Q＆Aのセクション */
@@ -834,6 +838,9 @@ input[type="submit"]:hover {
 }
 .qa_title {
   text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333333;
 }
 .accordion-header {
   width: 100%;
@@ -1350,7 +1357,7 @@ input[type="submit"]:hover {
     overflow: hidden;
   }
 
-  .swiper-wrapper {
+  .swiper01 .swiper-wrapper {
     margin-top: 25px;
     transition-timing-function: linear;
   }
@@ -1439,7 +1446,6 @@ input[type="submit"]:hover {
     width: 100%;
     max-width: 980px;
     margin: 0 auto;
-
   }
 
   .feature_heading {
@@ -1527,44 +1533,32 @@ input[type="submit"]:hover {
     opacity: .6;
   }
 
+
+  #slider {
+    margin-inline: auto;
+    position: relative;
+  }
   .slider-title {
     font-size: 32px;
     line-height: 48px;
     color: #222222;
   }
-
-  #slider {
-    margin: 0 auto;
+  .slider-sec-swiper{
     width: 100%;
-    padding-top: 96px;
-    padding-bottom: 0;
-  }
-
-  .slider-sec {
-    width: 100%;
-    max-width: 980px;
-    margin: 0 auto;
     position: relative;
     display: flex;
-    justify-content: space-between;
-    padding: 73px 34px 55px;
   }
 
-  .slider-item {
-    border: 1px;
-    /* width: 93%; */
+  .slider-box {
+    width: 404px;
     height: auto;
-    margin: 0 auto;
-    box-shadow: 0px 5px 8px rgba(51, 51, 51, 0.25);
-    border-radius: 30px 0 30px 0;
-    /* padding: 0 20px; */
-    background-color: #FFFFFF;
-  }
-  .swiper-slide-block {
-    width: 93%;
+    border-radius: 30px 0;
+    padding: 32px 20px 0 ;
+    position: relative;
+    margin: 53px auto 55px;
+    box-shadow: 0px 5px 8px 3px #33333340;
   }
   .slider-concept {
-    padding-top: 31px;
     font-size: 24px;
     line-height: 1.8;
   }
@@ -1585,10 +1579,28 @@ input[type="submit"]:hover {
     height: 64px;
     margin-top: 37px;
   }
+  /* 前へ次への矢印カスタマイズ */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 20px;
+  margin: auto;
+  width: 20px;
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+  background-image: url(img/arrow-01.png);
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+  background-image: url(img/arrow-02.png);
+}
 
 /* 前への矢印 */
 .swiper-button-prev {
-  left: -30px;
+  left: -20px;
 }
 /* 次への矢印 */
 .swiper-button-next {
@@ -1618,7 +1630,7 @@ input[type="submit"]:hover {
 
   .plan_list {
     max-width: 1020px;
-    margin: 60px auto 0;
+    margin: 68px auto 0;
     padding: 0 54px;
     gap: 11px;
     display: grid;
@@ -1651,7 +1663,7 @@ input[type="submit"]:hover {
   .plan_number {
     font-size: 96px;
     font-weight: 700;
-    margin-top: 0;
+    margin-top: 16px;
   }
 
   .plan_number span {
