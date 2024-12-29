@@ -698,7 +698,7 @@ input[type="submit"]:hover {
   position: relative;
   margin: 0 auto;
 }
-.slider-box {
+.swiper-box {
   display: flex;
   
 }
@@ -711,33 +711,33 @@ input[type="submit"]:hover {
   color: #333333;
 }
 
-.slider-concept {
+.swiper-concept {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.8;
   color: #222222;
 }
-.slider-concept span {
+.swiper-concept span {
   color: #007FC6;
 }
 
-.slider-lead {
+.swiper-lead {
   margin-top: 24px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.8;
 }
-.slider-pic-a {
+.swiper-pic-a {
   width: 54%;
   margin-top: 48px;
 }
-.slider-pic-b  {
+.swiper-pic-b  {
   width: 64px;
   height: 64px;
   margin-top: 37px;
 }
 
-.slider-item {
+.swiper-item {
   background-color: #fff;
 }
 
@@ -1544,12 +1544,12 @@ input[type="submit"]:hover {
     color: #222222;
   }
   .slider-sec-swiper{
-    width: 100%;
+    /* width: 100%; */
     position: relative;
-    display: flex;
+    /* display: flex; */
   }
 
-  .slider-box {
+  .swiper-box {
     width: 404px;
     height: auto;
     border-radius: 30px 0;
@@ -1558,23 +1558,23 @@ input[type="submit"]:hover {
     margin: 53px auto 55px;
     box-shadow: 0px 5px 8px 3px #33333340;
   }
-  .slider-concept {
+  .swiper-concept {
     font-size: 24px;
     line-height: 1.8;
   }
 
-  .slider-lead {
+  .swiper-lead {
     margin-top: 24px;
     font-size: 14px;
     line-height: 1.8;
   }
 
-  .slider-pic-a  {
+  .swiper-pic-a  {
     width: 42.6%;
     margin-top: 37px;
   }
 
-  .slider-pic-b  {
+  .swiper-pic-b  {
     width: 64px;
     height: 64px;
     margin-top: 37px;
@@ -1588,16 +1588,16 @@ input[type="submit"]:hover {
   height: 20px;
   margin: auto;
   width: 20px;
+  border-radius: 50%;
+  background-color: #007FC6;
+  color: #fff;
+  box-shadow: 0 0 3px #fff;
 }
-/* 前への矢印カスタマイズ */
-.swiper-button-prev::after {
-  background-image: url(img/arrow-01.png);
-}
-/* 次への矢印カスタマイズ */
+/* 前への矢印カスタマイズ*/
+.swiper-button-prev::after ,
 .swiper-button-next::after {
-  background-image: url(img/arrow-02.png);
+  font-size: 16px;
 }
-
 /* 前への矢印 */
 .swiper-button-prev {
   left: -20px;
