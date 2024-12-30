@@ -14,7 +14,7 @@ $(function(){
 
   // 会社ロゴ無限ループのjQuery
 
-    const LoopSwiper = new Swiper('.swiper01', {
+    const swiper = new Swiper('.swiper01', {
       speed:4000,
       loop: true, // ループさせる
       allowTouchMove: false,//スワイプ有効
@@ -43,7 +43,7 @@ $(function(){
 
     // // // カードスライダーのjQuery
  
-    const swiper = new Swiper('.slider-sec .swiper' , {
+    const CardSwiper = new Swiper('.slider-sec-swiper .swiper ' , {
       speed:1000,
       loop: true, // ループさせる
       allowTouchMove: true, 

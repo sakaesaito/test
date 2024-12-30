@@ -677,10 +677,10 @@ input[type="submit"]:hover {
   margin: 0 auto;
 }
 
+/* 　CardSwiper 　カードスライダーSp版 */
 #slider {
   width: 100%;
   overflow: hidden;
-  padding: 5px 20px;
 }
 .slider-title {
   font-size: 24px;
@@ -692,30 +692,35 @@ input[type="submit"]:hover {
   padding-top: 96px;
 }
 
-.slider-sec-swiper .swiper-wrapper{
+.sliser-sec-swiper {
   width: 100%;
   height: auto;
   position: relative;
   margin: 0 auto;
 }
-.swiper-box {
-  display: flex;
-  
+
+.swiper-box  {
+  width: 311px;
+  height: auto;
+  border-radius: 30px 0;
+  padding: 32px 10px 20px;
+  position: relative;
+  margin: 53px auto 55px;
+  box-shadow: 0px 5px 8px 3px #33333340;
 }
-.slider-slide {
+.swiper-slider {
   width: 100%;
   margin: 0 auto;
+  color: #333333;
+  display: flex;
+}
+
+.swiper-concept {
+  margin-top: 31px;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.8;
   color: #333333;
-}
-
-.swiper-concept {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.8;
-  color: #222222;
 }
 .swiper-concept span {
   color: #007FC6;
@@ -741,14 +746,36 @@ input[type="submit"]:hover {
   background-color: #fff;
 }
 
-.slider-box {
-  width: 311px;
-  height: auto;
-  border-radius: 30px 0;
-  padding: 32px 10px 20px;
-  position: relative;
-  margin: 53px auto 55px;
-  box-shadow: 0px 5px 8px 3px #33333340;
+ /* 前へ次への矢印カスタマイズ */
+ .swiper-button-prev::after,
+ .swiper-button-next::after {
+   background-repeat: no-repeat;
+   background-size: contain;
+   content:"";
+   height: 20px;
+   margin: auto;
+   width: 20px;
+ }
+ /* 前への矢印カスタマイズ*/
+ .swiper-button-prev::after{
+  background-image: url(img/arrow-01.png);
+ }
+ 
+ .swiper-button-next::after {
+  background-image: url(img/arrow-02.png);
+ }
+ /* 前への矢印 */
+ .swiper-button-prev {
+   left: -5px;
+
+ }
+ /* 次への矢印 */
+ .swiper-button-next {
+   right: -5px;
+ }
+ .swiper-button-next:after, 
+.swiper-button-prev:after {
+    content: none; /* 矢印を表示しないようにする */
 }
 
 /* 成約手数料のセクション */
@@ -945,6 +972,8 @@ input[type="submit"]:hover {
   width: 32px; 
   height: 32px; 
   text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 
@@ -1533,7 +1562,7 @@ input[type="submit"]:hover {
     opacity: .6;
   }
 
-
+/* カードのスライダーPC版は２枚表示 */
   #slider {
     margin-inline: auto;
     position: relative;
@@ -1543,12 +1572,10 @@ input[type="submit"]:hover {
     line-height: 48px;
     color: #222222;
   }
-  .slider-sec-swiper{
-    /* width: 100%; */
+  .swiper-sec{
     position: relative;
-    /* display: flex; */
+   
   }
-
   .swiper-box {
     width: 404px;
     height: auto;
@@ -1562,13 +1589,11 @@ input[type="submit"]:hover {
     font-size: 24px;
     line-height: 1.8;
   }
-
   .swiper-lead {
     margin-top: 24px;
     font-size: 14px;
     line-height: 1.8;
   }
-
   .swiper-pic-a  {
     width: 42.6%;
     margin-top: 37px;
@@ -1588,15 +1613,18 @@ input[type="submit"]:hover {
   height: 20px;
   margin: auto;
   width: 20px;
-  border-radius: 50%;
+  /* border-radius: 50%;
   background-color: #007FC6;
   color: #fff;
-  box-shadow: 0 0 3px #fff;
+  box-shadow: 0 0 3px #fff; */
 }
 /* 前への矢印カスタマイズ*/
-.swiper-button-prev::after ,
+.swiper-button-prev::after{
+ background-image: url(img/arrow-01.png);
+}
+
 .swiper-button-next::after {
-  font-size: 16px;
+ background-image: url(img/arrow-02.png);
 }
 /* 前への矢印 */
 .swiper-button-prev {
