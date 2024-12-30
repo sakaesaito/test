@@ -532,7 +532,6 @@ input[type="submit"]:hover {
 }
 
 
-
 #lead_area {
   background-color: #fff;
   color: #333333;
@@ -712,7 +711,6 @@ input[type="submit"]:hover {
   width: 100%;
   margin: 0 auto;
   color: #333333;
-  display: flex;
 }
 
 .swiper-concept {
@@ -843,11 +841,11 @@ input[type="submit"]:hover {
 }
 
 /* Q＆Aのセクション */
-#qa {
+#accordion {
   background-color: #F9F9F9;
 }
 
-.accordion {
+.qa-accordion {
   margin-top: 48px;
 }
 
@@ -855,7 +853,7 @@ input[type="submit"]:hover {
   display: none;
 }
 
-.qa_container {
+.qa-accordion {
   width: 100%;
   /* max-width: 375px; */
   padding: 0 16px;
@@ -863,7 +861,7 @@ input[type="submit"]:hover {
   background: #F9F9F9;
   padding-bottom: 72px;
 }
-.qa_title {
+.accordion-title {
   text-align: center;
   font-size: 24px;
   font-weight: 700;
@@ -1708,23 +1706,25 @@ input[type="submit"]:hover {
   
 
   /* PC版Q&Aセクション */
-  #qa {
+  #accordion {
     width: 100%;
     margin: 0 auto;
     padding: 0;
   }
 
-  .qa_container {
+  .accordion-sec {
     max-width: 1024px;
     margin: 0 auto;
 
   }
-  .qa_title {
+  .accordion-title {
     color: #333333;
     font-size: 32px;
     padding-top: 96px;
     font-weight: 700;
   }
+
+
 
   .recommend {
     padding-top: 96px;

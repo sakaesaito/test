@@ -43,7 +43,7 @@ $(function(){
 
     // // // カードスライダーのjQuery
  
-    const CardSwiper = new Swiper('.slider-sec-swiper .swiper ' , {
+    const CardSwiper = new Swiper('.slider-sec .swiper ' , {
       speed:1000,
       loop: true, // ループさせる
       allowTouchMove: true, 
@@ -71,3 +71,12 @@ $(function(){
       }
     }
   });
+
+
+    // Q&AアコーディオンのjQuery
+  $('.accordion-header').click(function() { // .accordion-headerをクリックで発火
+    $(this).next().slideToggle();
+    // $(this)...$('.accordion-header')の.next()...次の要素が.slideToggle()...表示と非表示を交互にする
+    $(this).toggleClass('active');
+    // $(this)...$('.accordion-header')に、activeというクラスが追加と削除を交互にする
+});
