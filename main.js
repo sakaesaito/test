@@ -43,7 +43,7 @@ $(function(){
 
     // // // カードスライダーのjQuery
  
-    const CardSwiper = new Swiper('.slider-sec .swiper ' , {
+    const CardSwiper = new Swiper('.slider-sec .swiper2 ' , {
       speed:1000,
       loop: true, // ループさせる
       allowTouchMove: true, 
