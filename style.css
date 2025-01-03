@@ -1217,7 +1217,7 @@ input[type="submit"]:hover {
   .hero_left {
     width: 100%;
     margin: 0 auto;
-    padding: 0 0 120px 20px;
+    padding: 0 0 128px 20px;
   }
 
   .hero_text {
@@ -1444,7 +1444,7 @@ input[type="submit"]:hover {
 
   .lead_title {
     font-size: 32px;
-    padding-top: 96px;
+    padding-top: 92px;
   }
 
   .lead_text {
