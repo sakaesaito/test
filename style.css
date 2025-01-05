@@ -873,7 +873,6 @@ input[type="submit"]:hover {
 }
 .accordion-header:nth-child(5){
   padding-top: 12px;
-  line-height: 1.5;
 }
 .accordion-header:nth-child(7){
   padding: 17px 35px 10px 20px;
@@ -1594,7 +1593,6 @@ input[type="submit"]:hover {
   }
   .swiper-wrapper .swiper02{
     position: relative;
-    /* display: flex; */
   }
   .swiper-card {
     /* width: 404px; */

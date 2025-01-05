@@ -45,7 +45,7 @@ $(function(){
  
     const CardSwiper = new Swiper('.swiper02' , {
       speed:1000,
-      loop: true, // ループさせる
+      loop: false, 
       allowTouchMove: true, 
       grabCursor:true, // 手でスワイプする
       breakpoints:{
@@ -62,8 +62,6 @@ $(function(){
               slidesPerGroup: 2, // 一度にスワイプされるスライドの
           },
         
-  
-
      // Navigation arrows
       navigation: {
       nextEL: '.swiper-button-next',
