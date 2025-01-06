@@ -43,9 +43,9 @@ $(function(){
 
     // // // カードスライダーのjQuery
  
-    const CardSwiper = new Swiper('.swiper02' , {
+    const CardSwiper = new Swiper('.slider-sec-swiper', {
       speed:1000,
-      loop: false, 
+      loop: true, 
       allowTouchMove: true, 
       grabCursor:true, // 手でスワイプする
       breakpoints:{
@@ -56,18 +56,18 @@ $(function(){
           },
         
           900:{
-              spaceBetween: 70, // 要素間の余白
-              centeredSlides:true, // 中心を起点にする
+              spaceBetween: 50, // 要素間の余白
               slidesPerView: 2, // 一度に表示するスライドの数
               slidesPerGroup: 2, // 一度にスワイプされるスライドの
           },
+        },
         
      // Navigation arrows
       navigation: {
-      nextEL: '.swiper-button-next',
-      prevEL: '.swiper-button-prev',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
       }
-    }
+  
   });
 
 
