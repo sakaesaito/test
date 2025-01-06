@@ -251,7 +251,7 @@ img {
 }
 
 .hero_left {
-  padding-bottom: 30px;
+  padding-bottom: 26px;
 }
 
 .hero_text {
@@ -262,14 +262,14 @@ img {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  margin-top: 40px;
+  margin-top: 42px;
 }
 
 .hero_catch {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.8;
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .hero_read {
@@ -308,8 +308,8 @@ img {
 }
 
 .hero_detail {
-  margin-top: 13px;
-  font-weight: 700;
+  margin-top: 15px;
+  font-weight: 700;margin-left: 4px;
 }
 
 .hero_note {
@@ -327,19 +327,21 @@ img {
   font-size: 12px;
   vertical-align: top;
   color: #333333;
+  margin-left: 2px;
 }
 
 .hero_detail #span {
   font-size: 16px;
   vertical-align: center;
   color: #007FC6;
+  margin-left: 2px;
 }
 
 /* FV中央の画像 */
 .job_listing {
  position: absolute;
  max-width: 360px;
- bottom: 51%;
+ bottom: 52%;
  left: 6px;
 }
 
@@ -350,7 +352,7 @@ img {
 .contact_inner {
   margin: 0 auto ;
   width: 100%;
-  padding: 8px 8px 19px;
+  padding: 10px 8px 19px;
   height: auto;
   background-color: #fff;
   display: block;
@@ -458,7 +460,7 @@ input[type="submit"] {
   display: block;
   text-align: center;
   width: 74%;
-  margin: 35px auto 18px;
+  margin: 46px auto 0;
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: #007FC6;
@@ -506,7 +508,7 @@ input[type="submit"]:hover {
 }
 
 .works_logo img {
-  width: 80%;
+  width: 82%;
   height: auto;
   margin: 0 auto;
   text-align: center;
@@ -514,8 +516,8 @@ input[type="submit"]:hover {
 }
 
 .works_logo img:nth-child(2) {
-  margin-top: 4px;
-  width: 86%;
+  margin-top: 8px;
+  width: 82%;
 }
 
 /* 会社ロゴ無限スライダー */
@@ -540,7 +542,7 @@ input[type="submit"]:hover {
 
 .lead_main {
   width: 100%;
-  margin: 72px auto 0;
+  margin: 66px auto 0;
   padding: 0 15px;
   text-align: center;
 }
@@ -615,7 +617,7 @@ input[type="submit"]:hover {
 }
 
 .feature_title {
-  margin-top: 12px;
+  margin-top: 19px;
   font-size: 20px;
   font-weight: 700;
   line-height: 1.5;
@@ -688,7 +690,7 @@ input[type="submit"]:hover {
   color: #222222;
   text-align: center;
   margin: 0 auto;
-  padding-top: 96px;
+  padding-top: 70px;
 }
 
 .swiper-container {
@@ -703,7 +705,7 @@ input[type="submit"]:hover {
   width: 311px; 
   height: auto;
   border-radius: 30px 0;
-  padding: 26px 10px 23px;
+  padding: 14px 10px 20px;
   position: relative;
   margin: 53px auto 55px;
   box-shadow: 0px 5px 8px 3px #33333340;
@@ -784,7 +786,7 @@ input[type="submit"]:hover {
   width: 310px;
   text-align: center;
   margin: 0 auto;
-  padding-top: 72px;
+  padding-top: 58px;
 }
 
 .plan_title {
@@ -850,7 +852,7 @@ input[type="submit"]:hover {
   padding: 0 16px;
   margin: 45px auto 0;
   background: #F9F9F9;
-  padding-bottom: 72px;
+  padding-bottom: 68px;
 }
 .accordion-title {
   text-align: center;
@@ -861,8 +863,8 @@ input[type="submit"]:hover {
 .accordion-header {
   width: 100%;
   height: 64px;
-  padding: 24px 35px 24px 20px;
-  margin: 16px auto 0 ;
+  padding: 26px 35px 24px 20px;
+  margin: 17px auto 0 ;
   cursor: pointer;
   position: relative;
   font-size: 14px;
@@ -876,10 +878,12 @@ input[type="submit"]:hover {
   padding-top: 12px;
 }
 .accordion-header:nth-child(7){
-  padding: 17px 35px 10px 20px;
+  padding: 8px 35px 10px 20px;
+  line-height: 1.5;
 }
 .accordion-header:nth-child(9){
-  padding: 17px 35px 10px 20px;
+  padding: 10px 35px 10px 20px;
+  line-height: 1.5;
 }
 .accordion-header.active {
   display: block;
@@ -891,7 +895,7 @@ input[type="submit"]:hover {
 .accordion-header::before{
   position: absolute;
   content: '';
-  top: 1px;
+  top: 0px;
   right: 20px;
   bottom: 0;
   width: 16px;
@@ -1063,7 +1067,7 @@ input[type="submit"]:hover {
 .footer_logo {
   width: 227px;
   transition: 0.4s;
-  margin: 0 auto 34px ;
+  margin: 0 auto 30px ;
 }
 
 .small_sec {
