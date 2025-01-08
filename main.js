@@ -56,7 +56,7 @@ $(function(){
           },
         
           900:{
-              spaceBetween: 50, // 要素間の余白
+              spaceBetween: 40, // 要素間の余白
               slidesPerView: 2, // 一度に表示するスライドの数
               slidesPerGroup: 2, // 一度にスワイプされるスライドの
           },

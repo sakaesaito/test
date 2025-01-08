@@ -696,7 +696,7 @@ input[type="submit"]:hover {
 
 .swiper-container {
   width: 100%;
-  max-width: 321px;
+  max-width: 311px;
   height: auto;
   position: relative;
   margin: 0 auto;
@@ -704,7 +704,7 @@ input[type="submit"]:hover {
 .slider-sec ,.swiper-wrapper {
   width: 100%;
 }
-.swiper-box {
+.swiper-slider {
   width: 311px; 
   height: auto;
   border-radius: 30px 0;
@@ -772,11 +772,11 @@ input[type="submit"]:hover {
  }
  /* 前への矢印 */
  .swiper-button-prev {
-  left: -20px !important; /* 矢印を外に出すために使用 */
+  left: -28px !important; /* 矢印を外に出すために使用 */
  }
  /* 次への矢印 */
  .swiper-button-next {
-   right: -20px !important 
+   right: -28px !important 
  }
  
  .swiper-button-next:after, 
@@ -1618,11 +1618,14 @@ input[type="submit"]:hover {
     border-radius: 30px 0;
     padding: 1px 20px 26px ;
     position: relative; 
-    margin: 72px 15px 65px 15px; 
+    margin: 68px 15px 60px 15px; 
     box-shadow: 0px 5px 8px 3px #33333340;
   }
-  
-  .swiper-concept {
+  .swiper-box {
+    box-shadow: none;
+
+  }
+    .swiper-concept {
     font-size: 24px;
     line-height: 1.8;
     margin-top: 34px;
@@ -1641,12 +1644,12 @@ input[type="submit"]:hover {
   .swiper-pic-b  {
     width: 64px;
     height: 64px;
-    margin-top: 24px;
+    margin-top: 28px;
   }
   .swiper-pic-c  {
     width: 42.6%;
     height: auto;
-    margin-top: 48px;
+    margin-top: 52px;
   }
   /* 前へ次への矢印カスタマイズ */
 .swiper-button-prev::after,
