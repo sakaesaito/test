@@ -78,3 +78,4 @@ $(function(){
     $(this).toggleClass('active');
     // $(this)...$('.accordion-header')に、activeというクラスが追加と削除を交互にする
 });
+
