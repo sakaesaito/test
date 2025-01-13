@@ -783,7 +783,7 @@ input[type="submit"]:hover {
  }
  /* 次への矢印 */
  .swiper-button-next {
-   right: -20px !important 
+   right: -6%
  }
  
  .swiper-button-next:after, 
@@ -1685,7 +1685,7 @@ input[type="submit"]:hover {
     box-shadow: none;
 
   }
-    .swiper-concept {
+  .swiper-concept {
     font-size: 24px;
     line-height: 1.8;
     margin-top: 34px;
@@ -1697,7 +1697,7 @@ input[type="submit"]:hover {
   }
   .swiper-pic-a  {
     width: 42.6%;
-    margin-top: 35px;
+    margin-top: 10px;
     margin-left: 10px;
   }
 

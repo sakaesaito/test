@@ -7,7 +7,10 @@ $(function(){
     $(this).toggleClass("active");
     //「.nav」に「.active」を追加・削除
     $(".drawer_nav").toggleClass("active");
-  });
+    $('.drawer_nev a[href]').on('click', function(event) {
+      $('.drawer_item').trigger('click');
+  }); 
+ });
   });
   
 
