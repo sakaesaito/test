@@ -7,9 +7,11 @@ $(function(){
     $(this).toggleClass("active");
     //「.nav」に「.active」を追加・削除
     $(".drawer_nav").toggleClass("active");
-    $('.drawer_nev a[href]').on('click', function(event) {
-      $('.drawer_item').trigger('click');
-  }); 
+    $(".drawer_nav").click(function(){
+      $(this).removeClass("active")
+
+    })
+    
  });
   });
   
@@ -30,11 +32,12 @@ $(function(){
             slidesPerView: 2, // 一度に表示するスライドの数
             spaceBetween: 63, // 要素間の余白
         },
-        600:{
-            slidesPerView: 3,
-            spaceBetween: 63,
-        },
        
+        600:{
+          slidesPerView: 3,
+          spaceBetween: 63,
+      },
+         
         1200:{
             slidesPerView: 5,
             spaceBetween: 80,
@@ -54,15 +57,35 @@ $(function(){
       breakpoints:{
           0:{
               spaceBetween: 30, // 要素間の余白
+              centeredSliders:true,//中央を起点に
               slidesPerView: 1, // 一度に表示するスライドの数
               slidesPerGroup: 1, // 一度にスワイプされるスライドの数
           },
-        
-          900:{
-              spaceBetween: 40, // 要素間の余白
-              slidesPerView: 2, // 一度に表示するスライドの数
-              slidesPerGroup: 2, // 一度にスワイプされるスライドの
-          },
+          600:{
+            spaceBetween: 30, // 要素間の余白
+            centeredSliders:true,//中央を起点に
+            slidesPerView: 1.5, // 一度に表示するスライドの数
+            slidesPerGroup: 1, // 一度にスワイプされるスライドの
+        },
+        750:{
+          spaceBetween: 30, // 要素間の余白
+          centeredSliders:true,//中央を起点に
+          slidesPerView: 1.8, // 一度に表示するスライドの数
+          slidesPerGroup: 1, // 一度にスワイプされるスライドの
+      },
+         
+        900:{
+          spaceBetween: 40, // 要素間の余白
+          centeredSliders:true,
+          slidesPerView: 2, // 一度に表示するスライドの数
+          slidesPerGroup: 2, // 一度にスワイプされるスライドの
+        },
+        1024:{
+          spaceBetween: 50, // 要素間の余白
+          centeredSliders:true,
+          slidesPerView: 2, // 一度に表示するスライドの数
+          slidesPerGroup: 2, // 一度にスワイプされるスライドの
+        },
         },
         
      // Navigation arrows
@@ -70,7 +93,6 @@ $(function(){
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
       }
-  
   });
 
 
