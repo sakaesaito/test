@@ -70,8 +70,8 @@ $(function(){
         750:{
           spaceBetween: 30, // 要素間の余白
           centeredSliders:true,//中央を起点に
-          slidesPerView: 1.8, // 一度に表示するスライドの数
-          slidesPerGroup: 1, // 一度にスワイプされるスライドの
+          slidesPerView: 2, // 一度に表示するスライドの数
+          slidesPerGroup:2, // 一度にスワイプされるスライドの
       },
          
         900:{
