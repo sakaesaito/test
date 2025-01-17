@@ -2074,7 +2074,7 @@ input[type="submit"]:hover {
     left: -6px;
   }
 
-  .contact_second {
+  #contact_second {
     width: 80%;
     max-width: 400px;
     height: auto;
