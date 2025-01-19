@@ -63,17 +63,10 @@ const CardSwiper = new Swiper('.slider-sec-swiper', {
       slidesPerView: 1, // 一度に表示するスライドの数
       slidesPerGroup: 1, // 一度にスワイプされるスライドの数
     },
-   
-    750: {
-      spaceBetween: 30, // 要素間の余白
-      centeredSliders: true,//中央を起点に
-      slidesPerView: 2, // 一度に表示するスライドの数
-      slidesPerGroup: 2, // 一度にスワイプされるスライドの
-    },
 
-    900: {
+    800: {
       spaceBetween: 40, // 要素間の余白
-      centeredSliders: true,
+      centeredSliders: true,//中央を起点に
       slidesPerView: 2, // 一度に表示するスライドの数
       slidesPerGroup: 2, // 一度にスワイプされるスライドの
     },
@@ -130,3 +123,82 @@ $('.accordion-header').click(function () { // .accordion-headerをクリック�
   switchViewport();
 })
   ();
+
+
+var Swiper = new Swiper(".swiper-container", { // eslint-disable-line  
+  autoHeigt: true,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+    clickable: "true"
+  },
+  spaceBetween: 0
+});
+
+
+// ページが完全に読み取られた後に以下の処理を実行する
+$(document).ready(function () {
+  // id= 「form」のフォームが送信されたときこの関数を実行 
+  // フォーム内の入力データを URL エンコードされた文字列形式に変換して変数 formData に格納
+  $('#form').submit(function (event) {
+    var formData = $('#form').serialize();
+    // jQueryのAjax機能を使って非同期通信を// フォームデータをAjaxリクエストのデータとして送信する
+    $.ajax({
+      url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdthNbFJ_pRMWRFh263qz5n70zGalzJsJpwNr0GNIcMNU2rBg/formResponse",
+      data: formData,
+      // HTTPメソッドとしてPOSTを指定 // フォームデータを送信するときは通常POSTを使用する
+      type: "POST",
+      // サーバーからの応答データの形式をXMLとして指定
+      dataType: "xml",
+      // HTTPステータスコードごとの処理を定義
+      statusCode: {
+        // HTTPステータスコードが0の場合の処理
+        0: function () {
+          // クラス名 "end-message" を持つ要素を表示する
+          $(".end-message").slideDown();
+          // クラス名 "submit-btn" を持つ要素を徐々に非表示する
+          $(".submit-btn").fadeOut();
+          // 処理後に " thanks.html " というページにリダイレクトされる
+          window.location.href = "thanks.html";
+        },
+        // HTTPステータスコードが200の場合の処理​​ // サーバーからエラーが返された場合実行される
+        200: function () {
+          // クラス名 "false-message" を持つ要素を表示する 
+          $(".false-message").slideDown();
+        }
+      }
+    });
+    event.preventDefault();
+  });
+});
+
+
+// //フォームの必須項目チェックでメール送信可能にする実装
+// // ページの読み込みが完了したら、以下の処理を実行する
+// $(document).ready(function () {
+//   // ID「js-submit」のボタン要素を取得し、変数 `$submitBtn` に代入します
+//   const $submitBtn = $('#js-submit')
+//   // フォーム内のすべての `input` 要素や `textarea` 要素に「change」イベントを監視
+//   // ユーザーが値を変更するたびに、以下の処理が実行
+//   $('#form input,#form textarea').on('change', function () {
+//     // テキスト入力フィールドの値が空でいないか確認する。 
+//     if (
+//       // テキスト入力フィールドの値が空でいないか確認
+//       $('#form input[type="text"]').val() !== "" &&
+//       // メールアドレス入力フィールドの値が空でないか確認
+//       $('#form input[type="email"]').val() !== "" &&
+//       $('#form input[type="tel"]').val() !== "" &&
+//      ) {
+//       // 上記すべての条件が満たされていれば、送信ボタン（$submitBtn）を有効化（disabledを解除）
+//       $submitBtn.prop('disabled', false);
+//       // 条件が一つでも満たされない場合、送信ボタン（$submitBtn）を無効を有効化
+//     } else {
+//       $submitBtn.prop('disabled', true);
+//     }
+//   });
+// });

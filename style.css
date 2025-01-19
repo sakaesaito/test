@@ -121,6 +121,7 @@ img {
   justify-content: center;
 
 }
+
 .menu:hover {
   opacity: .7;
 }
@@ -140,9 +141,11 @@ img {
 .menu_icon span:nth-of-type(2) {
   margin-top: 8px;
 }
+
 .menu_icon span:nth-of-type(3) {
   margin-top: 8px;
 }
+
 .menu_item {
   text-align: center;
   margin-top: 7px;
@@ -152,16 +155,18 @@ img {
 .menu.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 8px);
 }
+
 .menu.active span:nth-child(2) {
   opacity: 0;
 }
+
 .menu.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -8px);
 }
 
 /* ドロワーメニュー */
 .drawer_nav {
-  display: none; 
+  display: none;
   display: block;
   position: fixed;
   top: 64px;
@@ -309,7 +314,8 @@ img {
 
 .hero_detail {
   margin-top: 15px;
-  font-weight: 700;margin-left: 4px;
+  font-weight: 700;
+  margin-left: 4px;
   letter-spacing: 1px;
 }
 
@@ -339,10 +345,10 @@ img {
 
 /* FV中央の画像 */
 .job_listing {
- position: absolute;
- max-width: 360px;
- bottom: 51.6%;
- left: 6px;
+  position: absolute;
+  max-width: 360px;
+  bottom: 51.6%;
+  left: 6px;
 }
 
 .contact {
@@ -350,7 +356,7 @@ img {
 }
 
 .contact_inner {
-  margin: 0 auto ;
+  margin: 0 auto;
   width: 100%;
   padding: 8px 8px 17px;
   height: auto;
@@ -372,12 +378,14 @@ img {
   padding-top: 16px;
   padding-bottom: 16px;
 }
+
 .contact_polygon {
   width: 17px;
   position: relative;
   top: -6px;
   left: 155px;
 }
+
 .contact_polygon_second {
   width: 17px;
   position: relative;
@@ -396,15 +404,19 @@ label {
 label:nth-child(1) {
   margin-top: 0;
 }
+
 label[for="company"] {
   margin-top: 15px;
 }
+
 label[for="email"] {
   margin-top: 15px;
 }
+
 label[for="tel"] {
   margin-top: 14px;
 }
+
 .contact_name_sec {
   width: 100%;
   display: flex;
@@ -438,11 +450,13 @@ input[type="tel"] {
   padding-left: 8px;
   margin-top: 8px;
 }
-input[type="text"]{
+
+input[type="text"] {
   padding-top: 12px;
   padding-bottom: 15px;
 
 }
+
 input[type="email"] {
   display: block;
   border: 1px solid #ccc;
@@ -485,7 +499,13 @@ input[type="submit"]:hover {
   margin-top: 26px;
   line-height: 1.25;
 }
+.end-message {
+  display: none;
+}
 
+.false-message {
+  display: none;
+}
 .works {
   background-color: #fff;
   color: #333333;
@@ -523,14 +543,15 @@ input[type="submit"]:hover {
 
 /* 会社ロゴ無限スライダー */
 .swiper {
-  overflow:hidden;
+  overflow: hidden;
 }
+
 .swiper-slider img {
   width: 100%;
   height: auto;
 }
 
-.swiper01 .swiper-wrapper{
+.swiper01 .swiper-wrapper {
   transition-timing-function: linear;
 }
 
@@ -683,9 +704,10 @@ input[type="submit"]:hover {
 #slider {
   width: 100%;
   position: relative;
-  padding:  0 16px;
-  overflow: hidden; 
+  padding: 0 16px;
+  overflow: hidden;
 }
+
 .slider-title {
   font-size: 24px;
   font-weight: 700;
@@ -701,14 +723,16 @@ input[type="submit"]:hover {
   max-width: 670px;
   height: auto;
   position: relative;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
-.slider-sec  {
+
+.slider-sec {
   width: 100%;
   overflow: visible;
 }
+
 .swiper-slider {
-  width: 311px; 
+  width: 311px;
   height: auto;
   border-radius: 30px 0;
   padding: 14px 10px 20px;
@@ -724,6 +748,7 @@ input[type="submit"]:hover {
   line-height: 1.8;
   color: #333333;
 }
+
 .swiper-concept span {
   color: #007FC6;
 }
@@ -734,16 +759,19 @@ input[type="submit"]:hover {
   font-size: 12px;
   line-height: 1.8;
 }
+
 .swiper-pic-a {
   width: 56%;
   margin-top: 52px;
 }
-.swiper-pic-b  {
+
+.swiper-pic-b {
   width: 64px;
   height: 64px;
   margin-top: 70px;
 }
-.swiper-pic-c  {
+
+.swiper-pic-c {
   width: 42.6%;
   height: auto;
   margin-top: 82px;
@@ -754,41 +782,45 @@ input[type="submit"]:hover {
 }
 
 
- /* 前へ次への矢印カスタマイズ */
+/* 前へ次への矢印カスタマイズ */
 .swiper-button-prev::after,
 .swiper-button-next::after {
   background-repeat: no-repeat;
   background-size: contain;
-  content: ""!important;
+  content: "" !important;
   height: 20px;
   margin: auto;
   width: 20px;
- }
+}
 
- .swiper-button-next, 
- .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   width: 36px;
- }
- /* 前への矢印カスタマイズ*/
-.swiper-button-prev::after{
+}
+
+/* 前への矢印カスタマイズ*/
+.swiper-button-prev::after {
   background-image: url(img/arrow-01.png);
- }
- 
- .swiper-button-next::after {
+}
+
+.swiper-button-next::after {
   background-image: url(img/arrow-02.png);
- }
- /* 前への矢印 */
- .swiper-button-prev {
-  left: -22px 
- }
- /* 次への矢印 */
- .swiper-button-next {
-   right: -6%
- }
- 
- .swiper-button-next:after, 
- .swiper-button-prev:after {
-    content: none; /* 矢印を表示しないようにする */
+}
+
+/* 前への矢印 */
+.swiper-button-prev {
+  left: -6%
+}
+
+/* 次への矢印 */
+.swiper-button-next {
+  right: -6%
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  content: none;
+  /* 矢印を表示しないようにする */
 }
 
 /* 成約手数料のセクション */
@@ -872,17 +904,19 @@ input[type="submit"]:hover {
   background: #F9F9F9;
   padding-bottom: 68px;
 }
+
 .accordion-title {
   text-align: center;
   font-size: 24px;
   font-weight: 700;
   color: #333333;
 }
+
 .accordion-header {
   width: 100%;
   height: 64px;
   padding: 26px 35px 17px 20px;
-  margin: 17px auto 0 ;
+  margin: 17px auto 0;
   cursor: pointer;
   position: relative;
   font-size: 14px;
@@ -890,58 +924,51 @@ input[type="submit"]:hover {
   color: #333333;
   text-align: left;
   background-color: #FFF;
-  border-radius: 10px 10px 0 0 ;
+  border-radius: 10px 10px 0 0;
 }
-.accordion-header:nth-child(1){
+
+.accordion-header:nth-child(1) {
   padding-top: 26px;
 }
-.accordion-header:nth-child(3){
+
+.accordion-header:nth-child(3) {
   padding-top: 16px;
 
 }
-.accordion-header:nth-child(5){
-  padding-top: 11px;
+
+.accordion-header:nth-child(5) {
+  padding-top: 10px;
   line-height: 1.3;
 }
-.accordion-header:nth-child(7){
+
+.accordion-header:nth-child(7) {
   padding: 9px 35px 10px 20px;
   line-height: 1.5;
 }
-.accordion-header:nth-child(9){
-  padding: 11px 35px 10px 20px;
+
+.accordion-header:nth-child(9) {
+  padding: 6px 35px 10px 20px;
   line-height: 1.5;
 }
+
 .accordion-header.active {
   display: block;
   height: inherit;
   background-color: #007FC6;
   color: #fff;
 }
-
-.accordion-header::before{
+.accordion-header.active::after {
   position: absolute;
   content: '';
-  top: -5px;
-  right: 20px;
-  bottom: 0;
-  width: 16px;
-  height: 2px;
-  margin: auto;
-  background: #333333;
-}
-
-.accordion-header::after {
-  position: absolute;
-  content: '';
-  top: -6px;
   right: 10px;
   bottom: 0;
   width: 16px;
   height: 2px;
   margin: auto;
-  background: #333333;
+  background: #fff;
+  transform: rotate(0deg);
 }
-.accordion-header.active::after {
+.accordion-header.active::before {
   position: absolute;
   content: '';
   /* top: 1px; */
@@ -953,33 +980,40 @@ input[type="submit"]:hover {
   background: #fff;
 }
 
+
 .accordion-header::before {
+  position: absolute;
+  content: '';
+  top: -5px;
+  bottom: 0;
+  width: 16px;
+  height: 2px;
+  margin: auto;
+  background: #333333;
   right: 10px;
-}
-.accordion-header-pc {
-  display: inline;
 }
 
 .accordion-header::after {
+  position: absolute;
+  content: '';
+  top: -5px;
+  right: 10px;
+  bottom: 0;
+  width: 16px;
+  height: 2px;
+  margin: auto;
+  background: #333333;
   transform: rotate(-90deg);
   transition: transform 0.3s;
   color: #333;
 }
 
-.accordion-header.active::after {
-  transform: rotate(0deg);
+
+.accordion-header-pc {
+  display: inline;
 }
-.accordion-header.active::before{
-  position: absolute;
-  content: '';
-  /* top: 1px; */
-  right: 10px;
-  bottom: 0;
-  width: 16px;
-  height: 2px;
-  margin: auto;
-  background: #fff;
-}
+
+
 .accordion-content {
   background-color: #FFF;
   padding: 10px 10px 10px;
@@ -994,17 +1028,12 @@ input[type="submit"]:hover {
   display: inline-block;
   padding-left: 34px;
 }
-/* .accordion-header span:nth-child(3) {
-  padding-top: 18px;
-} */
-/* .accordion-header span::before:nth-child(5) {
-  padding-top: 2px;
-} */
+
 .accordion-header span::before {
   position: absolute;
   content: "Q";
   top: -8px;
-  left:-10px;
+  left: -10px;
   font-family: Goldman;
   font-size: 16px;
   font-weight: 400;
@@ -1013,17 +1042,18 @@ input[type="submit"]:hover {
   color: #FFFFFF;
   background-color: #007FC6;
   border-radius: 50px;
-  width: 32px; 
-  height: 32px; 
+  width: 32px;
+  height: 32px;
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
 }
+
 .accordion-header.active span::before {
   position: absolute;
   content: "Q";
   top: -8px;
-  left:-10px;
+  left: -10px;
   font-family: Goldman;
   font-size: 16px;
   font-weight: 400;
@@ -1032,8 +1062,8 @@ input[type="submit"]:hover {
   color: #007FC6;
   background-color: #fff;
   border-radius: 50px;
-  width: 32px; 
-  height: 32px; 
+  width: 32px;
+  height: 32px;
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
@@ -1066,6 +1096,7 @@ input[type="submit"]:hover {
   text-align: center;
   margin-top: 26px;
 }
+
 .recommend_pic {
   display: block;
   width: 240px;
@@ -1075,24 +1106,31 @@ input[type="submit"]:hover {
   margin-bottom: 40px;
   text-align: center;
 }
-#contact_second .contact_name_sec{
+
+#contact_second .contact_name_sec {
   margin-top: 2px;
 }
+
 #contact_second.contact_inner:nth-child(2) {
   margin-top: 40px;
 }
-#contact_second input[type="text"]{
+
+#contact_second input[type="text"] {
   padding-top: 14px;
 }
-#contact_second >label[for="email"]{
+
+#contact_second>label[for="email"] {
   margin-top: 13px;
 }
-#contact_second input[type="tel"]  {
+
+#contact_second input[type="tel"] {
   padding-bottom: 11px;
 }
-#contact_second .contact_note{
+
+#contact_second .contact_note {
   line-height: 1.3;
 }
+
 .footer {
   background-color: #fff;
   width: 100%;
@@ -1107,10 +1145,11 @@ input[type="submit"]:hover {
   display: block;
   align-items: center;
 }
+
 .footer_logo {
   width: 227px;
   transition: 0.4s;
-  margin: 0 auto 30px ;
+  margin: 0 auto 30px;
 }
 
 .small_sec {
@@ -1124,7 +1163,13 @@ input[type="submit"]:hover {
 .footer_logo img:hover {
   opacity: .6;
 }
-@media (min-width:px) {}
+
+@media (min-width:900px) {
+  .swiper-button-prev {
+    left: -5%;
+}
+  
+}
 
 @media (min-width:1024px) {
 
@@ -1254,7 +1299,7 @@ input[type="submit"]:hover {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    
+
   }
 
   .hero_left {
@@ -1313,7 +1358,7 @@ input[type="submit"]:hover {
     gap: 20px;
     place-items: center;
     margin-top: 1px;
-    margin-left: 7px; 
+    margin-left: 7px;
   }
 
   .hero_item {
@@ -1348,8 +1393,7 @@ input[type="submit"]:hover {
     max-width: 360px;
     bottom: 8px;
     left: 36.1%;
-    width: clamp(28.4% , 2vw ,32%)
-    
+    width: clamp(28.4%, 2vw, 32%)
   }
 
   .hero_about li {
@@ -1382,32 +1426,38 @@ input[type="submit"]:hover {
     place-content: center;
     margin: 0 auto;
   }
+
   .contact_inner {
     padding-bottom: 28px;
   }
+
   label[for="lastname"] {
     margin-left: 3px;
-}
+  }
+
   label[for="firstname"] {
     margin-left: 3px;
-}
+  }
+
   .contact_text {
     font-size: 20px;
     white-space: nowrap;
     padding-top: 13px;
     padding-bottom: 14px;
   }
+
   .contact_polygon {
     width: 17px;
     position: relative;
     top: -6px;
     left: 182px;
-}
+  }
 
   label[for="company"] {
     margin-top: 13px;
     margin-left: 10px;
-}
+  }
+
   input[type="submit"] {
     font-size: 20px;
     width: 84%;
@@ -1415,27 +1465,33 @@ input[type="submit"]:hover {
     padding-bottom: 14px;
     margin: 35px auto 0;
   }
+
   input[type="email"] {
     width: 96%;
     margin-left: 10px;
     margin-top: 7px;
   }
+
   label[for="email"] {
     margin-top: 13px;
     margin-left: 11px;
-}
+  }
+
   input[type="tel"] {
     width: 96%;
     margin-left: 10px;
   }
+
   label {
     margin-bottom: 5px;
     margin-left: 10px;
   }
+
   input[type="text"] {
     width: 99%;
     margin-left: 2px;
   }
+
   input[type="text"][name="company"] {
     margin-bottom: 9px;
     margin-top: 8px;
@@ -1455,7 +1511,8 @@ input[type="submit"]:hover {
     padding: 0 12px 0 9px;
     margin-top: 26px;
   }
- /* works section 多くのお客様に選ばれ続けています（中央イラスト部分） */
+
+  /* works section 多くのお客様に選ばれ続けています（中央イラスト部分） */
   .works_inner {
     max-width: 1024px;
     height: auto;
@@ -1484,7 +1541,7 @@ input[type="submit"]:hover {
   }
 
   /* 会社ロゴの無限スライダー */
-  .swiper01{
+  .swiper01 {
     overflow: hidden;
   }
 
@@ -1492,14 +1549,16 @@ input[type="submit"]:hover {
     margin-top: 25px;
     transition-timing-function: linear;
   }
-  
+
   .swiper-slide img {
     width: 100%;
     height: auto;
   }
-  .swiper-slide{
+
+  .swiper-slide {
     width: 248px;
   }
+
   /* CareSendについて */
   .lead_text_img-pc img {
     display: none;
@@ -1664,93 +1723,108 @@ input[type="submit"]:hover {
     opacity: .6;
   }
 
-/* カードのスライダーPC版は２枚表示 */
+  /* カードのスライダーPC版は２枚表示 */
   #slider {
     margin-inline: auto;
     position: relative;
   }
+
   .slider-title {
     font-size: 32px;
     line-height: 48px;
     color: #222222;
     padding-top: 96px;
   }
+
   .swiper-container {
     position: relative;
     max-width: 920px;
     width: 100%;
   }
- 
+
   .swiper-slider {
     width: 405px;
     height: auto;
     border-radius: 30px 0;
-    padding: 3px 20px 24px ;
-    position: relative; 
-    margin: 74px 17px 60px 17px; 
+    padding: 3px 20px 24px;
+    position: relative;
+    margin: 74px 17px 60px 17px;
     box-shadow: 0px 5px 8px 3px #33333340;
   }
+
   .swiper-box {
     box-shadow: none;
 
   }
+
   .swiper-concept {
     font-size: 24px;
     line-height: 1.8;
     margin-top: 28px;
   }
+
   .swiper-lead {
     margin-top: 24px;
     font-size: 14px;
     line-height: 1.8;
   }
-  .swiper-pic-a  {
+
+  .swiper-pic-a {
     width: 42.6%;
     margin-top: 33px;
     margin-left: 10px;
   }
 
-  .swiper-pic-b  {
+  .swiper-pic-b {
     width: 64px;
     height: 64px;
     margin-top: 28px;
   }
-  .swiper-pic-c  {
+
+  .swiper-pic-c {
     width: 42.6%;
     height: auto;
     margin-top: 52px;
   }
-  /* 前へ次への矢印カスタマイズ */
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  background-repeat: no-repeat;
-  background-size: contain;
-  content: "";
-  height: 36px;
-  margin: auto;
-  width: 36px;
- 
-}
-/* 前への矢印カスタマイズ*/
-.swiper-button-prev::after{
- background-image: url(img/arrow-01.png);
- background-size: 36px;
- 
-}
 
-.swiper-button-next::after {
- background-image: url(img/arrow-02.png);
- background-size: 36px;
- z-index: 1000;
-}
-/* 前への矢印 */
-.swiper-button-prev {
- left: -35px !important; /* 矢印を外に出すために使用 */
-}
-/* 次への矢印 */
-.swiper-button-next {
-  right: -35px !important 
-}
+  /* 前へ次への矢印カスタマイズ */
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: 36px;
+    margin: auto;
+    width: 36px;
+
+  }
+  .button {
+    width: 100%;
+    max-width: 100vw;
+
+  }
+  /* 前への矢印カスタマイズ*/
+  .swiper-button-prev::after {
+    background-image: url(img/arrow-01.png);
+    background-size: 36px;
+
+  }
+
+  .swiper-button-next::after {
+    background-image: url(img/arrow-02.png);
+    background-size: 36px;
+    z-index: 1000;
+  }
+
+  /* 前への矢印 */
+  .swiper-button-prev {
+    left: -5% ;
+  }
+
+  /* 次への矢印 */
+  .swiper-button-next {
+    right: -5%; 
+  }
 
   #plan {
     width: 100%;
@@ -1822,7 +1896,7 @@ input[type="submit"]:hover {
     font-weight: 400;
     line-height: 1.8;
   }
-  
+
 
   /* PC版Q&Aセクション */
   .accordion {
@@ -1837,19 +1911,21 @@ input[type="submit"]:hover {
     padding-bottom: 72px;
 
   }
+
   .accordion-title {
     color: #333333;
     font-size: 32px;
     padding-top: 96px;
     font-weight: 700;
   }
+
   .qa-accordion {
     width: 100%;
     margin: 70px auto 0;
     background: #F9F9F9;
     padding: 0;
   }
-  
+
   .accordion-header {
     width: 100%;
     height: 80px;
@@ -1862,31 +1938,37 @@ input[type="submit"]:hover {
     color: #333333;
     text-align: left;
     background-color: #FFF;
-    border-radius: 10px 10px 10px 10px ;
+    border-radius: 10px 10px 10px 10px;
   }
 
-.accordion-header:nth-child(3) {
-  padding-top: 30px;
-}
-  .accordion-header:nth-child(5){
+  .accordion-header:nth-child(3) {
     padding-top: 30px;
   }
-  .accordion-header:nth-child(7){
+
+  .accordion-header:nth-child(5) {
+    padding-top: 30px;
+  }
+
+  .accordion-header:nth-child(7) {
     padding: 32px 35px 32px 35px;
   }
-  .accordion-header:nth-child(9){
+
+  .accordion-header:nth-child(9) {
     padding: 32px 35px 32px 35px;
   }
+
   .accordion-header.active {
     display: block;
     height: inherit;
     background-color: #007FC6;
     color: #fff;
-    border-radius: 10px 10px 0 0 ;
-    padding: 28px 50px ;
+    border-radius: 10px 10px 0 0;
+    padding: 30px 50px 30px 35px;
   }
-  
-  .accordion-header::before{
+  .accordion-header.active span::before {
+    left: -10px;
+  }
+  .accordion-header::before {
     position: absolute;
     content: '';
     top: -6px;
@@ -1897,7 +1979,7 @@ input[type="submit"]:hover {
     margin: auto;
     background: #333333;
   }
-  
+
   .accordion-header::after {
     position: absolute;
     content: '';
@@ -1909,6 +1991,7 @@ input[type="submit"]:hover {
     margin: auto;
     background: #333333;
   }
+
   .accordion-header.active::after {
     position: absolute;
     content: '';
@@ -1920,21 +2003,22 @@ input[type="submit"]:hover {
     margin: auto;
     background: #fff;
   }
-  
+
   .accordion-header::before {
     right: 23px;
   }
-  
+
   .accordion-header::after {
     transform: rotate(-90deg);
     transition: transform 0.3s;
     color: #333;
   }
-  
+
   .accordion-header.active::after {
     transform: rotate(0deg);
   }
-  .accordion-header.active::before{
+
+  .accordion-header.active::before {
     position: absolute;
     content: '';
     top: 1px;
@@ -1945,6 +2029,7 @@ input[type="submit"]:hover {
     margin: auto;
     background: #fff;
   }
+
   .accordion-content {
     background-color: #FFF;
     padding: 24px 36px;
@@ -1955,31 +2040,32 @@ input[type="submit"]:hover {
     line-height: 28.8px;
     border-radius: 0 0 10px 10px;
   }
-  
+
   .accordion-header span {
     position: relative;
     display: inline-block;
     padding-left: 70px;
   }
+
   .accordion-header .active span {
     position: relative;
     display: inline-block;
     padding-left: 65px;
   }
+
   .accordion-header span:nth-child(3) {
     padding-top: 30px;
   }
+
   .accordion-header.active:nth-child(3) {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 52px;
     margin-top: 20px;
   }
+
   .accordion-header span::before {
     position: absolute;
     content: "Q";
     top: -14px;
-    left:3px;
+    left: 3px;
     font-family: Goldman;
     font-size: 32px;
     font-weight: 400;
@@ -1988,45 +2074,45 @@ input[type="submit"]:hover {
     color: #FFFFFF;
     background-color: #007FC6;
     border-radius: 50px;
-    width: 44px; 
-    height: 44px; 
+    width: 44px;
+    height: 44px;
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
   }
-  .accordion-header.active span::before:nth-child(3) {
+/* 
+  .accordion-header.active span::before {
     padding-left: 6px;
-  }
+  } */
+
   .accordion-header.active span::before {
     position: absolute;
     content: "Q";
     top: -8px;
-    left:-12px;
+    left: 0px;
     font-family: Goldman;
     font-size: 32px;
     font-weight: 400;
     text-align: center;
-    padding-top: 2px;
+    padding-top: 5px;
     color: #007FC6;
     background-color: #fff;
     border-radius: 50px;
-    width: 44px; 
-    height: 44px; 
+    width: 44px;
+    height: 44px;
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
   }
-  
+
   .accordion-header:nth-child(7) {
     line-height: 1.2;
   }
-  .accordion-header:nth-child(3) {
-    padding-top: 29px;
-    padding-bottom: 30px;
-  }
+
   .accordion-header:nth-child(9) {
     line-height: 1.2;
   }
+
   .recommend {
     padding-top: 96px;
     padding-bottom: 57px;
@@ -2082,14 +2168,16 @@ input[type="submit"]:hover {
     border-radius: 6px;
     color: #333333;
     margin-left: 25px;
-    margin-top:8px;
+    margin-top: 8px;
   }
-  .contact_polygon_second{
+
+  .contact_polygon_second {
     width: 17px;
     position: relative;
     top: -10px;
     left: 180px;
   }
+
   .contact_inner {
     width: 100%;
     margin: 0 auto;
