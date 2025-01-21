@@ -125,21 +125,6 @@ $('.accordion-header').click(function () { // .accordion-headerをクリック�
   ();
 
 
-var Swiper = new Swiper(".swiper-container", { // eslint-disable-line  
-  autoHeigt: true,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    type: "bullets",
-    clickable: "true"
-  },
-  spaceBetween: 0
-});
-
 
 // ページが完全に読み取られた後に以下の処理を実行する
 $(document).ready(function () {
@@ -176,7 +161,6 @@ $(document).ready(function () {
     event.preventDefault();
   });
 });
-
 
 // //フォームの必須項目チェックでメール送信可能にする実装
 // // ページの読み込みが完了したら、以下の処理を実行する
