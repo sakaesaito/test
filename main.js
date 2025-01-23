@@ -146,10 +146,10 @@ $(document).ready(function () {
         0: function () {
           // クラス名 "end-message" を持つ要素を表示する
           $(".end-message").slideDown();
-          // クラス名 "submit-btn" を持つ要素を徐々に非表示する
-          $(".submit-btn").fadeOut();
+          // ID名 "js-submit" を持つ要素を徐々に非表示する
+          $("#js-submit").fadeOut();
           // 処理後に " thanks.html " というページにリダイレクトされる
-          window.location.href = "thanks.html";
+          //window.location.href = "thanks.html";
         },
         // HTTPステータスコードが200の場合の処理​​ // サーバーからエラーが返された場合実行される
         200: function () {
@@ -162,27 +162,28 @@ $(document).ready(function () {
   });
 });
 
-// //フォームの必須項目チェックでメール送信可能にする実装
-// // ページの読み込みが完了したら、以下の処理を実行する
-// $(document).ready(function () {
-//   // ID「js-submit」のボタン要素を取得し、変数 `$submitBtn` に代入します
-//   const $submitBtn = $('#js-submit')
-//   // フォーム内のすべての `input` 要素や `textarea` 要素に「change」イベントを監視
-//   // ユーザーが値を変更するたびに、以下の処理が実行
-//   $('#form input,#form textarea').on('change', function () {
-//     // テキスト入力フィールドの値が空でいないか確認する。 
-//     if (
-//       // テキスト入力フィールドの値が空でいないか確認
-//       $('#form input[type="text"]').val() !== "" &&
-//       // メールアドレス入力フィールドの値が空でないか確認
-//       $('#form input[type="email"]').val() !== "" &&
-//       $('#form input[type="tel"]').val() !== "" &&
-//      ) {
-//       // 上記すべての条件が満たされていれば、送信ボタン（$submitBtn）を有効化（disabledを解除）
-//       $submitBtn.prop('disabled', false);
-//       // 条件が一つでも満たされない場合、送信ボタン（$submitBtn）を無効を有効化
-//     } else {
-//       $submitBtn.prop('disabled', true);
-//     }
-//   });
-// });
+
+
+//フォームの必須項目チェックでメール送信可能にする実装
+// ページの読み込みが完了したら、以下の処理を実行する
+$(document).ready(function () {
+  // ID「js-submit」のボタン要素を取得し、変数 `$submitBtn` に代入します
+  const $submitBtn = $('#js-submit');
+  
+  // フォーム内のすべての `input` 要素や `textarea` 要素に「change」イベントを監視
+  // ユーザーが値を変更するたびに、以下の処理が実行
+  $('#form input,#form textarea').on('change', function () {
+    // 入力フィールドがすべて空でないか確認する
+    if (
+      $('#form input[type="text"]').val() !== "" && // テキスト入力フィールドが空でないか確認
+      $('#form input[type="email"]').val() !== "" && // メールアドレス入力フィールドが空でないか確認
+      $('#form input[type="tel"]').val() !== "" // 電話番号入力フィールドが空でないか確認
+     ) {
+      // 上記すべての条件が満たされていれば、送信ボタン（$submitBtn）を有効化（disabledを解除）
+      $submitBtn.prop('disabled', false);
+    } else {
+      // 条件が一つでも満たされない場合、送信ボタン（$submitBtn）を無効化（disabledを有効化）
+      $submitBtn.prop('disabled', true);
+    }
+  });
+});
