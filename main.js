@@ -148,8 +148,9 @@ $(document).ready(function () {
           $(".end-message").slideDown();
           // ID名 "js-submit" を持つ要素を徐々に非表示する
           $("#js-submit").fadeOut();
+          $(".contact_form__item").fadeOut();
           // 処理後に " thanks.html " というページにリダイレクトされる
-          //window.location.href = "thanks.html";
+          window.location.href = "thanks.html";
         },
         // HTTPステータスコードが200の場合の処理​​ // サーバーからエラーが返された場合実行される
         200: function () {
@@ -181,8 +182,8 @@ $(document).ready(function () {
      ) {
       // 上記すべての条件が満たされていれば、送信ボタン（$submitBtn）を有効化（disabledを解除）
       $submitBtn.prop('disabled', false);
-    } else {
       // 条件が一つでも満たされない場合、送信ボタン（$submitBtn）を無効化（disabledを有効化）
+    } else {
       $submitBtn.prop('disabled', true);
     }
   });
