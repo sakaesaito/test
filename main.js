@@ -64,13 +64,6 @@ const CardSwiper = new Swiper('.slider-sec-swiper', {
       slidesPerGroup: 1, // 一度にスワイプされるスライドの数
     },
 
-    800: {
-      spaceBetween: 40, // 要素間の余白
-      centeredSliders: true,//中央を起点に
-      slidesPerView: 2, // 一度に表示するスライドの数
-      slidesPerGroup: 2, // 一度にスワイプされるスライドの
-    },
-
     1024: {
       spaceBetween: 50, // 要素間の余白
       centeredSliders: true,
@@ -150,7 +143,7 @@ $(document).ready(function () {
           $("#js-submit").fadeOut();
           $(".contact_form__item").fadeOut();
           // 処理後に " thanks.html " というページにリダイレクトされる
-          window.location.href = "thanks.html";
+          // window.location.href = "thanks.html";
         },
         // HTTPステータスコードが200の場合の処理​​ // サーバーからエラーが返された場合実行される
         200: function () {
@@ -169,7 +162,7 @@ $(document).ready(function () {
 // ページの読み込みが完了したら、以下の処理を実行する
 $(document).ready(function () {
   // ID「js-submit」のボタン要素を取得し、変数 `$submitBtn` に代入します
-  const $submitBtn = $('#js-submit');
+  const $submitBtn = $('#js-submit')
   
   // フォーム内のすべての `input` 要素や `textarea` 要素に「change」イベントを監視
   // ユーザーが値を変更するたびに、以下の処理が実行
