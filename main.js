@@ -137,10 +137,10 @@ $(document).ready(function () {
       statusCode: {
         // HTTPステータスコードが0の場合の処理
         0: function () {
-          // クラス名 "end-message" を持つ要素を表示する
-          $(".end-message").slideDown();
           // ID名 "js-submit" を持つ要素を徐々に非表示する
           $("#js-submit").fadeOut();
+           // クラス名 "end-message" を持つ要素を表示する
+          $(".end-message").slideDown();
           $(".contact_form__item").fadeOut();
           // 処理後に " thanks.html " というページにリダイレクトされる
           // window.location.href = "thanks.html";
