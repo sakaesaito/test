@@ -121,10 +121,10 @@ $('.accordion-header').click(function () { // .accordion-headerをクリック�
 
 // ページが完全に読み取られた後に以下の処理を実行する
 $(document).ready(function () {
-  // id= 「form」のフォームが送信されたときこの関数を実行 
+  // class= 「form」のフォームが送信されたときこの関数を実行 
   // フォーム内の入力データを URL エンコードされた文字列形式に変換して変数 formData に格納
-  $('#form').submit(function (event) {
-    var formData = $('#form').serialize();
+  $('.form').submit(function (event) {
+    var formData = $('.form').serialize();
     // jQueryのAjax機能を使って非同期通信を// フォームデータをAjaxリクエストのデータとして送信する
     $.ajax({
       url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdthNbFJ_pRMWRFh263qz5n70zGalzJsJpwNr0GNIcMNU2rBg/formResponse",
@@ -166,12 +166,12 @@ $(document).ready(function () {
   
   // フォーム内のすべての `input` 要素や `textarea` 要素に「change」イベントを監視
   // ユーザーが値を変更するたびに、以下の処理が実行
-  $('#form input,#form textarea').on('change', function () {
+  $('.form input,#form textarea').on('change', function () {
     // 入力フィールドがすべて空でないか確認する
     if (
-      $('#form input[type="text"]').val() !== "" && // テキスト入力フィールドが空でないか確認
+      $('.form input[type="text"]').val() !== "" && // テキスト入力フィールドが空でないか確認
       $('#form input[type="email"]').val() !== "" && // メールアドレス入力フィールドが空でないか確認
-      $('#form input[type="tel"]').val() !== "" // 電話番号入力フィールドが空でないか確認
+      $('.form input[type="tel"]').val() !== "" // 電話番号入力フィールドが空でないか確認
      ) {
       // 上記すべての条件が満たされていれば、送信ボタン（$submitBtn）を有効化（disabledを解除）
       $submitBtn.prop('disabled', false);
@@ -181,3 +181,5 @@ $(document).ready(function () {
     }
   });
 });
+
+

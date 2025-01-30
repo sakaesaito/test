@@ -487,6 +487,9 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
+  opacity: .6;
+}
+#js-submit:disabled {
   opacity: .9;
 }
 
@@ -976,7 +979,6 @@ margin: 0 auto;
 .accordion-header.active::before {
   position: absolute;
   content: '';
-  /* top: 1px; */
   right: 10px;
   bottom: 0;
   width: 16px;
@@ -984,8 +986,6 @@ margin: 0 auto;
   margin: auto;
   background: #fff;
 }
-
-
 .accordion-header::before {
   position: absolute;
   content: '';
@@ -997,7 +997,6 @@ margin: 0 auto;
   background: #333333;
   right: 10px;
 }
-
 .accordion-header::after {
   position: absolute;
   content: '';
@@ -1012,13 +1011,9 @@ margin: 0 auto;
   transition: transform 0.3s;
   color: #333;
 }
-
-
 .accordion-header-pc {
   display: inline;
 }
-
-
 .accordion-content {
   background-color: #FFF;
   padding: 10px 10px 10px;
@@ -1027,14 +1022,11 @@ margin: 0 auto;
   font-weight: 400;
   line-height: 1.8;
 }
-
 .accordion-header span {
   position: relative;
   display: inline-block;
   padding-left: 34px;
 }
-
-
 .accordion-header span::before {
   position: absolute;
   content: "Q";
@@ -1054,7 +1046,6 @@ margin: 0 auto;
   top: 50%;
   transform: translateY(-50%);
 }
-
 .accordion-header.active span::before {
   position: absolute;
   content: "Q";
@@ -1074,27 +1065,23 @@ margin: 0 auto;
   top: 50%;
   transform: translateY(-50%);
 }
-
 .recommend {
   background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%);
   color: #fff;
   padding-top: 72px;
   padding-bottom: 46px;
 }
-
 .recommend_inner {
   margin: 0 auto;
   padding: 0 16px;
   max-width: 400px;
 }
-
 .recommend_title {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
 }
-
 .recommend_item {
   font-size: 12px;
   font-weight: 400;
@@ -1102,7 +1089,6 @@ margin: 0 auto;
   text-align: center;
   margin-top: 26px;
 }
-
 .recommend_pic {
   display: block;
   width: 240px;
@@ -1112,31 +1098,24 @@ margin: 0 auto;
   margin-bottom: 40px;
   text-align: center;
 }
-
 #contact_second .contact_name_sec {
   margin-top: 2px;
 }
-
 #contact_second.contact_inner:nth-child(2) {
   margin-top: 40px;
 }
-
 #contact_second input[type="text"] {
   padding-top: 14px;
 }
-
 #contact_second>label[for="email"] {
   margin-top: 13px;
 }
-
 #contact_second input[type="tel"] {
   padding-bottom: 11px;
 }
-
 #contact_second .contact_note {
   line-height: 1.3;
 }
-
 .footer {
   background-color: #fff;
   width: 100%;
@@ -1144,20 +1123,17 @@ margin: 0 auto;
   padding-bottom: 24px;
   text-align: center;
 }
-
 .footer_inner {
   margin: 0 auto;
   padding: 0 16px;
   display: block;
   align-items: center;
 }
-
 .footer_logo {
   width: 227px;
   transition: 0.4s;
   margin: 0 auto 30px;
 }
-
 .small_sec {
   font-family: Goldman;
   font-size: 12px;
@@ -1165,7 +1141,6 @@ margin: 0 auto;
   line-height: 12px;
   text-align: center;
 }
-
 .footer_logo img:hover {
   opacity: .6;
 }
@@ -1502,13 +1477,15 @@ margin: 0 auto;
   .contact_name_sec {
     gap: 18px;
     width: 97%;
-
   }
 
   .contact_note {
     font-size: 14px;
     padding: 0 12px 0 9px;
     margin-top: 26px;
+  }
+  #js-submit:disabled {
+    opacity: 0.9;
   }
 
   /* works section 多くのお客様に選ばれ続けています（中央イラスト部分） */
@@ -1628,7 +1605,6 @@ margin: 0 auto;
   #feature {
     width: 100%;
     margin: 0 auto;
-
   }
 
   .feature_menu {
@@ -1686,7 +1662,6 @@ margin: 0 auto;
     width: 100%;
     margin: 0 auto;
     margin-top: 31px;
-
   }
 
   .info_title {
