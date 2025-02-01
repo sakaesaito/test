@@ -118,41 +118,46 @@ $('.accordion-header').click(function () { // .accordion-headerをクリック�
   ();
 
 
-
-// ページが完全に読み取られた後に以下の処理を実行する
+// ページの読み込みが完了した後に以下の処理を実行
 $(document).ready(function () {
-  // class= 「form」のフォームが送信されたときこの関数を実行 
-  // フォーム内の入力データを URL エンコードされた文字列形式に変換して変数 formData に格納
-  $('.form').submit(function (event) {
-    var formData = $('.form').serialize();
-    // jQueryのAjax機能を使って非同期通信を// フォームデータをAjaxリクエストのデータとして送信する
+  
+  // クラス名「.form」を持つフォームが送信されたときに処理を実行
+  $(".form").submit(function (event) {
+    
+    event.preventDefault(); // フォームのデフォルトの送信を防ぐ（リロードしない）
+
+    var $form = $(this);  // 送信されたフォームを jQuery オブジェクトとして取得
+    var formData = $form.serialize(); // フォーム内のデータを URL エンコードされた文字列として取得
+
+    // Google フォームへデータを送信するための Ajax リクエスト
     $.ajax({
-      url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdthNbFJ_pRMWRFh263qz5n70zGalzJsJpwNr0GNIcMNU2rBg/formResponse",
-      data: formData,
-      // HTTPメソッドとしてPOSTを指定 // フォームデータを送信するときは通常POSTを使用する
-      type: "POST",
-      // サーバーからの応答データの形式をXMLとして指定
-      dataType: "xml",
+      url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdthNbFJ_pRMWRFh263qz5n70zGalzJsJpwNr0GNIcMNU2rBg/formResponse", // 送信先URL
+      data: formData,  // フォームデータを送信
+      type: "POST",  // HTTPメソッドとして「POST」を指定（フォームデータ送信時は通常POST）
+      dataType: "xml",  // サーバーの応答データの形式を「XML」として指定
+
       // HTTPステータスコードごとの処理を定義
       statusCode: {
-        // HTTPステータスコードが0の場合の処理
+        // 送信成功（GoogleフォームはCORS制限のため、成功時にステータスコード0が返ることがある）
         0: function () {
-          // ID名 "js-submit" を持つ要素を徐々に非表示する
-          $("#js-submit").fadeOut();
-           // クラス名 "end-message" を持つ要素を表示する
-          $(".end-message").slideDown();
-          $(".contact_form__item").fadeOut();
-          // 処理後に " thanks.html " というページにリダイレクトされる
-          // window.location.href = "thanks.html";
+          // 送信ボタン（#js-submit）をフェードアウト
+          $("#js-submit").fadeOut(function () {
+            // 1秒（1000ミリ秒）後にメッセージを表示
+            setTimeout(function () {
+              $(".end-message").slideDown();  // 送信完了メッセージを表示
+              $(".contact_form__item").fadeOut(); // 入力フィールドを非表示にする
+            }, 1000);
+          });
         },
-        // HTTPステータスコードが200の場合の処理​​ // サーバーからエラーが返された場合実行される
+        // 送信エラー時（Googleフォームの仕様上、エラー時に200が返ることがある）
         200: function () {
-          // クラス名 "false-message" を持つ要素を表示する 
-          $(".false-message").slideDown();
+          // 1秒（1000ミリ秒）後にエラーメッセージを表示
+          setTimeout(function () {
+            $(".false-message").slideDown(); // エラーメッセージを表示
+          }, 1000);
         }
       }
     });
-    event.preventDefault();
   });
 });
 
@@ -166,11 +171,11 @@ $(document).ready(function () {
   
   // フォーム内のすべての `input` 要素や `textarea` 要素に「change」イベントを監視
   // ユーザーが値を変更するたびに、以下の処理が実行
-  $('.form input,#form textarea').on('change', function () {
+  $('.form input,.form textarea').on('change', function () {
     // 入力フィールドがすべて空でないか確認する
     if (
       $('.form input[type="text"]').val() !== "" && // テキスト入力フィールドが空でないか確認
-      $('#form input[type="email"]').val() !== "" && // メールアドレス入力フィールドが空でないか確認
+      $('.form input[type="email"]').val() !== "" && // メールアドレス入力フィールドが空でないか確認
       $('.form input[type="tel"]').val() !== "" // 電話番号入力フィールドが空でないか確認
      ) {
       // 上記すべての条件が満たされていれば、送信ボタン（$submitBtn）を有効化（disabledを解除）
