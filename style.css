@@ -492,6 +492,9 @@ input[type="submit"]:hover {
 #js-submit:disabled {
   opacity: .9;
 }
+.js-submit:disabled {
+  opacity: .9;
+}
 
 .contact_note {
   width: 100%;
@@ -501,6 +504,11 @@ input[type="submit"]:hover {
   line-height: 1.25;
 }
 .end-message {
+  display: none;
+  padding-top: 40px;
+  text-align: center;
+}
+.end-message02 {
   display: none;
   padding-top: 40px;
   text-align: center;
@@ -1487,6 +1495,9 @@ margin: 0 auto;
   #js-submit:disabled {
     opacity: 0.9;
   }
+  #js-submit02:disabled {
+    opacity: 0.9;
+  }
 
   /* works section 多くのお客様に選ばれ続けています（中央イラスト部分） */
   .works_inner {
@@ -2053,10 +2064,6 @@ margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
   }
-/* 
-  .accordion-header.active span::before {
-    padding-left: 6px;
-  } */
 
   .accordion-header.active span::before {
     position: absolute;

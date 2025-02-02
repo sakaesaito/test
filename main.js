@@ -20,7 +20,6 @@ $(function () {
 
 
 // 会社ロゴ無限ループのjQuery
-
 const swiper = new Swiper('.swiper01', {
   speed: 4000,
   loop: true, // プルーさせる
@@ -50,7 +49,6 @@ const swiper = new Swiper('.swiper01', {
 
 
 // // // カードスライダーのjQuery
-
 const CardSwiper = new Swiper('.slider-sec-swiper', {
   speed: 1000,
   loop: true,
@@ -115,51 +113,45 @@ $('.accordion-header').click(function () { // .accordion-headerをクリック�
   addEventListener('resize', switchViewport, false);
   switchViewport();
 })
-  ();
 
 
-// ページの読み込みが完了した後に以下の処理を実行
+
+
+// heroのコンタクトform　ページの読み込みが完了した後に以下の処理を実行
 $(document).ready(function () {
-  
-  // クラス名「.form」を持つフォームが送信されたときに処理を実行
-  $(".form").submit(function (event) {
-    
-    event.preventDefault(); // フォームのデフォルトの送信を防ぐ（リロードしない）
-
+  $(".form").submit(function (event) { // クラス名「.form」を持つフォームが送信されたときに処理を実行
+    event.preventDefault(); // フォームのデフォルト送信を防ぐ
     var $form = $(this);  // 送信されたフォームを jQuery オブジェクトとして取得
     var formData = $form.serialize(); // フォーム内のデータを URL エンコードされた文字列として取得
-
-    // Google フォームへデータを送信するための Ajax リクエスト
-    $.ajax({
-      url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdthNbFJ_pRMWRFh263qz5n70zGalzJsJpwNr0GNIcMNU2rBg/formResponse", // 送信先URL
-      data: formData,  // フォームデータを送信
-      type: "POST",  // HTTPメソッドとして「POST」を指定（フォームデータ送信時は通常POST）
-      dataType: "xml",  // サーバーの応答データの形式を「XML」として指定
-
-      // HTTPステータスコードごとの処理を定義
-      statusCode: {
-        // 送信成功（GoogleフォームはCORS制限のため、成功時にステータスコード0が返ることがある）
-        0: function () {
-          // 送信ボタン（#js-submit）をフェードアウト
-          $("#js-submit").fadeOut(function () {
-            // 1秒（1000ミリ秒）後にメッセージを表示
-            setTimeout(function () {
-              $(".end-message").slideDown();  // 送信完了メッセージを表示
-              $(".contact_form__item").fadeOut(); // 入力フィールドを非表示にする
-            }, 1000);
-          });
-        },
-        // 送信エラー時（Googleフォームの仕様上、エラー時に200が返ることがある）
-        200: function () {
-          // 1秒（1000ミリ秒）後にエラーメッセージを表示
-          setTimeout(function () {
-            $(".false-message").slideDown(); // エラーメッセージを表示
-          }, 1000);
-        }
-      }
-    });
+    $form.find("#js-submit").fadeOut(); // ボタンをフェードアウト
+    setTimeout(function () {
+      $(".end-message").slideDown();// 送信完了メッセージを表示
+      $(".contact_form__item").fadeOut();// 入力フィールドを非表示にする
+      $form[0].reset(); // フォームの内容をリセット
+      //window.location.href = "thanks.html";
+    }, 700);
   });
-});
+},
+)
+
+
+
+// footer上のform ページの読み込みが完了した後に以下の処理を実行
+$(document).ready(function () {
+  $(".form02").submit(function (event) { // クラス名「.form」を持つフォームが送信されたときに処理を実行
+    event.preventDefault(); // フォームのデフォルト送信を防ぐ
+    var $form02 = $(this);  // 送信されたフォームを jQuery オブジェクトとして取得
+    var formData = $form02.serialize(); // フォーム内のデータを URL エンコードされた文字列として取得
+    $form02.find("#js-submit02").fadeOut();// ボタンをフェードアウト
+    setTimeout(function () { // 0.7秒（700ミリ秒）後にメッセージを表示
+      $(".end-message02").slideDown();// 送信完了メッセージを表示
+      $(".contact_form__item").fadeOut();// 入力フィールドを非表示にする
+      $form02[0].reset(); // フォームの内容をリセット
+      //window.location.href = "thanks.html";
+    }, 700);
+  });
+},
+)
 
 
 
@@ -168,7 +160,6 @@ $(document).ready(function () {
 $(document).ready(function () {
   // ID「js-submit」のボタン要素を取得し、変数 `$submitBtn` に代入します
   const $submitBtn = $('#js-submit')
-  
   // フォーム内のすべての `input` 要素や `textarea` 要素に「change」イベントを監視
   // ユーザーが値を変更するたびに、以下の処理が実行
   $('.form input,.form textarea').on('change', function () {
@@ -177,7 +168,7 @@ $(document).ready(function () {
       $('.form input[type="text"]').val() !== "" && // テキスト入力フィールドが空でないか確認
       $('.form input[type="email"]').val() !== "" && // メールアドレス入力フィールドが空でないか確認
       $('.form input[type="tel"]').val() !== "" // 電話番号入力フィールドが空でないか確認
-     ) {
+    ) {
       // 上記すべての条件が満たされていれば、送信ボタン（$submitBtn）を有効化（disabledを解除）
       $submitBtn.prop('disabled', false);
       // 条件が一つでも満たされない場合、送信ボタン（$submitBtn）を無効化（disabledを有効化）
@@ -188,3 +179,25 @@ $(document).ready(function () {
 });
 
 
+//2つ目footer上のフォーム　必須項目チェックでメール送信可能にする実装
+// ページの読み込みが完了したら、以下の処理を実行する
+$(document).ready(function () {
+  // ID「js-submit02」のボタン要素を取得し、変数 `$submitBtn` に代入します
+  const $submitBtn = $('#js-submit02')
+  // フォーム内のすべての `input` 要素や `textarea` 要素に「change」イベントを監視
+  // ユーザーが値を変更するたびに、以下の処理が実行
+  $('.form02 input,.form02 textarea').on('change', function () {
+    // 入力フィールドがすべて空でないか確認する
+    if (
+      $('.form02 input[type="text"]').val() !== "" && // テキスト入力フィールドが空でないか確認
+      $('.form02 input[type="email"]').val() !== "" && // メールアドレス入力フィールドが空でないか確認
+      $('.form02 input[type="tel"]').val() !== "" // 電話番号入力フィールドが空でないか確認
+    ) {
+      // 上記すべての条件が満たされていれば、送信ボタン（$submitBtn）を有効化（disabledを解除）
+      $submitBtn.prop('disabled', false);
+      // 条件が一つでも満たされない場合、送信ボタン（$submitBtn）を無効化（disabledを有効化）
+    } else {
+      $submitBtn.prop('disabled', true);
+    }
+  });
+});
