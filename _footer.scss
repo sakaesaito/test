@@ -1,0 +1,67 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin transition($time: 0.4s) {
+    transition: all $time ease-in-out;
+  }
+  
+  @mixin padding-y($top, $bottom) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+  }
+  
+  // メディアクエリ用の mixin
+  @mixin media-query($size) {
+    @media (min-width: $size) {
+      @content; // `@include` の中身をここに適用
+    }
+  }
+  
+  // 2. フッターのスタイル
+  .footer {
+    background-color: #fff;
+    width: 100%;
+    @include padding-y(24px, 24px); // 上下のパディング適用
+    text-align: center;
+  
+    &_inner {
+      margin: 0 auto;
+      padding: 0 16px;
+      display: block; // PC 版で height を変更するので、初期状態は block
+      align-items: center; // ここは効かないので削除
+    }
+  
+    &_logo {
+      width: 227px;
+      margin: 0 auto 30px;
+      @include transition; // トランジション適用
+  
+      img:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  
+  // 小さいテキスト部分
+  .small_sec {
+    font-family: Goldman;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: center;
+  }
+  
+  // 3. メディアクエリ（1024px以上）
+  @include media-query(1024px) {
+    .footer_inner {
+      height: 100px; // PC 版で高さ指定
+    }
+  
+    .small_sec {
+      display: block;
+      margin-top: 38px;
+    }
+  }
