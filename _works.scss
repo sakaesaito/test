@@ -1,0 +1,36 @@
+// 作品（Works）セクション
+.works {
+    background-color: #fff;
+    color: #333333;
+    width: 100%;
+  
+    &_inner {
+      width: 100%;
+      max-width: 375px;
+      margin: 0 auto 39px;
+      text-align: center;
+      padding: 0 18px;
+    }
+  
+    &_title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #333;
+      padding-top: 40px;
+    }
+  
+    &_logo {
+      img {
+        width: 82%;
+        height: auto;
+        margin: 30px auto 0;
+        text-align: center;
+  
+        &:nth-child(2) {
+          margin-top: 8px;
+          width: 82%;
+        }
+      }
+    }
+  }
+  

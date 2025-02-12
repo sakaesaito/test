@@ -1,0 +1,16 @@
+/* 会社ロゴ無限スライダー */
+.swiper {
+    overflow: hidden;
+  
+  
+  &-slider img {
+    width: 100%;
+    height: auto;
+  }
+}
+  .swiper01 {
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
+}
+  

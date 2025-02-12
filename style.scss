@@ -1,7 +1,18 @@
 @use 'destyle';
 @use 'header';
 @use 'footer';
-@use 'form';
+@use 'contact';
+@use 'hamburger';
+@use 'swiper-slider';
+@use 'drawer';
+@use 'hero';
+@use 'lead';
+@use 'works';
+@use 'feature';
+@use 'info';
+@use 'accordion';
+@use 'recommend';
+
 
 * {
     box-sizing: border-box;
@@ -26,3 +37,9 @@
     height: auto;
   }
   
+  .job_listing {
+    position: absolute;
+    max-width: 360px;
+    bottom: 51.6%;
+    left: 6px;
+  }

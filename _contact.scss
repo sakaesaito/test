@@ -1,0 +1,152 @@
+// お問い合わせフォーム
+.contact {
+    margin: 202px auto 0;
+  
+    &_inner {
+      margin: 0 auto;
+      width: 100%;
+      padding: 8px 8px 17px;
+      height: auto;
+      background-color: #fff;
+      display: block;
+      border-radius: 6px;
+      color: #333333;
+    }
+  
+    &_text {
+      width: 100%;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      background-color: #007FC6;
+      text-align: center;
+      border-radius: 6px;
+      align-items: center;
+      padding: 16px 0;
+    }
+  
+    &_polygon {
+      width: 17px;
+      position: relative;
+      top: -6px;
+      left: 155px;
+  
+      &.contact_polygon_second {
+        top: -10px;
+      }
+    }
+  
+    &_name_sec {
+      width: 100%;
+      display: flex;
+      gap: 9px;
+      margin-top: 6px;
+    }
+  
+    &_note {
+      width: 100%;
+      font-size: 12px;
+      font-weight: 400;
+      margin-top: 26px;
+      line-height: 1.25;
+    }
+  }
+  
+  // ラベル
+  label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 10px;
+  
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+  
+    &[for="company"],
+    &[for="email"],
+    &[for="tel"] {
+      margin-top: 15px;
+    }
+  
+    &[for="tel"] {
+      margin-top: 14px;
+    }
+  
+    span {
+      font-weight: 400;
+      font-size: 14px;
+      color: #F90000;
+    }
+  }
+  
+  // 入力フィールド
+  input {
+    color: #333333;
+    background-color: #F5F8FA;
+    margin-top: 5px;
+  
+    &[type="text"],
+    &[type="tel"],
+    &[type="email"] {
+      display: block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+      font-weight: 400;
+      width: 100%;
+      padding-left: 8px;
+    }
+  
+    &[type="text"] {
+      padding: 12px 0 15px;
+      margin-top: 8px;
+    }
+  
+    &[type="tel"] {
+      padding: 15px 0 14px;
+      margin-top: 8px;
+    }
+  
+    &[type="email"] {
+      padding: 12px 0 15px;
+      margin-top: 5px;
+    }
+  
+    &[type="submit"] {
+      display: block;
+      text-align: center;
+      width: 75%;
+      margin: 42px auto 0;
+      padding: 12px 0;
+      background-color: #007FC6;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: 30px;
+      border-style: none;
+      transition: 0.4s;
+  
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  
+  // 送信ボタンの無効時スタイル
+  #js-submit:disabled,
+  #js-submit02:disabled {
+    opacity: 0.9;
+  }
+  
+  // メッセージ関連
+  .end-message,
+  .end-message02,
+  .false-message {
+    display: none;
+    padding-top: 40px;
+    text-align: center;
+  }
+  

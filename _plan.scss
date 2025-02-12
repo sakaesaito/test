@@ -1,0 +1,71 @@
+/* 成約手数料のセクション */
+#plan {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #F9F9F9;
+  }
+  
+  .plan_inner {
+    width: 310px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 58px;
+  }
+  
+  .plan_title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333333;
+  }
+  
+  .plan_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .plan_item {
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.25);
+    border-radius: 10px 10px 10px 10px;
+    width: 96px;
+    height: 91px;
+    border-top: solid 6px #007FC6;
+    background-color: #fff;
+  }
+  
+  .plan_service {
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #333333;
+  }
+  
+  .plan_number {
+    margin-top: 8px;
+    margin-bottom: 17px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #007FC6;
+  }
+  
+  .plan_number span {
+    font-size: 12px;
+    color: #333333;
+  }
+  
+  .plan_text {
+    margin-top: 48px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.8;
+    text-align: left;
+    padding-bottom: 89px;
+    color: #333333;
+  }
+  .anchor-3 {
+    padding-top: 80px;
+    margin-top: 80px;
+  }

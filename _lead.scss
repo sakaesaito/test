@@ -1,0 +1,45 @@
+#lead_area {
+    background-color: #fff;
+    color: #333333;
+    margin: 0 auto;
+}
+
+.lead {
+    &-main {
+        width: 100%;
+        margin: 66px auto 0;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    &_title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+    &_text {
+        margin-top: 63px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.8;
+    }
+
+    &_text span {
+        color: #007FC6;
+        font-size: 24px;
+    }
+
+    &_main img {
+        width: 315px;
+    }
+
+    &_text_img {
+        background-color: #F9F9F9;
+        margin-top: 54px;
+    }
+
+    &_text_imgpc img {
+        display: none;
+    }
+}

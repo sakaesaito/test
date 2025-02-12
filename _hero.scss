@@ -1,0 +1,114 @@
+// 横幅の最大値 & センター配置
+@mixin container($max-width: 375px, $padding: 15px) {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+  
+  // グラデーション背景
+  @mixin gradient-bg {
+    background: linear-gradient(287.03deg, #02D1FF 0%, #007FC6 100%);
+  }
+  
+  // テキストスタイル（フォントサイズ、フォントウェイト、行間）
+  @mixin text-style($size, $weight, $line-height) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+  }
+  
+  // 2. ヒーローセクションのスタイル
+  
+  .hero {
+    width: 100%;
+    margin: 0 auto;
+    @include gradient-bg;
+    padding-top: 64px;
+  
+    &_inner {
+      @include container; // コンテナスタイル適用
+      color: #fff;
+      padding-bottom: 26px;
+      position: relative;
+    }
+  
+    &_left {
+      padding-bottom: 26px;
+    }
+  
+    &_text {
+      text-align: center;
+    }
+  
+    &_copy {
+      @include text-style(14px, 400, 1.5);
+      margin-top: 42px;
+    }
+  
+    &_catch {
+      @include text-style(24px, 700, 1.8);
+      margin-top: 19px;
+    }
+  
+    &_read {
+      @include text-style(14px, 400, 1.8);
+      margin-top: 24px;
+    }
+  
+    &_list {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    &_about {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      margin: 16px auto 0;
+  
+      li {
+        background-color: #fff;
+        color: #007FC6;
+        border-radius: 50%;
+        height: 112px;
+        place-content: center;
+      }
+    }
+  
+    &_item {
+      @include text-style(16px, 700, 1);
+    }
+  
+    &_detail {
+      margin-top: 15px;
+      font-weight: 700;
+      margin-left: 4px;
+      letter-spacing: 1px;
+  
+      span {
+        font-size: 12px;
+        vertical-align: top;
+        color: #333;
+      }
+  
+      #span {
+        font-size: 16px;
+        vertical-align: middle;
+        color: #007FC6;
+        margin-left: 2px;
+      }
+    }
+  
+    &_note {
+      @include text-style(12px, 400, 1);
+      text-align: left;
+      margin: 24px auto 0;
+  
+      p:nth-child(2) {
+        margin-top: 5px;
+      }
+    }
+  }
