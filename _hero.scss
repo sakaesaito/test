@@ -1,4 +1,4 @@
-// 横幅の最大値 & センター配置
+// 横幅の最大値 & センター配置（こちらのコードはchatGTP参照）
 @mixin container($max-width: 375px, $padding: 15px) {
     width: 100%;
     max-width: $max-width;

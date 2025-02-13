@@ -1105,7 +1105,7 @@ margin: 0 auto;
 #contact_second .contact_name_sec {
   margin-top: 2px;
 }
-#contact_second.contact_inner:nth-child(2) {
+#contact_second .contact_inner:nth-child(2) {
   margin-top: 40px;
 }
 #contact_second input[type="text"] {

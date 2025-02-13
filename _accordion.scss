@@ -1,1 +1,134 @@
-//実装途中
+/* Q＆Aのセクション */
+$bg-light: #F9F9F9;
+$bg-dark: #007FC6;
+$text-dark: #333333;
+$text-light: #FFF;
+$border-radius: 10px;
+$transition-speed: 0.3s;
+
+.accordion {
+  background-color: $bg-light;
+}
+.accordion-content {
+  display: none;
+}
+
+.qa-accordion {
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 16px;
+  margin: 45px auto 0;
+  background: $bg-light;
+  padding-bottom: 68px;
+}
+
+.accordion-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: $text-dark;
+}
+
+.accordion-header {
+  width: 100%;
+  height: 64px;
+  padding: 22px 35px 22px 20px;
+  margin: 17px auto 0;
+  cursor: pointer;
+  position: relative;
+  font-size: 14px;
+  font-weight: 700;
+  color: $text-dark;
+  text-align: left;
+  background-color: $text-light;
+  border-radius: $border-radius $border-radius 0 0;
+
+  &:nth-child(7) {
+    padding: 18px 35px 10px 20px;
+    line-height: 1.5;
+  }
+
+  &.active {
+    display: block;
+    height: inherit;
+    background-color: $bg-dark;
+    color: $text-light;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: '';
+      right: 10px;
+      bottom: 0;
+      width: 16px;
+      height: 2px;
+      margin: auto;
+      background: $text-light;
+    }
+
+    &::after {
+      transform: rotate(0deg);
+    }
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    top: -5px;
+    right: 10px;
+    bottom: 0;
+    width: 16px;
+    height: 2px;
+    margin: auto;
+    background: $text-dark;
+    transition: transform $transition-speed;
+  }
+
+  &::after {
+    transform: rotate(-90deg);
+  }
+}
+
+.accordion-header-pc {
+  display: inline;
+}
+
+.accordion-content {
+  background-color: $text-light;
+  padding: 10px;
+  height: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.accordion-header span {
+  position: relative;
+  display: inline-block;
+  padding-left: 34px;
+
+  &::before {
+    position: absolute;
+    content: "Q";
+    font-family: Goldman;
+    font-size: 16px;
+    font-weight: 400;
+    color: $text-light;
+    background-color: $bg-dark;
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.accordion-header.active span::before {
+  color: $bg-dark;
+  background-color: $text-light;
+}
