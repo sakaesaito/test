@@ -2,7 +2,7 @@
 .contact {
     margin: 202px auto 0;
   
-    &_inner {
+    .contact_inner {
       margin: 0 auto;
       width: 100%;
       padding: 8px 8px 17px;
@@ -13,7 +13,7 @@
       color: #333333;
     }
   
-    &_text {
+    .contact_text {
       width: 100%;
       font-size: 16px;
       font-weight: 700;
@@ -25,25 +25,26 @@
       padding: 16px 0;
     }
   
-    &_polygon {
+    .contact_polygon {
       width: 17px;
       position: relative;
       top: -6px;
       left: 155px;
-  
-      &.contact_polygon_second {
+    }
+    
+    .contact_polygon_second {
         top: -10px;
       }
-    }
+    
   
-    &_name_sec {
+    .contact_name_sec {
       width: 100%;
       display: flex;
       gap: 9px;
       margin-top: 6px;
     }
   
-    &_note {
+    .contact_note {
       width: 100%;
       font-size: 12px;
       font-weight: 400;

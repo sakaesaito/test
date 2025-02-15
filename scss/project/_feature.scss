@@ -3,32 +3,31 @@
     margin: 0 auto;
 }
 
-.feature {
-    &_menu {
+.feature_menu {
         margin: 72px auto 0;
         text-align: center;
     }
 
-    &_heading {
+    .feature_heading {
         font-weight: 700;
         font-size: 24px;
         line-height: 1.5;
         color: #333333;
     }
 
-    &_list {
+    .feature_list {
         margin-top: 51px;
         width: 100%;
     }
 
-    &_item {
+    .feature_item {
         border: 1px solid #007FC6;
         width: 91.2%;
         margin: 0 auto 24px;
         padding: 14px 30px 21px;
     }
 
-    &_item:nth-child(4) {
+    .feature_item:nth-child(4) {
         margin-bottom: 31px;
     }
 
